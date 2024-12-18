@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+    .footer-sections {
+      margin-top: 10px;
+      flex-direction: column; /* Stack content vertically on small screens */
+      align-items: center; /* Center align items */
+    }
+  
+    .footer-sections h5 {
+      font-size: 14px;
+    }
+  
+    .footer-sections ul li {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 768px) {
+    .subscription-form {
+      flex-direction: column;
+    }
+    .form-group {
+      min-width: 100%;
+    }
+  }

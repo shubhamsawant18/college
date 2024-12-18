@@ -1,0 +1,224 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Container */
+.navbar {
+    background-color: rgb(240, 240, 240); /* Light grey background */
+    padding: 10px 20px; /* Add horizontal padding for spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    height:40px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+}
+
+/* Logo Styles */
+.logo img {
+    height: 38px; /* Adjust logo height */
+}
+
+/* Navigation Links */
+.nav-links {
+    font-size: 15px;
+    display: flex;
+    list-style: none;
+    padding-left: 10;
+    padding-right: 100px;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+    position: relative; /* For dropdown positioning */
+}
+
+.nav-links a {
+    color: black; /* Dark text for visibility */
+    text-decoration: none;
+    font-size: 15px;
+    padding: 0px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-left: -20px;
+    margin-right: 20px; /* Adds space between each nav link */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-links a:hover {
+    background-color: rgb(200, 200, 200); /* Hover effect */
+    color: rgb(210, 88, 88);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    max-height: 700px;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    z-index: 1000; /* Ensure dropdown is on top */
+    height: -70px;
+}
+
+.menu-header {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: rgb(245, 245, 245); /* Slightly distinct header color */
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+}
+
+.f-18 {
+    font-size: 18px;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.line-height-26 {
+    line-height: 26px;
+}
+
+.mb-3 {
+    margin-bottom: 3px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+     background-color: rgb(255,238,238); 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 40px; /* Adjust height for better appearance */
+    width: 300px; /* Fixed width for search box */
+}
+
+.search-icon {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85zm-5.442 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg>') no-repeat center center;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px; /* Space between icon and input */
+    border-radius: 5px;
+    border-color: #333;
+}
+
+.course-search {
+    flex: 1; /* Take up remaining space */
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    height: 100%;
+    padding-left: 5px;
+}
+
+.course-search::placeholder {
+    color: #aaa; /* Subtle placeholder color */
+    font-size: 16px;
+}
+
+/* Close Button */
+.close-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    background-color: rgba(255, 238, 238, 0.8); /* Light red hover effect */
+}
+
+/* Dropdown List */
+.dropdown-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-list li {
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-list li:hover {
+    background-color: rgb(255,238,238); 
+    color:rgb(210, 88, 88);
+
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+/* List Item Styles */
+li {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1.5rem; /* Adjust for your padding needs */
+    padding-right: 1rem;
+    border-bottom: 1px solid #ccc; /* Light border for separation */
+}
+
+/* Text Styles */
+.f-16 {
+    font-size: 16px;
+}
+
+.font-weight-medium {
+    font-weight: 500; /* Medium font weight */
+}
+
+.line-height-23 {
+    line-height: 23px;
+}
+
+.text-capitalize {
+    text-transform: capitalize; /* Capitalize the first letter of each word */
+}
+
+/* Icon Styles */
+.expand-icon{
+    padding-left:10px ;
+    padding-right: 11px;
+    font-size: 20px;
+}
+.plus{
+    font-size: 20px;
+    margin-right: 12px;
+
+}
+.AllCategories{
+    text-align: left;
+}
+.nested-dropdown{
+    padding-left: 10px;
+}
