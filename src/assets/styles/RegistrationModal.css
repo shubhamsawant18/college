@@ -1,4 +1,4 @@
-/* RegistrationModal.css */
+/* Overlay Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -11,8 +11,10 @@
   justify-content: center;
   z-index: 1000;
   animation: fadeIn 0.4s ease-out;
+  padding-top: 0px;
 }
 
+/* Fade-in Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -22,6 +24,7 @@
   }
 }
 
+/* Modal Content */
 .modal-content {
   background: #ffffff;
   padding: 40px;
@@ -31,8 +34,10 @@
   position: relative;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: -20px;
 }
 
+/* Close Button */
 .close-button {
   position: absolute;
   top: 15px;
@@ -44,12 +49,16 @@
   background: none;
   color: #ff6600;
   transition: color 0.3s ease;
+  padding-bottom: 0px;
+  padding-top: 0px;
+ 
 }
 
 .close-button:hover {
-  color: #ff3b00;
+  
 }
 
+/* Header Section */
 .leadform-header {
   display: flex;
   align-items: center;
@@ -86,19 +95,21 @@
   margin-bottom: 0;
 }
 
+/* Registration Form */
 .registration-form {
   position: relative;
 }
 
+/* Input Group Styles */
 .input-group {
   position: relative;
   margin-bottom: 18px;
 }
 
-.registration-form input,
-.registration-form select {
+.input-group input,
+.input-group select {
   width: 100%;
-  padding: 14px 20px 14px 40px; /* Padding for icon space */
+  padding: 14px 20px 14px 50px; /* Adjusted for consistent spacing */
   margin-bottom: 18px;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -106,54 +117,35 @@
   font-size: 16px;
   transition: border-color 0.3s ease;
   position: relative;
-  z-index: 1; /* Ensure input text appears above the icons */
+  z-index: 1; /* Ensures text appears above the icons */
 }
 
-.registration-form input:focus,
-.registration-form select:focus {
+.input-group select {
+  padding: 14px 20px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
   border-color: #ff6600;
   outline: none;
 }
 
 .input-group .react-icons {
   position: absolute;
-  left: 14px;
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
   color: #ff6600;
   font-size: 18px;
-  z-index: 2; /* Ensure icon stays on top */
+  z-index: 2; /* Ensures icon stays on top */
 }
 
-.mobile-input-container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 18px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
-
-.mobile-input-container .country-code {
-  padding: 14px 15px;
-  background-color: #f5f5f5;
-  border-right: 1px solid #ddd;
-  font-size: 16px;
-  border-radius: 6px 0 0 6px;
-}
-
-.mobile-input-container input[type="tel"] {
-  flex-grow: 1;
-  border: none;
-  padding: 14px;
-  font-size: 16px;
-  outline: none;
-  border-radius: 0 6px 6px 0;
-}
-
+/* Checkbox Container */
 .checkbox-container {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: -25px;
   font-size: 16px;
   color: #555;
 }
@@ -166,11 +158,17 @@
   height: 20px;
 }
 
+.checkbox-container label {
+  display: flex;
+  align-items: center;
+}
+
+/* Submit Button */
 .submit-button {
   background-color: #ff6600;
   color: white;
   padding: 14px;
-  width: 100%;
+  width: 35%;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -184,6 +182,7 @@
   transform: scale(1.05);
 }
 
+/* Login Link */
 .login-link {
   margin-top: 20px;
   font-size: 14px;
@@ -200,7 +199,7 @@
   text-decoration: underline;
 }
 
-/* Animation for inputs */
+/* Animation for Inputs */
 @keyframes inputFocus {
   from {
     transform: scale(1);
@@ -212,4 +211,8 @@
 
 .registration-form input:focus {
   animation: inputFocus 0.2s forwards;
+}
+.react-icons{
+  margin-top: -9px;
+  height: 16px;
 }
