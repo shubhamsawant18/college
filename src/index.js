@@ -26,7 +26,7 @@ const IndexPage = () => {
           <div className="search-bar">
   <div className="search-icon"></div>
   <input
-    type="text"
+    type="text" 
     placeholder="Search for colleges, exams, courses and more..."
   />
             <button className="search-button">Search</button>
