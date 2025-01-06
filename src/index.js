@@ -24,13 +24,11 @@ const IndexPage = () => {
         <div className="search-container">
           <h1>Find Over 11000+ Courses in India</h1>
           <div className="search-bar">
-  <div className="search-icon"></div>
-  <input
-    type="text" 
-    placeholder="Search for colleges, exams, courses and more..."
-  />
+            <input
+              type="text"
+              placeholder="Search for colleges, exams, courses and more..."
+            />
             <button className="search-button">Search</button>
-            
           </div>
           <button className="counselling-button" onClick={openModal}>
             Need Counselling

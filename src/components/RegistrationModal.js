@@ -1,60 +1,151 @@
-import React from "react";
+import React, { useState } from "react";
 import "../assets/styles/RegistrationModal.css";
-import { FaUser, FaEnvelope, FaPhoneAlt, FaCity, FaCheckCircle, FaRegAddressCard } from "react-icons/fa";
 
 const RegistrationModal = ({ show, onClose }) => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    city: "",
+    course: "",
+    onlineCourse: false,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+      ...formData,
+      [name]: type === "checkbox" ? checked : value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Sending the form data to the backend
+    try {
+      const response = await fetch("http://localhost:5000/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.status === 201) {
+        alert("Registration successful");
+        onClose(); // Close modal after success
+      } else {
+        alert(data.message || "Registration failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Error during registration");
+    }
+  };
+
   if (!show) return null;
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
-        <button className="close-button" onClick={onClose}>
-          X
-        </button>
-        <div className="leadform-header">
-          <div className="lead-hdr-img">
-            <FaRegAddressCard size={33} color="#ff6600" />
+    <div>
+      <div className="modal-overlay">
+        <div className="modal-content">
+          <button className="close-button" onClick={onClose}>
+            &times;
+          </button>
+
+          <div className="leadform-header">
+            <div className="lead-hdr-img">
+              <img src="https://via.placeholder.com/60" alt="User Icon" />
+            </div>
+            <div className="lead-hdr-info">
+              <h3>Register</h3>
+              <p>Create your account below</p>
+            </div>
           </div>
-          <div className="lead-hdr-info">
-            <h3>Register Now To Apply</h3>
-            <p>Get details and latest updates</p>
+
+          <form className="registration-form" onSubmit={handleSubmit}>
+            <div className="input-group">
+              <input
+                type="text"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleChange}
+                placeholder="Full Name"
+                required
+              />
+              <span className="react-icons">👤</span>
+            </div>
+
+            <div className="input-group">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email"
+                required
+              />
+              <span className="react-icons">📧</span>
+            </div>
+
+            <div className="input-group">
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone"
+                required
+              />
+              <span className="react-icons">📱</span>
+            </div>
+
+            <div className="input-group">
+              <input
+                type="text"
+                name="city"
+                value={formData.city}
+                onChange={handleChange}
+                placeholder="City"
+                required
+              />
+              <span className="react-icons">🏙️</span>
+            </div>
+
+            <div className="input-group">
+              <input
+                type="text"
+                name="course"
+                value={formData.course}
+                onChange={handleChange}
+                placeholder="Course"
+                required
+              />
+              <span className="react-icons">📚</span>
+            </div>
+
+            <div className="checkbox-container">
+              <input
+                type="checkbox"
+                name="onlineCourse"
+                checked={formData.onlineCourse}
+                onChange={handleChange}
+              />
+              <label>Online Course</label>
+            </div>
+
+            <button type="submit" className="submit-button">
+              Register
+            </button>
+          </form>
+
+          <div className="login-link">
+            Already have an account? <a href="/login">Login here</a>.
           </div>
         </div>
-        <form className="registration-form">
-          <div className="input-group">
-            <FaUser className="react-icons" />
-            <input type="text" placeholder="Full Name *" required />
-          </div>
-          <div className="input-group">
-            <FaEnvelope className="react-icons" />
-            <input type="email" placeholder="Email Address *" required />
-          </div>
-          <div className="input-group">
-            <FaPhoneAlt className="react-icons" />
-            <input type="tel" placeholder="Mobile Number *" required />
-          </div>
-          <div className="input-group">
-            <FaCity className="react-icons" />
-            <input type="text" placeholder="City You Live In *" required />
-          </div>
-          <div className="input-group">
-            <select required>
-              <option value="">Course Interested In *</option>
-              <option value="BA">BA - Bachelors (Arts)</option>
-              {/* Add other courses here */}
-            </select>
-          </div>
-          <div class="checkbox-container">
-  <input type="checkbox" id="onlineCourse" />
-  <label for="onlineCourse">Looking For Online/Distance Course?</label>
-</div>
-          <button type="submit" className="submit-button">
-            SUBMIT
-          </button>
-        </form>
-        <p className="login-link">
-          Already Registered? <a href="/login">Click Here To Login</a>
-        </p>
       </div>
     </div>
   );
