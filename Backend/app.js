@@ -11,7 +11,9 @@ app.use(express.json());
 
 // Routes
 const userRoutes = require("./routes/userRoutes");
+const adminRoutes = require("./routes/adminRoutes"); // Import admin routes
 app.use("/api", userRoutes);
+app.use("/api/admin", adminRoutes); // Use admin routes
 
 // MongoDB connection
 mongoose

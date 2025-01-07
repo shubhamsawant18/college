@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../assets/styles/Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -1163,6 +1164,12 @@ const Navbar = () => {
           <li>
             <a href="#">B.C.A</a>
           </li>
+
+          <li className="nav-item">
+  <Link className="nav-link" to="/admin">
+    <button className="btn btn-outline-light">Admin</button>
+  </Link>
+</li>
         </ul>
       </div>
     </header>

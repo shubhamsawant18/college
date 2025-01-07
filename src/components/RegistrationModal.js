@@ -57,14 +57,18 @@ const RegistrationModal = ({ show, onClose }) => {
           </button>
 
           <div className="leadform-header">
-            <div className="lead-hdr-img">
-              <img src="https://via.placeholder.com/60" alt="User Icon" />
-            </div>
-            <div className="lead-hdr-info">
-              <h3>Register</h3>
-              <p>Create your account below</p>
-            </div>
-          </div>
+  <div className="lead-hdr-img">
+    <img
+      src={process.env.PUBLIC_URL + "/assets/images/leadform_logo.webp"}
+      alt="Lead Form Logo"
+    />
+  </div>
+  <div className="lead-hdr-info">
+    <h3>Register Now To Apply</h3>
+    <p>Create your account below</p>
+  </div>
+</div>
+
 
           <form className="registration-form" onSubmit={handleSubmit}>
             <div className="input-group">

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./index.css";
-import App from "./App";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import RegistrationModal from "./components/RegistrationModal";
+import AdminPage from "./components/AdminPage";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 const IndexPage = () => {
@@ -35,16 +38,23 @@ const IndexPage = () => {
           </button>
         </div>
       </div>
-      <App />
+      <Footer />
+      {/* Remove App if unnecessary */}
       <RegistrationModal show={isModalVisible} onClose={closeModal} />
     </div>
   );
 };
 
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <IndexPage />
+    <Router>
+      <Routes>
+        <Route path="/" element={<IndexPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
