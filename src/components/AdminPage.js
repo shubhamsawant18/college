@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar'; // Adjusted the import path to correctly reference the Navbar component
 import Footer from './Footer'; // Import Footer component
-
+import '../assets/styles/AdminPage.css';
 
 const AdminPage = () => {
   const [registrations, setRegistrations] = useState([]);
@@ -25,7 +25,7 @@ const AdminPage = () => {
     <div className="admin-page">
       <Navbar /> {/* Include Navbar at the top */}
       <div className="content">
-        <h1>Registration Information</h1>
+        <h1 class="regi">Registration Information</h1>
         <table className="registration-table">
           <thead>
             <tr>

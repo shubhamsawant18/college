@@ -1,0 +1,61 @@
+/* AdminPage.css */
+.admin-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+regi {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.registration-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.registration-table th, .registration-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.registration-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.registration-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.registration-table tr:hover {
+    background-color: #ddd;
+}
+
+.registration-table th, .registration-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.content{
+    padding: 30px;
+    padding-bottom: 300px;
+}

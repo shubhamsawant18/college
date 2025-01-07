@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../assets/styles/RegistrationModal.css";
+import '../assets/styles/RegistrationModal.css';
 
 const RegistrationModal = ({ show, onClose }) => {
   const [formData, setFormData] = useState({
