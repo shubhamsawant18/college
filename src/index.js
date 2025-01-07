@@ -39,12 +39,10 @@ const IndexPage = () => {
         </div>
       </div>
       <Footer />
-      {/* Remove App if unnecessary */}
       <RegistrationModal show={isModalVisible} onClose={closeModal} />
     </div>
   );
 };
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './Navbar'; // Adjusted the import path to correctly reference the Navbar component
 import Footer from './Footer'; // Import Footer component
-import '../assets/styles/AdminPage.css';
+import '../assets/styles/AdminPage.css'; // Corrected import path for AdminPage.css
 
 const AdminPage = () => {
   const [registrations, setRegistrations] = useState([]);
