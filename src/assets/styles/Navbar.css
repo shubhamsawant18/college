@@ -17,6 +17,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 44px;
+    padding-left: 50px;
 }
 
 /* Logo Styles */
@@ -221,4 +222,8 @@ li {
 }
 .nested-dropdown{
     padding-left: 10px;
+}
+.logo{
+    padding-left: -80px;
+    padding-right: 30px;
 }

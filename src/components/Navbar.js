@@ -1161,15 +1161,9 @@ const Navbar = () => {
           <li>
             <a href="#">B.B.A</a>
           </li>
-          <li>
-            <a href="#">B.C.A</a>
-          </li>
+          
 
-          <li className="nav-item">
-  <Link className="nav-link" to="/admin">
-    <button className="btn btn-outline-light">Admin</button>
-  </Link>
-</li>
+          <li className="nav-item"> <Link className="nav-link" to="/login"> <button className="btn btn-outline-light">Login</button> </Link> </li>
         </ul>
       </div>
     </header>

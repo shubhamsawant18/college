@@ -25,7 +25,7 @@ const AdminPage = () => {
     <div className="admin-page">
       <Navbar /> {/* Include Navbar at the top */}
       <div className="content">
-        <h1 class="regi">Registration Information</h1>
+        <h1 class="registration">Registration Information</h1>
         <table className="registration-table">
           <thead>
             <tr>
@@ -39,17 +39,23 @@ const AdminPage = () => {
             </tr>
           </thead>
           <tbody>
-            {registrations.map((registration) => (
-              <tr key={registration._id}>
-                <td>{registration.fullName}</td>
-                <td>{registration.email}</td>
-                <td>{registration.phone}</td>
-                <td>{registration.city}</td>
-                <td>{registration.course}</td>
-                <td>{registration.onlineCourse ? 'Yes' : 'No'}</td>
-                <td>{new Date(registration.createdAt).toLocaleString()}</td>
+            {registrations.length === 0 ? (
+              <tr>
+                <td colSpan="7">No registrations found.</td>
               </tr>
-            ))}
+            ) : (
+              registrations.map((registration) => (
+                <tr key={registration._id}>
+                  <td>{registration.fullName}</td>
+                  <td>{registration.email}</td>
+                  <td>{registration.phone}</td>
+                  <td>{registration.city}</td>
+                  <td>{registration.course}</td>
+                  <td>{registration.onlineCourse ? 'Yes' : 'No'}</td>
+                  <td>{new Date(registration.createdAt).toLocaleString()}</td>
+                </tr>
+              ))
+            )}
           </tbody>
         </table>
       </div>

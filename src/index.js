@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./index.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import RegistrationModal from "./components/RegistrationModal";
 import AdminPage from "./components/AdminPage";
-import App from "./App";
+import Login from "./components/Login";
 import reportWebVitals from "./reportWebVitals";
 
 const IndexPage = () => {
@@ -44,15 +44,24 @@ const IndexPage = () => {
   );
 };
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
+const App = () => {
+  const [authenticated, setAuthenticated] = useState(false);
+
+  return (
     <Router>
       <Routes>
         <Route path="/" element={<IndexPage />} />
-        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/login" element={<Login setAuthenticated={setAuthenticated} />} />
+        <Route path="/admin" element={authenticated ? <AdminPage /> : <Navigate to="/login" />} />
       </Routes>
     </Router>
+  );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <App />
   </React.StrictMode>
 );
 

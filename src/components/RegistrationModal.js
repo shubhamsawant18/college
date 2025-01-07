@@ -11,6 +11,43 @@ const RegistrationModal = ({ show, onClose }) => {
     onlineCourse: false,
   });
 
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    let formErrors = {};
+    let valid = true;
+
+    if (!formData.fullName.trim()) {
+      formErrors.fullName = "Full Name is required";
+      valid = false;
+    }
+    if (!formData.email) {
+      formErrors.email = "Email is required";
+      valid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      formErrors.email = "Email address is invalid";
+      valid = false;
+    }
+    if (!formData.phone) {
+      formErrors.phone = "Phone number is required";
+      valid = false;
+    } else if (!/^\d{10}$/.test(formData.phone)) {
+      formErrors.phone = "Phone number is invalid";
+      valid = false;
+    }
+    if (!formData.city.trim()) {
+      formErrors.city = "City is required";
+      valid = false;
+    }
+    if (!formData.course.trim()) {
+      formErrors.course = "Course is required";
+      valid = false;
+    }
+
+    setErrors(formErrors);
+    return valid;
+  };
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -21,6 +58,10 @@ const RegistrationModal = ({ show, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
 
     // Sending the form data to the backend
     try {
@@ -57,18 +98,17 @@ const RegistrationModal = ({ show, onClose }) => {
           </button>
 
           <div className="leadform-header">
-  <div className="lead-hdr-img">
-    <img
-      src={process.env.PUBLIC_URL + "/assets/images/leadform_logo.webp"}
-      alt="Lead Form Logo"
-    />
-  </div>
-  <div className="lead-hdr-info">
-    <h3>Register Now To Apply</h3>
-    <p>Create your account below</p>
-  </div>
-</div>
-
+            <div className="lead-hdr-img">
+              <img
+                src={process.env.PUBLIC_URL + "/assets/images/leadform_logo.webp"}
+                alt="Lead Form Logo"
+              />
+            </div>
+            <div className="lead-hdr-info">
+              <h3>Register Now To Apply</h3>
+              <p>Create your account below</p>
+            </div>
+          </div>
 
           <form className="registration-form" onSubmit={handleSubmit}>
             <div className="input-group">
@@ -81,6 +121,7 @@ const RegistrationModal = ({ show, onClose }) => {
                 required
               />
               <span className="react-icons">👤</span>
+              {errors.fullName && <p className="error">{errors.fullName}</p>}
             </div>
 
             <div className="input-group">
@@ -93,6 +134,7 @@ const RegistrationModal = ({ show, onClose }) => {
                 required
               />
               <span className="react-icons">📧</span>
+              {errors.email && <p className="error">{errors.email}</p>}
             </div>
 
             <div className="input-group">
@@ -105,6 +147,7 @@ const RegistrationModal = ({ show, onClose }) => {
                 required
               />
               <span className="react-icons">📱</span>
+              {errors.phone && <p className="error">{errors.phone}</p>}
             </div>
 
             <div className="input-group">
@@ -117,6 +160,7 @@ const RegistrationModal = ({ show, onClose }) => {
                 required
               />
               <span className="react-icons">🏙️</span>
+              {errors.city && <p className="error">{errors.city}</p>}
             </div>
 
             <div className="input-group">
@@ -129,6 +173,7 @@ const RegistrationModal = ({ show, onClose }) => {
                 required
               />
               <span className="react-icons">📚</span>
+              {errors.course && <p className="error">{errors.course}</p>}
             </div>
 
             <div className="checkbox-container">
