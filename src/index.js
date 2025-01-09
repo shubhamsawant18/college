@@ -6,6 +6,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import RegistrationModal from "./components/RegistrationModal";
 import AdminPage from "./components/AdminPage";
+import StudyGoals from "./components/StudyGoals";
+
+
 import Login from "./components/Login";
 import reportWebVitals from "./reportWebVitals";
 
@@ -38,6 +41,10 @@ const IndexPage = () => {
           </button>
         </div>
       </div>
+
+      {/* New Section: Study Goals */}
+      
+      <StudyGoals />
       <Footer />
       <RegistrationModal show={isModalVisible} onClose={closeModal} />
     </div>

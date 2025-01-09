@@ -1,0 +1,100 @@
+import React, { useState } from 'react';
+import '../assets/styles/StudyGoals.css';
+
+const StudyGoals = () => {
+  const [showMore, setShowMore] = useState(false);
+
+  const initialGoals = [
+    {
+      title: 'Engineering',
+      colleges: 6256,
+      courses: ['BE/B.Tech', 'Diploma in Engineering', 'ME/M.Tech'],
+      icon: '🎓',
+    },
+    {
+      title: 'Management',
+      colleges: 7736,
+      courses: ['MBA/PGDM', 'BBA/BMS', 'Executive MBA'],
+      icon: '📈',
+    },
+    {
+      title: 'Commerce',
+      colleges: 4970,
+      courses: ['B.Com', 'M.Com'],
+      icon: '🛒',
+    },
+    {
+      title: 'Arts',
+      colleges: 5607,
+      courses: ['BA', 'MA', 'BFA', 'BSW'],
+      icon: '🎨',
+    },
+  ];
+
+  const moreGoals = [
+    {
+      title: 'Medical',
+      colleges: 2369,
+      courses: ['MBBS', 'PG Medical'],
+      icon: '🩺',
+    },
+    {
+      title: 'Design',
+      colleges: 1411,
+      courses: ['B.Des', 'M.Des'],
+      icon: '🎨',
+    },
+    {
+      title: 'See all',
+      colleges: '',
+      courses: [],
+      icon: '🔍',
+    },
+  ];
+
+  return (
+    <div className="study-goal-container">
+      <h2>Select Your Study Goal</h2>
+      <div className="study-goal-list">
+        {!showMore && initialGoals.map((goal, index) => (
+          <div key={index} className="study-goal-item">
+            <div className="icon">{goal.icon}</div>
+            <h3>{goal.title}</h3>
+            <p>{goal.colleges} Colleges</p>
+            <ul>
+              {goal.courses.map((course, idx) => (
+                <li key={idx}>{course}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        {showMore && (
+          <>
+            <div className="back-button" onClick={() => setShowMore(false)}>
+              <div className="arrow-icon back-arrow">←</div>
+            </div>
+            {moreGoals.map((goal, index) => (
+              <div key={index} className="study-goal-item">
+                <div className="icon">{goal.icon}</div>
+                <h3>{goal.title}</h3>
+                <p>{goal.colleges} Colleges</p>
+                <ul>
+                  {goal.courses.map((course, idx) => (
+                    <li key={idx}>{course}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </>
+        )}
+        {!showMore && (
+          <div className="show-more" onClick={() => setShowMore(true)}>
+            <div className="arrow-icon">→</div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default StudyGoals;

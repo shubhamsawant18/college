@@ -120,7 +120,7 @@ const RegistrationModal = ({ show, onClose }) => {
                 placeholder="Full Name"
                 required
               />
-              <span className="react-icons">👤</span>
+              <span className="react-icons"></span>
               {errors.fullName && <p className="error">{errors.fullName}</p>}
             </div>
 
@@ -133,7 +133,7 @@ const RegistrationModal = ({ show, onClose }) => {
                 placeholder="Email"
                 required
               />
-              <span className="react-icons">📧</span>
+              <span className="react-icons"></span>
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
 
@@ -146,7 +146,7 @@ const RegistrationModal = ({ show, onClose }) => {
                 placeholder="Phone"
                 required
               />
-              <span className="react-icons">📱</span>
+              <span className="react-icons"></span>
               {errors.phone && <p className="error">{errors.phone}</p>}
             </div>
 
@@ -159,7 +159,7 @@ const RegistrationModal = ({ show, onClose }) => {
                 placeholder="City"
                 required
               />
-              <span className="react-icons">🏙️</span>
+              <span className="react-icons"></span>
               {errors.city && <p className="error">{errors.city}</p>}
             </div>
 
@@ -172,7 +172,7 @@ const RegistrationModal = ({ show, onClose }) => {
                 placeholder="Course"
                 required
               />
-              <span className="react-icons">📚</span>
+              <span className="react-icons"></span>
               {errors.course && <p className="error">{errors.course}</p>}
             </div>
 
