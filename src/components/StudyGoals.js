@@ -20,13 +20,13 @@ const StudyGoals = () => {
     {
       title: 'Commerce',
       colleges: 4970,
-      courses: ['B.Com', 'M.Com'],
+      courses: ['B.Com', 'M.Com','More about Commerce'],
       icon: '🛒',
     },
     {
       title: 'Arts',
       colleges: 5607,
-      courses: ['BA', 'MA', 'BFA', 'BSW'],
+      courses: ['BA', 'MA', 'BFA'],
       icon: '🎨',
     },
   ];
@@ -35,13 +35,13 @@ const StudyGoals = () => {
     {
       title: 'Medical',
       colleges: 2369,
-      courses: ['MBBS', 'PG Medical'],
+      courses: ['MBBS', 'PG Medical','MD'],
       icon: '🩺',
     },
     {
       title: 'Design',
       colleges: 1411,
-      courses: ['B.Des', 'M.Des'],
+      courses: ['B.Des', 'M.Des','More about Des'],
       icon: '🎨',
     },
     {
