@@ -7,7 +7,8 @@ import Footer from "./components/Footer";
 import RegistrationModal from "./components/RegistrationModal";
 import AdminPage from "./components/AdminPage";
 import StudyGoals from "./components/StudyGoals";
-
+import ExplorePrograms from "./components/ExplorePrograms";
+import Divider from "./components/Divider";
 
 import Login from "./components/Login";
 import reportWebVitals from "./reportWebVitals";
@@ -41,15 +42,22 @@ const IndexPage = () => {
           </button>
         </div>
       </div>
-
-      {/* New Section: Study Goals */}
-      
+  
+      {/* Study Goals Section */}
       <StudyGoals />
+  
+      {/* Divider placed between sections */}
+      <Divider />
+  
+      {/* Explore Programs Section */}
+      <ExplorePrograms />
+  
+      {/* Footer */}
       <Footer />
       <RegistrationModal show={isModalVisible} onClose={closeModal} />
     </div>
   );
-};
+};  
 
 const App = () => {
   const [authenticated, setAuthenticated] = useState(false);

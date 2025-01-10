@@ -1,0 +1,134 @@
+.explore-programs {
+  padding: 20px;
+  margin-top: -50px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
+}
+
+.expro-text-center{
+margin-left: -737px;
+margin-top: 45px;
+margin-right: 20px;
+
+}
+.program-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Reduced gap between buttons */
+  justify-content: center; /* Center the buttons */
+  margin-bottom: 20px;
+}
+
+.program-buttons button,
+.college-button {
+  padding: 5px 10px; /* Reduced padding for smaller buttons */
+  background-color: white; /* Background color */
+  color: rgb(21, 6, 6); /* Text color */
+  border: 0.5px solid rgb(21, 6, 6); /* Border color */
+  border-radius: 15px; /* Rounded corners */
+  cursor: pointer;
+  margin: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for buttons */
+  transition: transform 0.2s; /* Smooth transition on hover */
+  font-size: 14px; /* Smaller font size */
+  width: auto;
+  text-align: center;
+  
+}
+
+.program-buttons button:hover,
+.college-button:hover {
+  transform: scale(1.05); /* Slightly enlarge buttons on hover */
+}
+
+.program-buttons .arrow-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.program-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+  gap: 20px; /* Space between the cards */
+  justify-content: center; /* Center the grid items */
+  max-width: 1200px; /* Limit the container's max width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.program-card {
+  border: 1px solid #ddd;
+  padding: 10px; /* Reduced padding to reduce card height */
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 15px; /* Reduced margin to reduce card height */
+  max-width: 300px; /* Set a maximum width for each card */
+  width: 100%; /* Allow card to be responsive within the max-width */
+  height: 180px; /* Reduced height for all cards */
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.section h3 {
+  margin-top: 0;
+  margin-bottom: 10px; /* Reduced margin to reduce card height */
+  color: rgb(21, 6, 6); /* Text color */
+}
+
+.section p {
+  margin-bottom: 10px; /* Reduced margin to reduce card height */
+  color: #555; /* Secondary text color */
+}
+
+/* Ranking sources, exam list, predictor exams, and course list styles */
+.ranking-sources,
+.exam-list,
+.predictor-exams,
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Reduced space between items */
+}
+
+.ranking-sources div,
+.exam-list div,
+.predictor-exams div,
+.course-list div {
+  background-color: #f8f9fa; /* Light background for items */
+  padding: 3px 8px; /* Smaller padding to reduce size */
+  border-radius: 15px; /* Reduced rounded corners */
+  border: 0.5px solid rgb(21, 6, 6); /* Border color */
+  margin-bottom: 5px; /* Reduced space between rows */
+  font-size: 12px; /* Smaller font size */
+}
+
+.ranking-sources div:nth-child(-n+2),
+.exam-list div:nth-child(-n+3),
+.predictor-exams div:nth-child(-n+2),
+.course-list div:nth-child(-n+2) {
+  margin-right: 5px;
+}
+
+.captions {
+  margin-top: 0px;
+}
+
+.endings {
+  padding-top: 50px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-bottom: 0;
+  position: relative;
+  top: 40px; /* Move it further down from its current position */
+}
