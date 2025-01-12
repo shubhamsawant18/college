@@ -8,6 +8,7 @@ import RegistrationModal from "./components/RegistrationModal";
 import AdminPage from "./components/AdminPage";
 import StudyGoals from "./components/StudyGoals";
 import ExplorePrograms from "./components/ExplorePrograms";
+import TopColleges from "./components/TopColleges";
 import Divider from "./components/Divider";
 
 import Login from "./components/Login";
@@ -51,7 +52,8 @@ const IndexPage = () => {
   
       {/* Explore Programs Section */}
       <ExplorePrograms />
-  
+      <Divider />
+      <TopColleges />
       {/* Footer */}
       <Footer />
       <RegistrationModal show={isModalVisible} onClose={closeModal} />

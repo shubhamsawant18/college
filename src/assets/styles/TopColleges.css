@@ -1,0 +1,166 @@
+/* Container Styles */
+.top-colleges-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1150px;
+  margin: 20px auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+}
+
+/* Table Styles */
+.college-table {
+  width: 100%;
+  border-collapse: collapse;  /* Ensure borders collapse into one */
+  margin-top: 20px;
+  color: #333;
+  font-size: 14px;
+  border: 1px solid #ddd; /* Outer border around the entire table */
+}
+
+.college-table th,
+.college-table td {
+  padding: 13px 10px;  /* Increased padding to make rows taller */
+  text-align: left;
+  border-top: 1px solid #ddd; /* Add top border for each row */
+}
+
+.college-table th {
+  background-color: white;
+  font-weight: bold;
+}
+
+.college-table tr:nth-child(even) {
+  background-color: #f5f8f9;
+}
+
+/* Table Row Height Adjustment */
+.college-table tr {
+  border-bottom: 0.1px solid #ddd; /* Horizontal borders between rows */
+  height: 33px; /* Increased height by 3px from the previous height */
+}
+
+/* Remove inner borders and just keep outer border */
+.college-table td,
+.college-table th {
+  border-left: none;
+  border-right: none;
+}
+
+/* Remove bottom border from last row */
+.college-table tr:last-child {
+  border-bottom: none;
+}
+
+/* College Cell */
+.college-cell {
+  display: flex;
+  align-items: center;
+}
+
+.college-logo {
+  width: 32px;
+  height: 31px;
+  border-radius: 5px;
+  margin-right: 10px; 
+  margin-top: -20px;
+}
+
+/* Ranking Cell */
+.ranking-cell {
+  display: flex;
+  align-items: center;
+}
+
+.ranking-logo {
+  width: 32px;
+  height: 24px;
+  margin-right: 10px; /* Space between the logo and the text */
+  margin-top: 0; /* Align the logo properly */
+}
+
+.ranking-cell div {
+  font-size: 14px;
+}
+
+/* Bold text for Rating, Cutoff number, and Fees */
+.bold {
+  font-weight: bold;
+}
+
+/* Cutoff Bold Number */
+.cutoff-number {
+  font-weight: bold;
+}
+
+/* Fees Formatting */
+.fees-amount {
+  font-weight: bold;
+}
+
+.fees-text {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .college-table {
+    font-size: 12px;
+  }
+
+  .college-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.thead {
+  height: 32px; /* Adjust height as per your requirement */
+}
+
+.thead th {
+  padding: 15px 10px; /* Add more padding for better spacing inside the header cells */
+}
+.course-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  gap: 12px; /* Reduced gap between buttons */
+  justify-content: center; /* Center the buttons */
+  margin-bottom: 27px;
+  margin-top: 8px;
+  color: #666;
+  margin-left: -27px;
+  
+}
+.course-buttons button,
+.course-button {
+  padding: 9px 16px; /* Reduced padding for smaller buttons */
+  background-color: #fff; /* Background color */
+  color: #666; /* Text color */
+  border: 1px solid #dedede; /* Border color */
+  border-radius: 100px; /* Rounded corners */
+  cursor: pointer;
+  margin: 2px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for buttons */
+  transition: transform 0.2s; /* Smooth transition on hover */
+  font-size: 16px; /* Smaller font size */
+  width: auto;
+  text-align: center;
+  line-height: 20px;
+  font-weight: 500;
+  white-space: nowrap;
+  margin-left: 0px;
+}
+.arrow-button{
+  background-color: #666;
+  color: #fff;
+}
