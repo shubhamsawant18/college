@@ -9,9 +9,12 @@ import AdminPage from "./components/AdminPage";
 import StudyGoals from "./components/StudyGoals";
 import ExplorePrograms from "./components/ExplorePrograms";
 import TopColleges from "./components/TopColleges";
+
+
 import Divider from "./components/Divider";
 
 import Login from "./components/Login";
+import CardImages from "./components/CardImages";
 import reportWebVitals from "./reportWebVitals";
 
 const IndexPage = () => {
@@ -54,8 +57,13 @@ const IndexPage = () => {
       <ExplorePrograms />
       <Divider />
       <TopColleges />
-      {/* Footer */}
+      <Divider/>
+      <CardImages />
+      <Divider/>
+     
+     
       <Footer />
+     
       <RegistrationModal show={isModalVisible} onClose={closeModal} />
     </div>
   );

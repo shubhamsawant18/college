@@ -1,27 +1,31 @@
+/* Container for the entire study goal section */
 .study-goal-container {
   padding: 40px 20px;
   text-align: center;
   background-color: white;
+  font-family: "din",sans-serif;
+  max-width: 1170px;
+  margin-left: 185px;
 }
 
+/* Styling the list of study goals */
 .study-goal-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding-left: 55px;
-  padding-bottom: 40px;
-  padding-top: 20px;
+  gap: 25px; /* Increased gap for spacing */
+  padding: 20px;
 }
 
+/* Styling for each individual card */
 .study-goal-item {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  width: 220px;
-  height: 280px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Light background for the cards */
+  border: 1px solid #e9e9e9; /* Slightly darker border for visibility */
+  border-radius: 12px; /* Smooth rounded corners */
+  width: 200px; /* Reduced width */
+  height: 220px; /* Reduced height */
+  padding: 15px; /* Adjusted padding for the smaller card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Improved shadow for card elevation */
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
@@ -30,51 +34,117 @@
 }
 
 .study-goal-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px); /* More noticeable hover effect */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 
+/* Styling for the icon and title-college container */
+.icon-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the icon container */
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px; /* Increased icon container size */
+  height: 60px; /* Increased icon container size */
+  margin-left: -130px;
+  margin-top: 7px;
+}
+
+/* Styling for the icons inside the cards */
 .study-goal-item .icon {
-  font-size: 50px;
-  margin-bottom: 15px;
+  font-size: 40px; /* Increased icon size */
+  width: 60px; /* Increased icon width */
+  height: 60px; /* Increased icon height */
+  line-height: 60px; /* Aligns the icon vertically */
+  background-color: #fff; /* Slightly lighter background */
+  border: 1.5px solid #e9e9e9; /* Slightly darker border for better visibility */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjusted shadow for smaller size */
   text-align: center;
+  border-radius: 50%; /* Circular shape */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.study-goal-item .icon:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Styling for the title and college count container */
+.title-college-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: -52px;
+  margin-left: 60px;
+  
+}
+
+/* Styling for headings inside cards */
 .study-goal-item h3 {
   font-size: 22px;
-  margin: 0 0 10px;
+  margin: 0;
   text-align: center;
+  font-size: 20px;
+  color: #333;
 }
 
+/* Styling for text below the title */
 .study-goal-item p {
-  font-size: 16px;
+  font-size: 14px;
   color: #777;
+  margin: 12px 0 0 0; /* Adjusted margin for better alignment */
   text-align: center;
+  font: "din", sans-serif;
 }
 
+/* Styling for the list of courses inside the card */
 .study-goal-item ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  
+  
 }
 
 .study-goal-item ul li {
   font-size: 14px;
   margin: 5px 0;
   color: #555;
+  font-size: 15px;
+  text-align:left;
+  
+}.study-goal-item ul li:hover {
+  color:#ff7900; /* Change color to blue on hover */
+  cursor: pointer; /* Show pointer cursor on hover */
 }
 
+/* Styling for the ul container */
+.ul-container {
+  margin-top: 9px; /* Adjust as needed */
+  margin-bottom: 55px;
+  padding: 8px 10px 8px 0;
+  
+}
+
+/* Styling for the "Show More" and "Back" buttons */
 .show-more,
 .back-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 70px; /* Increased back button size */
+  height: 70px; /* Increased back button size */
   background-color: #007bff;
   color: white;
   border-radius: 50%;
-  font-size: 24px;
+  font-size: 30px; /* Increased font size for arrows */
   cursor: pointer;
   transition: background-color 0.3s;
   margin-top: 20px;
@@ -92,3 +162,13 @@
 .back-arrow {
   transform: rotate(180deg);
 }
+.study-goal-item ul li:nth-child(2) {
+  border-bottom: 1.5px solid #e9e9e9;
+}
+.study-goal-item ul li:nth-child(1) {
+  border-bottom: 1.5px solid #e9e9e9;
+}
+.h22{
+  color: #333;
+}
+

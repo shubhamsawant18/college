@@ -20,7 +20,7 @@ const StudyGoals = () => {
     {
       title: 'Commerce',
       colleges: 4970,
-      courses: ['B.Com', 'M.Com','More about Commerce'],
+      courses: ['B.Com', 'M.Com', 'More about Commerce'],
       icon: '🛒',
     },
     {
@@ -35,13 +35,13 @@ const StudyGoals = () => {
     {
       title: 'Medical',
       colleges: 2369,
-      courses: ['MBBS', 'PG Medical','MD'],
+      courses: ['MBBS', 'PG Medical', 'MD'],
       icon: '🩺',
     },
     {
       title: 'Design',
       colleges: 1411,
-      courses: ['B.Des', 'M.Des','More about Des'],
+      courses: ['B.Des', 'M.Des', 'More about Des'],
       icon: '🎨',
     },
     {
@@ -54,18 +54,26 @@ const StudyGoals = () => {
 
   return (
     <div className="study-goal-container">
-      <h2>Select Your Study Goal</h2>
+      <h2 class="h22">Select Your Study Goal</h2>
       <div className="study-goal-list">
         {!showMore && initialGoals.map((goal, index) => (
           <div key={index} className="study-goal-item">
-            <div className="icon">{goal.icon}</div>
-            <h3>{goal.title}</h3>
-            <p>{goal.colleges} Colleges</p>
-            <ul>
-              {goal.courses.map((course, idx) => (
-                <li key={idx}>{course}</li>
-              ))}
-            </ul>
+            <div className="icon-title-container">
+              <div className="icon-container">
+                <div className="icon">{goal.icon}</div>
+              </div>
+              <div className="title-college-container">
+                <h3>{goal.title}</h3>
+                <p>{goal.colleges} Colleges</p>
+              </div>
+            </div>
+            <div className="ul-container">
+              <ul>
+                {goal.courses.map((course, idx) => (
+                  <li key={idx}>{course}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         ))}
         {showMore && (
@@ -75,14 +83,22 @@ const StudyGoals = () => {
             </div>
             {moreGoals.map((goal, index) => (
               <div key={index} className="study-goal-item">
-                <div className="icon">{goal.icon}</div>
-                <h3>{goal.title}</h3>
-                <p>{goal.colleges} Colleges</p>
-                <ul>
-                  {goal.courses.map((course, idx) => (
-                    <li key={idx}>{course}</li>
-                  ))}
-                </ul>
+                <div className="icon-title-container">
+                  <div className="icon-container">
+                    <div className="icon">{goal.icon}</div>
+                  </div>
+                  <div className="title-college-container">
+                    <h3>{goal.title}</h3>
+                    <p>{goal.colleges} Colleges</p>
+                  </div>
+                </div>
+                <div className="ul-container">
+                  <ul>
+                    {goal.courses.map((course, idx) => (
+                      <li key={idx}>{course}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </>

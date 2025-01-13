@@ -1,0 +1,278 @@
+/* Main container for card image */
+.card-image-container {
+    position: relative;
+    width: 100%;
+    height: 140px;
+}
+
+/* Title and Location container */
+.title-location-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1; /* Ensure it is on top of the image */
+    display: flex;
+    align-items: center;
+    gap: -8px;
+    flex-direction: row;
+    margin-top: 17px;
+}
+
+/* Logo container (no background, no rounded border) */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px; /* Adjust the height */
+    width: 30px;  /* Adjust the width */
+    margin-left: 16px;
+    margin-top: 25px;
+    /* No background or border-radius, logo is just an image */
+}
+
+/* Logo image */
+.logo {
+    height: 100%; /* Logo fills the container */
+    width: 100%;  /* Logo fills the container */
+    object-fit: contain; /* Keep the logo in its aspect ratio */
+}
+
+/* Styling for the title */
+.card-title-container {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+
+/* Styling for the location */
+.card-location-container {
+    font-size: 14px;
+    color: #fff;
+    margin-top: -10px;
+    margin-left: 00px;
+}
+
+/* Image Section */
+.card-image {
+    height: 140px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Main container for card */
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Adjusted card width */
+.col-md-3 {
+    flex: 0 0 29%; /* Increased width from 23% to 30% */
+    box-sizing: border-box;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #333;
+    text-align: left;
+    font-family: "din,sans-serif";
+}
+
+/* Card styling */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 3.5px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: auto; /* Set height to auto to allow flexible content adjustment */
+    margin-bottom: 20px; /* Add some spacing between the cards */
+    max-width: 100%; /* Ensure the card takes up the full width of its container */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Body */
+.card-body {
+    padding: 15px;
+    height: auto; /* Set height to auto for natural content height */
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card-location {
+    font-size: 13px;
+    color: #e9e9e9;
+    margin-bottom: 8px;
+    margin-top: -6px;
+}
+
+/* New Styles for Course, Fees, Ratings, and Reviews */
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: -20px 0;
+    margin-bottom: 20px;
+    padding-bottom: 5.5px; /* Add padding to leave space before the border */
+    border-bottom: 1px solid #ddd; /* The border will appear slightly lower now */
+}
+
+.course-fees {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-course {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+.card-fees {
+    font-size: 12.5px;
+    margin-top: -10px;
+}
+
+/* Style for the fee value (e.g., 2.31 Lacs) */
+.card-fees .fees-value {
+    color: #007bff; /* Blue color for fee value */
+    font-weight: bold; /* Optional: Make it bold */
+}
+
+/* Style for the "First Year Fees" text */
+.card-fees .fees-text {
+    color: #666; /* Gray color for text */
+}
+
+/* New Styles for Rankings */
+.rankings-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    margin-top: -90px;
+    margin-left: -179px;
+    padding-top: 30px;
+}
+
+.card-rank {
+    font-size: 15px;
+    color: #666;
+    margin-top: -14px; /* Adjust this value to move the text higher */
+    margin-bottom: 9px;
+    padding-top: -2px; /* Remove padding to ensure the border is right after the text */
+    padding-bottom: -9px;
+    border-bottom: 1px solid #ddd;
+    height: 29px;
+}
+
+/* New Styles for Reviews */
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.card-rating {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.card-reviews {
+    font-size: 12.5px;
+    color: #666;
+    margin-top: -13.5px;
+}
+
+.card-actions {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 20px; /* Adds space below links */
+    border-bottom: 1px solid #ddd; /* Add a border to the bottom */
+}
+
+
+.card-actions a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Adding red border below the first two links */
+.card-actions {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 10px; /* Adds space below links */
+    border-bottom: 1px solid #ddd; /* Add a border to the bottom */
+}
+
+/* Adding border-bottom for the first two links only */
+.card-actions a:nth-child(1),
+.card-actions a:nth-child(2) {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px; /* Adjust spacing if needed */
+}
+
+/* Hover effect for links */
+.card-actions a:hover {
+    color: #ff7900;
+}
+
+/* Ensure no border for the third link */
+.card-actions a:nth-child(3) { border-bottom: none; /* Remove border for the third link */ padding-bottom: 0; /* Ensure no padding */ margin-bottom: 0; /* Ensure no margin */ }
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .col-md-3 {
+        flex: 0 0 48%; /* Slightly narrower to fit more cards */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 100%; /* Full width on mobile */
+    }
+}
