@@ -70,6 +70,7 @@ const CardImages = () => {
       img: "/assets/images/university.jpg",
       logo: "/assets/collegenamelogos/bitspilani.webp",
     },
+   
   ];
   
 

@@ -1,0 +1,266 @@
+.TableBanner {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1080px;
+  margin: 20px auto;
+}
+
+.Bannercontainer {
+  margin-top: 39px;
+  padding-bottom: 30px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1018px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fce9d2;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 35px;
+  margin-top: 39px;
+  padding-bottom: 55px;
+}
+
+.text {
+  font-size: 26px;
+  color: #395aa1;
+  margin-right: 20px;
+  margin-left: 45px;
+  font-weight: 540;
+  margin-top: 33px;
+}
+
+.button {
+  background-color: #ff7900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-right: 350px;
+  height: 46px;
+  width: 220px;
+  margin-top: 30px;
+}
+
+.button:hover {
+  background-color: #e67600;
+}
+
+/* Heading */
+.heading {
+  margin-right: 700px;
+  color: #333;
+  font-size: 28px;
+  margin-top: 70px;
+  margin-left: 10px;
+}
+
+/* Dropdown and Buttons Container */
+.dropdown-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0;
+  margin-left: 1px;
+  margin-top: 31px;
+  margin-bottom: 28px;
+}
+
+.dropdown-container {
+  margin-left: 30px;
+}
+
+.dropdown1 {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #dedede;
+  border-radius: 100px;
+  background-color: #fff;
+  height: 37px;
+  width: 200px;
+  margin-right: 50px;
+  color: #333;
+  margin-left: -32px;
+  font-weight: 500;
+  margin-bottom: -60px;
+}
+
+/* Buttons */
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 1px;
+  margin-bottom: -11px;
+  
+  
+  
+}
+
+.buttons-container button {
+  padding: 10px 15px;
+  font-size: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #333;
+  font-weight: 500;
+}
+.viewcontainer{
+  margin-top: -42px;
+}
+
+.view-all {
+  color: #ff7900;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-right: -962px;
+  margin-bottom: 900px;
+  margin-top: 20px;
+  
+}
+
+.buttons-container button:hover,
+.view-all:hover {
+  background-color: #f0f0f0;
+}
+
+.arrow-button {
+  background-color: rgb(40, 111, 173);
+  color: white;
+  font-size: 28px;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.arrow-button:hover {
+  background-color: rgb(35, 99, 155);
+}
+
+
+/* Table Styles */
+.college-table1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: #333;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  table-layout: fixed; /* Ensures columns follow defined widths */
+}
+
+.college-table1 th,
+.college-table1 td {
+  padding: 10px 8px; /* Reduced padding for less spacing */
+  text-align: left;
+  border: 1px solid #ddd;
+  vertical-align: middle; /* Align content vertically in the middle */
+  font-weight: 500;
+  color: #333;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-right: -20px;
+}
+
+.college-table1 td:hover {
+  color: #ff7900; /* Orange hover color */
+  /* Change text color to white on hover */
+}
+
+.college-table1 th {
+  background-color: white;
+  font-weight: bold;
+  height: 30px; /* Reduced header height */
+  font-size: 14px;
+  padding-left: 12px;
+
+}
+
+.college-table1 td:first-child, /* First column (College) */
+.college-table1 th:first-child {
+  width: 53%; /* First column (College) gets 53% */
+  word-wrap: break-word; /* Ensure text wraps within the cell */
+}
+
+.college-table1 td:nth-child(2),
+.college-table1 td:nth-child(3),
+.college-table1 th:nth-child(2),
+.college-table1 th:nth-child(3) {
+  width: 23.5%; /* Remaining two columns share 47% equally */
+}
+
+.college-table1 tr:nth-child(even) {
+  background-color: #f5f8f9; /* Alternate row color for better readability */
+}
+
+.college-table1 tr {
+  height: 58px; /* Slightly reduced row height */
+}
+
+
+
+.college-table1 th,
+.college-table1 td {
+  text-align: left;
+}
+
+.college-table1 tr:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .college-table1 {
+    font-size: 12px;
+  }
+
+  .college-table1 td:first-child,
+  .college-table1 th:first-child {
+    width: 60%; /* Slightly wider for smaller screens */
+  }
+
+  .college-table1 td:nth-child(2),
+  .college-table1 td:nth-child(3),
+  .college-table1 th:nth-child(2),
+  .college-table1 th:nth-child(3) {
+    width: 20%; /* Proportionally smaller on smaller screens */
+  }
+
+  .college-table1 img {
+    width: 20px; /* Smaller logo size for smaller screens */
+    height: 20px;
+  }
+}
+.college-logo {
+  margin-top: 2px;
+  height: 0px; /* Reduced size */
+  width: auto; /* Maintain aspect ratio */
+}
+.college-table1 img {
+  width: 27px; /* Logo size */
+  height: 27px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.college-table1 td:first-child img {
+  display: inline-block; /* Align image with text */
+}
+

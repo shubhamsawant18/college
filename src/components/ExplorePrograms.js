@@ -6,6 +6,7 @@ const ExplorePrograms = () => {
     <div className="explore-programs container">
       <h2 className="expro-text-center">Explore Programs</h2>
       <div className="program-buttons">
+        
         <button>All</button>
         <button>BE/B.Tech</button>
         <button>MBA/PGDM</button>

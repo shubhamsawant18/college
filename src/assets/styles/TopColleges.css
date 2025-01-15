@@ -161,8 +161,11 @@
   margin-left: 0px;
 }
 .arrow-button{
-  background-color: #666;
-  color: #fff;
+  background-color: rgb(40, 111, 173);
+  color: #666;
+  font-size: 28px;
+ 
+  border-radius: 50%;
 }
 .thread{
   color: #666;

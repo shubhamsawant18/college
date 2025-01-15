@@ -14,15 +14,7 @@
 }
 
 .program-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1170px;
-  gap: 12px; /* Reduced gap between buttons */
-  justify-content: center; /* Center the buttons */
-  margin-bottom: 27px;
-  margin-top: 8px;
-  color: #666;
-  margin-left: -60px;
+  display: flex ; flex-wrap: wrap; max-width: 1170px; gap: 12px; justify-content: center; margin-bottom: 27px; margin-top: 8px; color: #666; margin-left: -27px;
 }
 
 .program-buttons button,
@@ -50,9 +42,14 @@
 }
 
 .program-buttons .arrow-button {
-  background-color: #6c757d;
-  color: white;
+  background-color: aliceblue;
+  color: #666;
+  font-size: 28px;
+  height: 40px;
+  
+  
 }
+
 
 .program-cards-container {
   display: grid;

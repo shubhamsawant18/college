@@ -55,13 +55,18 @@
 }
 
 /* Image Section */
+/* Image Section */
 .card-image {
     height: 140px;
     width: 100%;
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for the image */
+    object-fit: cover; /* Ensures the image fits correctly without affecting container size */
 }
+
+
 
 /* Main container for card */
 .container {
@@ -72,10 +77,11 @@
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 24px;
     font-weight: bold;
     color: #333;
+    margin-left: -770px;
 }
 
 .row {
@@ -162,7 +168,9 @@ h2 {
     font-weight: bold;
     color: #444;
 }
-
+.card-course:hover {
+    color: #ff7900; 
+  }
 .card-fees {
     font-size: 12.5px;
     margin-top: -10px;

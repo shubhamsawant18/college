@@ -9,7 +9,7 @@ import AdminPage from "./components/AdminPage";
 import StudyGoals from "./components/StudyGoals";
 import ExplorePrograms from "./components/ExplorePrograms";
 import TopColleges from "./components/TopColleges";
-
+import Banner from "./components/Banner";
 
 import Divider from "./components/Divider";
 
@@ -60,6 +60,8 @@ const IndexPage = () => {
       <Divider/>
       <CardImages />
       <Divider/>
+      <Banner />
+      
      
      
       <Footer />

@@ -120,8 +120,7 @@ const TopColleges = () => {
       <h1 className="title">Top Colleges in India</h1>
 
       <div className="course-buttons">
-      
-        
+  
     <button>All</button>
     <button>B.Tech</button>
     <button>MBA</button>
@@ -129,20 +128,12 @@ const TopColleges = () => {
     <button>B.Pharmacy</button>
     <button>M.Pharmacy</button>
     <button>M.Sc</button>
-
-    
-
         <button>B.Tech</button>
-   
-
-  
     <button>Diploma</button>
     <button>Certificate Courses</button>
- 
+    <div class="arrow-container">
     <button className="arrow-button">→</button>
-
-
-    
+    </div>
       </div>
       <table className="college-table">
         <thead class="thead">
