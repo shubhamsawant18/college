@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/styles/Banner.css";
+import "../assets/styles/BannerTable.css";
 
 const Banner = () => {
   const colleges = [

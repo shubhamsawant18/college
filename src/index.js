@@ -9,10 +9,9 @@ import AdminPage from "./components/AdminPage";
 import StudyGoals from "./components/StudyGoals";
 import ExplorePrograms from "./components/ExplorePrograms";
 import TopColleges from "./components/TopColleges";
-import Banner from "./components/Banner";
-
+import BannerTable from "./components/BannerTable";
 import Divider from "./components/Divider";
-
+import Topstudy from "./components/Topstudy";
 import Login from "./components/Login";
 import CardImages from "./components/CardImages";
 import reportWebVitals from "./reportWebVitals";
@@ -46,26 +45,34 @@ const IndexPage = () => {
           </button>
         </div>
       </div>
-  
+
       {/* Study Goals Section */}
       <StudyGoals />
-  
-      {/* Divider placed between sections */}
+      
       <Divider />
-  
+
       {/* Explore Programs Section */}
       <ExplorePrograms />
+
       <Divider />
+
       <TopColleges />
-      <Divider/>
+
+      <Divider />
+
       <CardImages />
-      <Divider/>
-      <Banner />
-      
-     
-     
+
+      <Divider />
+
+      <BannerTable />
+
+      {/* Here we add Topstudy */}
+      <Topstudy />
+
+      <Divider />
+
       <Footer />
-     
+      
       <RegistrationModal show={isModalVisible} onClose={closeModal} />
     </div>
   );

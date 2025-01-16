@@ -20,7 +20,6 @@
   background-color: #fce9d2;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 35px;
   margin-top: 39px;
   padding-bottom: 55px;
 }
@@ -52,6 +51,7 @@
 .button:hover {
   background-color: #e67600;
 }
+
 
 /* Heading */
 .heading {
