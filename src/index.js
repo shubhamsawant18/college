@@ -15,7 +15,7 @@ import Topstudy from "./components/Topstudy";
 import Login from "./components/Login";
 import CardImages from "./components/CardImages";
 import reportWebVitals from "./reportWebVitals";
-
+import ExploreCourses from "./components/ExploreCourses";
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -70,7 +70,8 @@ const IndexPage = () => {
       <Topstudy />
 
       <Divider />
-
+    <ExploreCourses />
+    <Divider />
       <Footer />
       
       <RegistrationModal show={isModalVisible} onClose={closeModal} />
