@@ -75,7 +75,7 @@ const Topstudy = () => {
       <div className="Bannercontainer">
         <div className="banner">
           <div className="text">Subscribe For Regular Alerts</div>
-          <button className="button">Subscribe Now</button>
+          <button className="button0">Subscribe Now</button>
         </div>
       </div>
 

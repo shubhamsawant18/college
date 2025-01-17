@@ -1,15 +1,16 @@
+/* Container styles */
 .explore-courses {
   max-width: 1170px;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: #fff; /* Temporarily set a background */
-/* Thicker, brighter border */
-  min-height: 50px; /* Ensure height is sufficient */
+  background-color: #fff; /* Temporary background */
+
+  position: relative; /* Prevent potential clipping */
+  z-index: 100; /* Ensure it's on top of overlapping elements */
+  min-height: 100px; /* Increase height to test visibility */
+
 }
-
-
-
 
 /* Heading styles */
 .explore-courses h2 {
@@ -40,21 +41,18 @@
   color: #555;
   cursor: pointer;
   transition: all 0.3s ease;
-  
 }
 
 .tab.active {
-  
   color: #444;
   font-weight: bold;
-  border-color: #444
+  border-color: #444;
 }
 
 .tab:hover {
   background-color: #fff;
   color: #222;
   border-color: #444;
-  
 }
 
 /* Course card container */
@@ -71,7 +69,6 @@
 }
 
 /* Course card styles */
-/* Course card styles */
 .course-card {
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -82,9 +79,13 @@
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: auto; /* Ensures the card height adjusts dynamically */
+  margin-bottom: 20px; /* Add space below each card */
 }
 
-
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
 
 .full-time {
   background-color: rgb(244, 244, 244);
@@ -107,10 +108,10 @@
   cursor: pointer;
 }
 
-.course-title:hover{
+.course-title:hover {
   color: #ff7900;
 }
-/* #ff7900 */
+
 /* Course card detail styles */
 .course-details {
   display: flex;
@@ -147,5 +148,51 @@
 
 .course-overview1:hover {
   text-decoration: underline;
-  color:#ff7900;
+  color: #ff7900;
+}
+
+/* New image container */
+.image-container1 {
+  
+  text-align: center;
+  margin-top: 30px;
+  height: 150px;
+  position: relative; /* Required for pseudo-elements */
+  margin-left: 30px;
+}
+
+/* Styling for the image */
+/* Styling for the image */
+.image-container1 img {
+  max-width: 93.5%; /* Ensure the image remains responsive */
+  height: 121px; /* Increased height for the image */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  object-fit: cover; /* Ensures the image maintains aspect ratio */
+}
+
+
+/* Border above the container (before) */
+.image-container1::before {
+  content: "";
+  position: absolute;
+  top: -15px; /* Position above the container */
+  left: 50%; /* Center horizontally */
+  width: 140%; /* Wider than the container */
+  height: 0.5px; /* Border thickness */
+  background-color: #ddd; /* Border color */
+  transform: translateX(-50%); /* Center alignment */
+}
+
+/* Border below the container (after) */
+.image-container1::after {
+  content: "";
+  position: absolute;
+  bottom: -15px; /* Position below the container */
+  left: 50%; /* Center horizontally */
+  width: 140%; /* Wider than the container */
+  height: 0.5px; /* Border thickness */
+  background-color: #ddd; /* Border color */
+  transform: translateX(-50%); /* Center alignment */
 }

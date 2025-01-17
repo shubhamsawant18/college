@@ -11,19 +11,20 @@
   max-width: 1018px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fce9d2;
+  background-color: #fce8d2;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 100px;
+  height: 75px;
 }
 
 .text {
   font-size: 26px;
-  margin-left: 45px;
+  margin-left: 52px;
   font-weight: 540;
+  margin-top: 4px;
 }
 
-.button {
+.button0 {
   background-color: #ff7900;
   color: white;
   border: none;
@@ -32,12 +33,13 @@
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
-  margin-right: 50px;
+  margin-right: 390px;
   height: 46px;
   width: 220px;
+  margin-top: 2px;
 }
 
-.button:hover {
+.button0:hover {
   background-color: #e67600;
 }
 
