@@ -1,0 +1,147 @@
+/* Container styles */
+.explore-courses {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* Heading styles */
+.explore-courses h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 23px;
+  margin-top: -2px;
+  margin-left: -815px;
+  color: rgb(51,51,51);
+}
+
+/* Tabs container */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+  margin-left: -444px;
+}
+
+.tab {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.tab.active {
+  
+  color: #444;
+  font-weight: bold;
+  border-color: #444
+}
+
+.tab:hover {
+  background-color: #fff;
+  color: #222;
+  border-color: #444;
+  
+}
+
+/* Course card container */
+.coursee-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  margin-left: 66px;
+}
+
+.coursee-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Course card styles */
+/* Course card styles */
+.course-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px; /* Reduced padding from 20px to 15px */
+  min-width: 220px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto; /* Ensures the card height adjusts dynamically */
+}
+
+
+
+.full-time {
+  background-color: rgb(244, 244, 244);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  height: 15px;
+  padding-top: 2px;
+}
+
+.course-title {
+  font-size: 17.5px;
+  color: #444;
+  margin-bottom: 24px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.course-title:hover{
+  color: #ff7900;
+}
+/* #ff7900 */
+/* Course card detail styles */
+.course-details {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  margin-top: -10px;
+}
+
+.course-details-left, .course-details-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.course-overview0 {
+  margin-bottom: -10px; /* Adjusted to maintain space consistency */
+  margin-top: 5px; /* Added margin to push it slightly downward */
+}
+
+.course-overview1 {
+  display: inline-block;
+  font-size: 16px; /* Increased font size for better visibility */
+  text-decoration: none;
+  font-weight: 600; /* Slightly bolder for emphasis */
+  cursor: pointer;
+}
+
+.course-overview1:hover {
+  text-decoration: underline;
+  color:#ff7900;
+}
