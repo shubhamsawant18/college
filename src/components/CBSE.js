@@ -42,12 +42,14 @@ const CBSE = () => {
       {cbseData.map((section, index) => (
         <div key={index} className="cbse-section">
           <h2 className="cbse-title">{section.title}</h2>
-          <div className="cbse-links">
-            {section.links.map((link, idx) => (
-              <a key={idx} href="#" className="cbse-link">
-                {link} <span className="cbse-arrow">&#8594;</span>
-              </a>
-            ))}
+          <div className="cbse-links-container">
+            <div className="cbse-links">
+              {section.links.map((link, idx) => (
+                <a key={idx} href="#" className="cbse-link">
+                  {link} <span className="cbse-arrow">&#8594;</span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       ))}

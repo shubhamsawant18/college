@@ -1,0 +1,143 @@
+.top-exams-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.exam-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 180px; /* Reduced height */
+  border: 1px solid rgb(233, 233, 233); /* Added border */
+  margin: 5px; /* Added gap between cards */
+  height: 100%;
+  
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  margin-top: -15px;
+}
+
+.exam-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.type-and-name-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px; /* Move the container close to the logo */
+  margin-top: 20px;
+}
+
+.exam-type {
+  font-size: 12px;
+  color:rgb(102, 102, 102);
+  background-color: rgb(244, 244, 244);
+  padding: 5px 10px;
+  border-radius: 4px;
+  
+  min-width: 80px;
+  font-size: 14px;
+}
+
+
+
+
+.exam-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 3px;
+  padding: 8px;
+}
+
+.card-middle {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.card-bottom {
+  text-align: left;
+  font-size: 14px;
+  color: #555;
+}
+
+.exam-details-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-left, .details-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.details-left p {
+  text-align: left;
+}
+
+.details-right p {
+  text-align: right;
+}
+
+.links {
+  margin-top: 10px;
+}
+
+.link {
+  font-size: 12px;
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Slider Dots and Arrows */
+.slick-dots {
+  bottom: -25px;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #007bff;
+}
+
+.slick-dots li.slick-active button:before {
+  color: grey;
+}
+
+.slick-prev,
+.slick-next {
+  width: 35px;
+  height: 35px;
+  z-index: 10;
+}
+
+.slick-prev {
+  left: -40px;
+}
+
+.slick-next {
+  right: -40px;
+}
