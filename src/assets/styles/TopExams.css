@@ -1,143 +1,209 @@
-.top-exams-container {
-  padding: 20px;
+/* Outer container for Top Exams section */
+.top-exams-outer-container {
+  padding: 20px 40px;
   background-color: #f9f9f9;
-  text-align: center;
+  margin-left: -40px;
 }
 
+/* Inner container to centralize content */
+.top-exams-inner-container {
+  max-width: 1170px; /* Increased max-width */
+  margin: 0 auto;
+}
+
+/* Section title styling */
 .title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
   color: #333;
+  margin-left: -860px;
 }
 
+/* Slider container for the carousel */
+.slider-container {
+  position: relative;
+  padding: 20px 0; /* Adjusted padding */
+  background-color: #f9f9f9;
+}
+
+/* New class for individual card with margin for spacing */
+.exam-card-container {
+  padding: 0 10px; /* Adjusted padding */
+  box-sizing: border-box;
+}
+
+/* Individual exam card styling */
 .exam-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 180px; /* Reduced height */
-  border: 1px solid rgb(233, 233, 233); /* Added border */
-  margin: 5px; /* Added gap between cards */
-  height: 100%;
-  
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  max-width: 650px; /* Increased max-width */
+  height: 261px; /* Increased height */
+  border: 1px solid #ddd;
 }
 
+/* Top section of the card */
 .card-top {
   display: flex;
   align-items: center;
-  margin-top: -15px;
+  padding: 15px;
 }
 
 .exam-logo {
   width: 50px;
   height: 50px;
-  object-fit: contain;
+  object-fit: cover;
+  margin-right: 15px;
 }
 
 .type-and-name-container {
   display: flex;
   flex-direction: column;
-  margin-left: 10px; /* Move the container close to the logo */
-  margin-top: 20px;
 }
 
+/* Original exam mode styling (Online/Offline Exam) */
 .exam-type {
   font-size: 12px;
-  color:rgb(102, 102, 102);
+  color: rgb(102, 102, 102);
   background-color: rgb(244, 244, 244);
   padding: 5px 10px;
   border-radius: 4px;
-  
   min-width: 80px;
-  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
-
-
-
 
 .exam-name {
   font-size: 18px;
   font-weight: bold;
   color: #333;
-  margin-top: 3px;
-  padding: 8px;
+  margin: 0;
+  margin-left: -13px;
 }
 
-.card-middle {
-  text-align: center;
-  margin: 10px 0;
-}
-
+/* Bottom section of the card */
 .card-bottom {
-  text-align: left;
-  font-size: 14px;
-  color: #555;
+  padding: 15px;
+  margin-top: 10px; /* Added spacing between .card-top and .card-bottom */
 }
 
+/* Exam details container */
 .exam-details-container {
-  margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  gap: 20px; /* Space between left and right sections */
+  margin-top: -18px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 16px; /* Adds space below the content */
 }
 
-.details-left, .details-right {
+/* Left column for labels */
+.details-left {
   display: flex;
   flex-direction: column;
+  gap: 8px; /* Adds consistent spacing between labels */
 }
 
 .details-left p {
+  font-size: 15px;
+  color: #555;
+  margin: 0; /* Removes default margin */
   text-align: left;
+  padding-bottom: 4px; /* Adds space between text */
+}
+
+/* Right column for values */
+.details-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Adds consistent spacing between values */
 }
 
 .details-right p {
+  font-size: 15px;
+  color: #333;
+  margin: 0; /* Removes default margin */
   text-align: right;
+  font-weight: bold; /* Highlights values */
+  padding-bottom: 4px; /* Adds space between text */
 }
 
+/* Links at the bottom of the card */
 .links {
-  margin-top: 10px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
 }
 
 .link {
-  font-size: 12px;
-  color: #007bff;
+  font-size: 14px;
+  color: #333; /* Changed color from blue to normal */
   text-decoration: none;
-  margin-right: 10px;
 }
 
 .link:hover {
   text-decoration: underline;
 }
 
-/* Slider Dots and Arrows */
+.links .divider {
+  border-bottom: 1px solid #ddd;
+  margin: -3px;
+}
+
+/* Dots for the slider */
 .slick-dots {
-  bottom: -25px;
+  bottom: -20px;
 }
 
 .slick-dots li button:before {
-  font-size: 12px;
-  color: #007bff;
+  font-size: 10px;
+  color: #ccc;
 }
 
-.slick-dots li.slick-active button:before {
-  color: grey;
+
+
+/* Custom arrows for the slider */
+.custom-arrow {
+  background-color: #ff7900;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-40%); /* Adjusted to move arrows slightly down */
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.slick-prev,
-.slick-next {
-  width: 35px;
-  height: 35px;
-  z-index: 10;
+.custom-prev {
+  left: -15px;
 }
 
-.slick-prev {
-  left: -40px;
+.custom-next {
+  right: -15px;
 }
 
-.slick-next {
-  right: -40px;
+.custom-arrow:hover {
+  background-color: #e66f00;
+}
+
+.arrow-icon {
+  margin-top: 10px; /* Move the arrow symbol down within the container */
+  font-size: 22px;
+  font-style: normal;
 }
