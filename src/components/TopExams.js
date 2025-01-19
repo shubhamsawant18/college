@@ -15,6 +15,25 @@ const examsData = [
   { name: "CBSE UGC NET", logo: "assets/TopExamslogo/CBSEU.webp", type: "Online Exam", colleges: "N/A", date: "Jan 2025", level: "National" },
 ];
 
+const cbseData = [
+  {
+    title: "Admission 2024",
+    links: [
+      "B Ed Admission 2024",
+      "MBA Admission 2024",
+      "MBBS Admission 2024",
+      "BA Admission 2024",
+      "M Tech Admission 2024",
+      "PhD Admission 2024",
+      "LLB Admission 2024",
+      "D El Ed Admission 2024",
+      "BSc Admission 2024",
+      "B Pharmacy Admission 2024",
+      
+    ],
+  },
+];
+
 const SampleNextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -43,7 +62,7 @@ const SamplePrevArrow = (props) => {
 
 const TopExams = () => {
   const settings = {
-    
+    dots: true,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -88,9 +107,9 @@ const TopExams = () => {
                       </div>
                     </div>
                     <div className="links">
-                      <div className="link">Application Process</div>
+                      <div className="link">Application Process <span className="cbse-arrow">&#8594;</span></div>
                       <div className="divider"></div>
-                      <div className="link">Exam Info</div>
+                      <div className="link">Exam Info <span className="cbse-arrow">&#8594;</span></div>
                     </div>
                   </div>
                 </div>
@@ -98,6 +117,24 @@ const TopExams = () => {
             ))}
           </Slider>
         </div>
+      </div>
+
+      {/* CBSE Section below the Top Exams section */}
+      <div className="admission-container">
+        {cbseData.map((section, index) => (
+          <div key={index} className="cbse-section">
+            <h2 className="cbse-title">{section.title}</h2>
+            <div className="cbse-links-container">
+              <div className="cbse-links">
+                {section.links.map((link, idx) => (
+                  <a key={idx} href="#" className="cbse-link">
+                    {link} <span className="cbse-arrow">&#8594;</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

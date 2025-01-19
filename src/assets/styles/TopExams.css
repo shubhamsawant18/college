@@ -1,14 +1,16 @@
 /* Outer container for Top Exams section */
 .top-exams-outer-container {
   padding: 20px 40px;
-  background-color: #f9f9f9;
+  background-color: #fff;
   margin-left: -40px;
+  height: 610px;
 }
 
 /* Inner container to centralize content */
 .top-exams-inner-container {
   max-width: 1170px; /* Increased max-width */
   margin: 0 auto;
+background-color: fff;
 }
 
 /* Section title styling */
@@ -26,13 +28,14 @@
 .slider-container {
   position: relative;
   padding: 20px 0; /* Adjusted padding */
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 /* New class for individual card with margin for spacing */
 .exam-card-container {
   padding: 0 10px; /* Adjusted padding */
   box-sizing: border-box;
+  
 }
 
 /* Individual exam card styling */
@@ -54,7 +57,9 @@
   align-items: center;
   padding: 15px;
 }
-
+.cbse-title{
+  margin-left: -864px;
+}
 .exam-logo {
   width: 50px;
   height: 50px;
@@ -206,4 +211,16 @@
   margin-top: 10px; /* Move the arrow symbol down within the container */
   font-size: 22px;
   font-style: normal;
+}
+.admission-container {
+  width: 102.5%;
+  margin: 0 auto;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f8f9;
+  margin-top: 13px;
+  margin-bottom: 0px;
+  height: 200px;
+  border-top: 1px solid #ddd;  /* Added upper border */
+  border-bottom: 1px solid #ddd; /* Bottom border remains the same */
 }
