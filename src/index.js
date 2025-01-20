@@ -18,7 +18,7 @@ import reportWebVitals from "./reportWebVitals";
 import ExploreCourses from "./components/ExploreCourses";
 import CBSE from "./components/CBSE";
 import TopExams from "./components/TopExams";
-
+import LatestNews from "./components/LatestNews";
 
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -64,6 +64,7 @@ const IndexPage = () => {
       <ExploreCourses />
       <CBSE />
       <TopExams />
+      <LatestNews />
       
       <Footer />
       <RegistrationModal show={isModalVisible} onClose={closeModal} />

@@ -1,0 +1,161 @@
+/* LatestNews-specific styles */
+.latest-news-container {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-top: -27px;
+}
+
+.section-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  margin-left: -720px;
+
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 8px; 
+  margin-bottom: 30px;
+  margin-top: 11px;
+  margin-left: -635px;
+}
+
+.category-btn {
+  padding: 0 16px;
+  border: 1.5px solid #dedede;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  color: #212121;
+  font-size: 14.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(20, 9, 9, 0.1);
+  height: 40px;
+  font-weight: 400;
+}
+
+.category-btn:hover {
+  background-color: #f9f9f9;
+  color: #666666;
+}
+
+.category-btn.active {
+  background-color: #f9f9f9;
+  color: #212121;
+  box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Add padding to enforce spacing between slides */
+.news-slide {
+  padding: 0 10px; /* Adjust this value for desired gap */
+}
+
+.news-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  font-size: 0.9rem;
+  height: 230px;
+  width: auto;
+  max-width: 210px;
+  border: 1px solid #ddd;
+  
+}
+
+.news-header {
+  margin-bottom: 10px;
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.news-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.news-body {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.news-text {
+  margin-bottom: 10px;
+  font-size: 16px;
+  margin-top: 20px;
+  text-transform: capitalize;
+  height: 100px;
+  border-bottom: 1px solid #ddd;
+  
+}
+
+.read-more {
+  color: #444;
+  font-size: 0.8rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+font-size: 15px;
+  
+}
+
+.read-more:hover {
+  color: #0056b3;
+}
+
+/* Slider arrows */
+.slick-prev:before,
+.slick-next:before {
+  color: #007bff;
+  font-size: 20px;
+}
+
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.custom-prev {
+  left: -20px;
+}
+
+.custom-next {
+  right: -20px;
+}
+
+.arrow-icon {
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s;
+  margin-top: -3px;
+}
+
+.arrow-icon:hover {
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .categories {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .news-card {
+    width: 100%;
+  }
+}
