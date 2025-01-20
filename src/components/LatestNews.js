@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "../assets/styles/LatestNews.css";
 
-const SampleNextArrow = (props) => {
-  const { onClick } = props;
+const SampleNextArrow = ({ onClick }) => {
   return (
     <div className="custom-arrow custom-next" onClick={onClick}>
       <span className="arrow-icon">→</span>
@@ -11,31 +10,17 @@ const SampleNextArrow = (props) => {
   );
 };
 
-const SamplePrevArrow = (props) => {
-  const { onClick } = props;
+const SamplePrevArrow = ({ onClick, isVisible }) => {
   return (
-    <div className="custom-arrow custom-prev" onClick={onClick}>
+    <div className={`custom-arrow custom-prev ${isVisible ? "visible" : "hidden"}`} onClick={onClick}>
       <span className="arrow-icon">←</span>
     </div>
   );
 };
 
-const settings = {
-  dots: true,
-  infinite: false,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  arrows: true,
-  nextArrow: <SampleNextArrow />,
-  prevArrow: <SamplePrevArrow />,
-  responsive: [
-    { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 1 } },
-    { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
-  ],
-};
-
 const LatestNews = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const newsItems = [
     {
       title: "NTA SWAYAM July 2024: Semester Results",
@@ -72,8 +57,38 @@ const LatestNews = () => {
       date: "Jan 18, 2025",
       text: "CEED 2023 question paper and answer key PDF is available for download. The exam tests aptitude for design.",
     },
-   
+    {
+      title: "IIT JAM 2024 Chemistry (CY) Question Paper",
+      date: "Jan 18, 2025",
+      text: "IIT JAM 2024 Chemistry (CY) Question Paper with the answer key PDF is available for download. Exam conducted by IIT Madras.",
+    },
+    {
+      title: "JEE Main 2025 Session 1 Admit Card Released",
+      date: "Jan 18, 2025",
+      text: "JEE Main 2025 Session 1 admit card has been released on the official website with details of timing and venue.",
+    },
+    {
+      title: "CEED 2023 Question Paper (Available)",
+      date: "Jan 18, 2025",
+      text: "CEED 2023 question paper and answer key PDF is available for download. The exam tests aptitude for design.",
+    },
   ];
+
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow isVisible={currentSlide > 0} />,
+    beforeChange: (current, next) => setCurrentSlide(next),
+    responsive: [
+      { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 2 } },
+      { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
+    ],
+  };
 
   return (
     <div className="latest-news-container">

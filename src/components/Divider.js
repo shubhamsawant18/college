@@ -9,7 +9,7 @@ const Divider = () => {
         height: "0.1px", // Makes the line thinner
         backgroundColor: "#ccc", // Sets a light gray color
         borderRadius: "0.5px", // Gives rounded edges
-        marginTop:"7px",
+        marginTop:"-1px",
         color:"#f8f8f8",
       }}
     ></div>

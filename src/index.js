@@ -65,7 +65,7 @@ const IndexPage = () => {
       <CBSE />
       <TopExams />
       <LatestNews />
-      
+      <Divider />
       <Footer />
       <RegistrationModal show={isModalVisible} onClose={closeModal} />
     </div>
