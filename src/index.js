@@ -20,6 +20,7 @@ import CBSE from "./components/CBSE";
 import TopExams from "./components/TopExams";
 import LatestNews from "./components/LatestNews";
 
+
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -66,7 +67,9 @@ const IndexPage = () => {
       <TopExams />
       <LatestNews />
       <Divider />
+      
       <Footer />
+     
       <RegistrationModal show={isModalVisible} onClose={closeModal} />
     </div>
   );
