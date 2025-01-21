@@ -23,7 +23,7 @@
   margin-bottom: 27px;
   margin-top: -10px;
   color: #666;
-  margin-right: 50px;
+  margin-right: 40px;
 }
 
 .program-buttons button,
@@ -32,10 +32,10 @@
   background-color: #fff; /* Background color */
   color: #666; /* Text color */
   border: 1px solid #dedede; /* Border color */
-  border-radius: 80px; /* Rounded corners */
+  border-radius: 100px; /* Rounded corners */
   cursor: pointer;
   margin: 2px;
-  transition: transform 0.2s; /* Smooth transition on hover */
+  transition: transform 0.2s, background-color 0.2s, color 0.2s, border-color 0.2s; /* Smooth transition on hover and active state */
   font-size: 16px; /* Smaller font size */
   width: auto;
   text-align: center;
@@ -48,6 +48,12 @@
 .college-button:hover {
   transform: scale(1.05); /* Slightly enlarge buttons on hover */
 }
+.program-buttons .active {
+  background-color: #fff; /* Keep the background white */
+  color: #333; /* Change text color to black */
+  border: 1px solid #333; /* Change border color to black */
+}
+
 
 .program-buttons .arrow-button {
   background-color: aliceblue;
@@ -70,7 +76,6 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #ffffff;
-
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
@@ -81,8 +86,6 @@
   width: 99%; /* Allow card to be responsive within the max-width */
   height: 240px; /* Increased card height */
 }
-
-
 
 .top-section {
   background-color: #f5faff;
@@ -167,7 +170,6 @@
 .comparison section:last-child::after {
   content: ""; /* Remove " vs " after the last item */
 }
-
 .captions {
   margin-top: 0px;
   color: #666;
@@ -194,6 +196,5 @@
   margin-left: 8px;
 }
 .program-buttons{
-  margin-left: -68px;
-
+  margin-left: 0px;
 }

@@ -201,7 +201,11 @@ const ExplorePrograms = () => {
       <h2 className="expro-text-center">Explore Programs</h2>
       <div className="program-buttons">
         {Object.keys(courseData).map((course) => (
-          <button key={course} onClick={() => handleCourseChange(course)}>
+          <button
+            key={course}
+            onClick={() => handleCourseChange(course)}
+            className={selectedCourse === course ? 'active' : ''}
+          >
             {course.replace('_', '/')}
           </button>
         ))}
@@ -327,3 +331,4 @@ const ExplorePrograms = () => {
 };
 
 export default ExplorePrograms;
+
