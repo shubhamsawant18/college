@@ -7,10 +7,10 @@ const Divider = () => {
       style={{
         margin: "-31px 0 20px 0", // Adds margin (top: -20px, bottom: 20px)
         height: "0.1px", // Makes the line thinner
-        backgroundColor: "#ccc", // Sets a light gray color
+        backgroundColor: "#ddd", // Sets a light gray color
         borderRadius: "0.5px", // Gives rounded edges
-        marginTop:"-1px",
-        color:"#f8f8f8",
+        marginTop:"-24px",
+        
       }}
     ></div>
   );
