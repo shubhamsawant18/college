@@ -32,10 +32,10 @@ const ExplorePrograms = () => {
         { colleges: ['IIM Bangalore', 'IIM Mumbai'] },
         { colleges: ['IIM Ahmedabad', 'IIM Kolkata'] },
       ],
-      predictor: ['CET (MBA)', 'CAT', 'XAT'],
-      exams: ['CAT', 'MAT', 'XAT'],
-      courses: ['MBA/PGDM - 1141'],
-      findColleges: ['Best MBA colleges in India'],
+      predictor: ['CET (MBA)', 'CAT', 'XAT', 'MAT', 'NMAT', 'GMAT', 'CMAT'],
+      exams: ['CAT', 'MAT', 'XAT', 'CET (MBA)', 'NMAT', 'GMAT', 'CMAT'],
+      courses: ['MBA/PGDM - 1141', 'Executive MBA - 1023', 'Online MBA - 1342'],
+      findColleges: ['Best MBA colleges in India', 'Best MBA colleges in Mumbai'],
     },
     BE_BTech: {
       ranking: [
@@ -48,12 +48,141 @@ const ExplorePrograms = () => {
         { colleges: ['IIT Madras', 'IIT Delhi'] },
         { colleges: ['IIT Mumbai', 'IIT Kolkata'] },
       ],
-      predictor: ['JEE Main', 'JEE Advanced', 'GATE'],
-      exams: ['JEE Main', 'JEE Advanced', 'GATE'],
-      courses: ['BE/B.Tech - 1009'],
-      findColleges: ['Best BTech colleges in India'],
+      predictor: ['JEE Main', 'JEE Advanced', 'GATE', 'BITSAT', 'VITEEE', 'COMEDK', 'SRMJEEE'],
+      exams: ['JEE Main', 'JEE Advanced', 'GATE', 'BITSAT', 'VITEEE', 'SRMJEEE', 'COMEDK'],
+      courses: ['BE/B.Tech - 1009', 'B.Tech IT - 1234', 'B.Tech CSE - 1456', 'B.Tech ECE - 1678'],
+      findColleges: ['Best BTech colleges in India', 'Best BTech colleges in Mumbai'],
     },
-    // Add other courses similarly...
+    MBBS: {
+      ranking: [
+        { source: "Indiatoday", rank: 1600 },
+        { source: "Collegedunia", rank: 1400 },
+        { source: "IIRF", rank: 1500 },
+        { source: "NIRF", rank: 1300 },
+      ],
+      comparison: [
+        { colleges: ["AIIMS Delhi", "CMC Vellore"] },
+        { colleges: ["JIPMER Pondicherry", "KMC Manipal"] },
+      ],
+      predictor: ["NEET", "AIIMS MBBS", "JIPMER", "AFMC", "AMU MBBS", "CMC Vellore", "BHU MBBS"],
+      exams: ["NEET", "AIIMS MBBS", "JIPMER", "AFMC", "AMU MBBS", "CMC Vellore", "BHU MBBS"],
+      courses: ["MBBS - 1453", "BDS - 1134", "BAMS - 1225", "BHMS - 1346"],
+      findColleges: ["Best MBBS colleges in India", "Best MBBS colleges in Mumbai"],
+    },
+    ME_MTech: {
+      ranking: [
+        { source: "Indiatoday", rank: 1800 },
+        { source: "Collegedunia", rank: 1450 },
+        { source: "IIRF", rank: 1550 },
+        { source: "NIRF", rank: 1350 },
+      ],
+      comparison: [
+        { colleges: ["IIT Madras", "IIT Delhi"] },
+        { colleges: ["IIT Mumbai", "IIT Kanpur"] },
+      ],
+      predictor: ["GATE", "TANCET", "BITS HD", "SRMJEEE PG", "VITMEE", "CUCET", "IIITH PGEE"],
+      exams: ["GATE", "TANCET", "BITS HD", "SRMJEEE PG", "VITMEE", "CUCET", "IIITH PGEE"],
+      courses: ["ME/M.Tech - 1223", "M.Tech IT - 1234", "M.Tech CSE - 1456", "M.Tech ECE - 1678"],
+      findColleges: ["Best ME/MTech colleges in India", "Best ME/MTech colleges in Mumbai"],
+    },
+    BSc: {
+      ranking: [
+        { source: "Indiatoday", rank: 1700 },
+        { source: "Collegedunia", rank: 1400 },
+        { source: "IIRF", rank: 1500 },
+        { source: "NIRF", rank: 1300 },
+      ],
+      comparison: [
+        { colleges: ["St. Stephen's College", "Hindu College"] },
+        { colleges: ["Miranda House", "Hansraj College"] },
+      ],
+      predictor: ["CUCET", "NPAT", "SET", "DUET", "BHU UET", "IPU CET", "JMI Entrance Exam"],
+      exams: ["CUCET", "NPAT", "SET", "DUET", "BHU UET", "IPU CET", "JMI Entrance Exam"],
+      courses: ["B.Sc Physics - 1234", "B.Sc Chemistry - 1456", "B.Sc Biology - 1678", "B.Sc Mathematics - 1890"],
+      findColleges: ["Best B.Sc colleges in India", "Best B.Sc colleges in Mumbai"],
+    },
+    BA: {
+      ranking: [
+        { source: "Indiatoday", rank: 1650 },
+        { source: "Collegedunia", rank: 1500 },
+        { source: "IIRF", rank: 1450 },
+        { source: "NIRF", rank: 1400 },
+      ],
+      comparison: [
+        { colleges: ["St. Xavier's College", "Lady Shri Ram College"] },
+        { colleges: ["Hindu College", "Miranda House"] },
+      ],
+      predictor: ["CUET", "DUET", "IPU CET", "BHU UET", "JMI Entrance Exam"],
+      exams: ["CUET", "DUET", "IPU CET", "BHU UET", "JMI Entrance Exam"],
+      courses: ["BA English - 1200", "BA History - 1350", "BA Psychology - 1500", "BA Economics - 1400"],
+      findColleges: ["Best BA colleges in India", "Best BA colleges in Delhi"],
+    },
+    
+    BCom: {
+      ranking: [
+        { source: "Indiatoday", rank: 1600 },
+        { source: "Collegedunia", rank: 1450 },
+        { source: "IIRF", rank: 1550 },
+        { source: "NIRF", rank: 1350 },
+      ],
+      comparison: [
+        { colleges: ["SRCC Delhi", "Lady Shri Ram College"] },
+        { colleges: ["Hindu College", "Hansraj College"] },
+      ],
+      predictor: ["DU JAT", "NPAT", "SET", "IPU CET", "BHU UET", "CUCET", "Christ University Entrance Test"],
+      exams: ["DU JAT", "NPAT", "SET", "IPU CET", "BHU UET", "CUCET", "Christ University Entrance Test"],
+      courses: ["B.Com General - 1134", "B.Com Honors - 1234", "B.Com Accounting - 1456", "B.Com Finance - 1678"],
+      findColleges: ["Best B.Com colleges in India", "Best B.Com colleges in Mumbai"],
+    },
+    BCA: {
+      ranking: [
+        { source: 'Indiatoday', rank: 1600 },
+        { source: 'Collegedunia', rank: 1500 },
+        { source: 'IIRF', rank: 1450 },
+        { source: 'NIRF', rank: 1400 },
+      ],
+      comparison: [
+        { colleges: ['Christ University', 'Loyola College'] },
+        { colleges: ['St. Xavier’s Kolkata', 'Amity University'] },
+      ],
+      predictor: ['IPU CET', 'SET', 'DUET', 'BHU UET', 'JMI Entrance Exam'],
+      exams: ['IPU CET', 'SET', 'DUET', 'BHU UET', 'JMI Entrance Exam'],
+      courses: ['BCA General - 1200', 'BCA Honors - 1300'],
+      findColleges: ['Best BCA colleges in India', 'Best BCA colleges in Bangalore'],
+    },
+
+          BBA: {
+            ranking: [
+              { source: 'Indiatoday', rank: 1500 },
+              { source: 'Collegedunia', rank: 1400 },
+              { source: 'IIRF', rank: 1350 },
+              { source: 'NIRF', rank: 1250 },
+            ],
+            comparison: [
+              { colleges: ['Shaheed Sukhdev College of Business Studies', 'Christ University'] },
+              { colleges: ['NMIMS Mumbai', 'Amity University'] },
+            ],
+            predictor: ['IPMAT', 'NPAT', 'SET', 'DU JAT'],
+            exams: ['IPMAT', 'NPAT', 'SET', 'DU JAT'],
+            courses: ['BBA - 1500', 'BMS - 1400'],
+            findColleges: ['Best BBA colleges in India', 'Best BMS colleges in Mumbai'],
+          },
+         " BSc(Nursing)": {
+            ranking: [
+              { source: 'Indiatoday', rank: 1700 },
+              { source: 'Collegedunia', rank: 1650 },
+              { source: 'IIRF', rank: 1600 },
+              { source: 'NIRF', rank: 1550 },
+            ],
+            comparison: [
+              { colleges: ['AIIMS Delhi', 'CMC Vellore'] },
+              { colleges: ['JIPMER Pondicherry', 'KMC Manipal'] },
+            ],
+            predictor: ['NEET', 'AIIMS Nursing', 'JIPMER Nursing'],
+            exams: ['NEET', 'AIIMS Nursing', 'JIPMER Nursing'],
+            courses: ['B.Sc (Nursing) - 1300', 'M.Sc (Nursing) - 1400'],
+            findColleges: ['Best B.Sc Nursing colleges in India', 'Best B.Sc Nursing colleges in Mumbai'],
+          },
   };
 
   useEffect(() => {
