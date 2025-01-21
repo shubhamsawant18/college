@@ -1,3 +1,4 @@
+/* Container styles */
 .explore-programs {
   padding: 20px;
   margin-top: -50px;
@@ -14,7 +15,15 @@
 }
 
 .program-buttons {
-  display: flex ; flex-wrap: wrap; max-width: 1170px; gap: 12px; justify-content: center; margin-bottom: 27px; margin-top: 8px; color: #666; margin-left: -27px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 27px;
+  margin-top: -10px;
+  color: #666;
+  margin-right: 40px;
 }
 
 .program-buttons button,
@@ -26,7 +35,6 @@
   border-radius: 100px; /* Rounded corners */
   cursor: pointer;
   margin: 2px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for buttons */
   transition: transform 0.2s; /* Smooth transition on hover */
   font-size: 16px; /* Smaller font size */
   width: auto;
@@ -46,25 +54,23 @@
   color: #666;
   font-size: 28px;
   height: 40px;
-  
-  
 }
-
 
 .program-cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
-  gap: 22px; /* Reduced gap between the cards */
+  gap: 15px; /* Reduced gap between the cards */
   justify-content: center; /* Center the grid items */
-  max-width: 1150px; /* Set a max-width to prevent the container from taking too much space */
+  max-width: 1080px; /* Set a max-width to prevent the container from taking too much space */
   margin: 0 auto; /* Center the container horizontally */
+  margin-left: -24px;
 }
 
 .program-card {
   border: 1px solid #ddd;
   border-radius: 4px;
   background-color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
@@ -72,19 +78,16 @@
   text-align: left;
   margin-bottom: 15px; /* Reduced margin to reduce card height */
   max-width: 400px; /* Increased maximum width for each card */
-  width: 100%; /* Allow card to be responsive within the max-width */
-  height: 270px; /* Increased card height */
+  width: 99%; /* Allow card to be responsive within the max-width */
+  height: 240px; /* Increased card height */
 }
 
-.program-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
+
 
 .top-section {
   background-color: #f5faff;
   padding: 5px; /* Reduced padding for smaller top section */
-  height: 45%;
+  height: 42%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,7 +101,9 @@
   flex-direction: column;
   justify-content: center;
 }
-
+.h333{
+  color: rgb(50, 60, 79);
+}
 .section h3 {
   margin-top: 0;
   margin-bottom: 5px; /* Reduced margin to reduce card height */
@@ -121,30 +126,53 @@
   gap: 5px; /* Reduced space between items */
 }
 
-.best-colleges,
+.best-colleges div,
 .ranking-sources div,
 .exam-list div,
 .predictor-exams div,
 .course-list div {
-  background-color: #f8f9fa; /* Light background for items */
+  background-color: #fff; /* Light background for items */
   padding: 3px 8px; /* Smaller padding to reduce size */
   border-radius: 15px; /* Reduced rounded corners */
-  border: 0.5px solid rgb(21, 6, 6); /* Border color */
+  border: 1px solid #ddd; /* Border color */
   margin-bottom: 0px; /* Reduced space between rows */
   font-size: 14px; /* Smaller font size */
-  margin-top: 10px;
+  color: #666;
 }
 
-.ranking-sources div:nth-child(-n+2),
-.exam-list div:nth-child(-n+3),
-.predictor-exams div:nth-child(-n+2),
-.course-list div:nth-child(-n+2)
-.best-colleges div:nth-child(-n+2) {
-  margin-right: 5px;
+/* Specific styles for "IIT Madras vs IIT Delhi" */
+.comparison {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px; /* Reduced space between items */
+}
+
+.comparison section {
+  background-color: #fff; /* Light background for items */
+  padding: 3px 8px; /* Smaller padding to reduce size */
+  border-radius: 15px; /* Reduced rounded corners */
+  border: 1px solid #ddd; /* Border color */
+  margin-bottom: 0px; /* Reduced space between rows */
+  font-size: 14px; /* Smaller font size */
+  color: #666;
+  display: inline-block;
+}
+
+.comparison section::after {
+  content: " vs ";
+  color: #666;
+  padding: 0 5px;
+}
+
+.comparison section:last-child::after {
+  content: ""; /* Remove " vs " after the last item */
 }
 
 .captions {
   margin-top: 0px;
+  color: #666;
+  margin-top: -10px;
+  font-size: 14px;
 }
 
 .endings {
@@ -161,7 +189,10 @@
 .endings:hover {
   text-decoration: underline;
 }
-.toporder{
+
+.toporder {
   margin-left: 8px;
-  
+}
+.program-buttons{
+  margin-left: 0px;
 }

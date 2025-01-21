@@ -18,7 +18,7 @@ const ExplorePrograms = () => {
         <button>BCA</button>
         
         <button>B.Sc (Nursing)</button>
-        <button className="arrow-button">→</button>
+       
       </div>
 
       <div className="program-cards-container">
@@ -26,7 +26,7 @@ const ExplorePrograms = () => {
         <div className="program-card">
           <div className="top-section">
             <div className="toporder">
-            <h3>Ranking</h3>
+            <h3 class ="h333">Ranking</h3>
             <p className="captions">College ranked based on real data</p></div>
           </div>
           <div className="bottom-section">
@@ -53,7 +53,7 @@ const ExplorePrograms = () => {
         <div className="program-card">
           <div className="top-section">
           <div className="toporder">
-            <h3>Find Colleges</h3>
+            <h3 class ="h333">Find Colleges</h3>
             {/* <img className="find-colleges-img" src="/assets/exploreprograms/findcollege.png" alt="Find Colleges" /> */}
             <p className="captions">Discover 19000+ colleges via preferences</p>
           </div></div>
@@ -70,7 +70,7 @@ const ExplorePrograms = () => {
         <div className="program-card">
           <div className="top-section">
           <div className="toporder">
-            <h3>Compare Colleges</h3>
+            <h3 class ="h333">Compare Colleges</h3>
             <p className="captions">Compare on the basis of rank, fees, etc.</p>
           </div></div>
           <div className="bottom-section">
@@ -80,8 +80,10 @@ const ExplorePrograms = () => {
                 <section>IIT Delhi</section>
               </div>
               <div>
-                <section>IIT Madras</section>
+                <section>IIT Mumbai</section>
+                <section>IIT Kolkata</section>
               </div>
+            
             </div>
             <a className="endings" href="#">Compare Colleges</a>
           </div>
@@ -93,7 +95,7 @@ const ExplorePrograms = () => {
         <div className="program-card">
           <div className="top-section">
           <div className="toporder">
-            <h3>Exams</h3>
+            <h3 class ="h333">Exams</h3>
             <p className="captions">Know more about your exams</p>
           </div></div>
           <div className="bottom-section">
@@ -113,7 +115,7 @@ const ExplorePrograms = () => {
         {/* Card 5 */}
         <div className="program-card">
           <div className="top-section"><div className="toporder">
-            <h3>College Predictor</h3>
+            <h3 class ="h333">College Predictor</h3>
             <p className="captions">Know your college admission chances</p>
           </div></div>
           <div className="bottom-section">
@@ -135,7 +137,7 @@ const ExplorePrograms = () => {
         <div className="program-card">
           <div className="top-section">
           <div className="toporder">
-            <h3>Course Finder</h3>
+            <h3 class ="h333">Course Finder</h3>
             <p className="captions">Top courses in Indian Colleges 2024</p>
           </div></div>
           <div className="bottom-section">

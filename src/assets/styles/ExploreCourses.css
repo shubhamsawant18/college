@@ -1,4 +1,10 @@
 /* Container styles */
+.explore-programs{
+  margin-top: -42px;
+  max-width: 1100px;
+}
+
+
 .explore-courses {
   max-width: 1170px;
   margin: 0 auto;
@@ -73,7 +79,7 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 15px; /* Reduced padding from 20px to 15px */
-  min-width: 220px;
+  min-width: 200px;
   background: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -195,4 +201,8 @@
   height: 0.5px; /* Border thickness */
   background-color: #ddd; /* Border color */
   transform: translateX(-50%); /* Center alignment */
+}
+.program-buttons{
+  margin-left: -80px;
+  
 }
