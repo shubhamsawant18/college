@@ -32,7 +32,7 @@
   background-color: #fff; /* Background color */
   color: #666; /* Text color */
   border: 1px solid #dedede; /* Border color */
-  border-radius: 100px; /* Rounded corners */
+  border-radius: 80px; /* Rounded corners */
   cursor: pointer;
   margin: 2px;
   transition: transform 0.2s; /* Smooth transition on hover */
@@ -194,6 +194,6 @@
   margin-left: 8px;
 }
 .program-buttons{
-  margin-left: 0px;
+  margin-left: -68px;
 
 }
