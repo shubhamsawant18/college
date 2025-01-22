@@ -52,7 +52,6 @@
   background-color: #e67600;
 }
 
-
 /* Heading */
 .heading {
   margin-right: 700px;
@@ -100,9 +99,6 @@
   gap: 10px;
   margin-left: 1px;
   margin-bottom: -11px;
-  
-  
-  
 }
 
 .buttons-container button {
@@ -116,7 +112,7 @@
   color: #333;
   font-weight: 500;
 }
-.viewcontainer{
+.viewcontainer {
   margin-top: -42px;
 }
 
@@ -131,7 +127,6 @@
   margin-right: -962px;
   margin-bottom: 900px;
   margin-top: 20px;
-  
 }
 
 .buttons-container button:hover,
@@ -153,7 +148,6 @@
 .arrow-button:hover {
   background-color: rgb(35, 99, 155);
 }
-
 
 /* Table Styles */
 .college-table1 {
@@ -190,7 +184,6 @@
   height: 30px; /* Reduced header height */
   font-size: 14px;
   padding-left: 12px;
-
 }
 
 .college-table1 td:first-child, /* First column (College) */
@@ -213,8 +206,6 @@
 .college-table1 tr {
   height: 58px; /* Slightly reduced row height */
 }
-
-
 
 .college-table1 th,
 .college-table1 td {
@@ -263,4 +254,19 @@
 .college-table1 td:first-child img {
   display: inline-block; /* Align image with text */
 }
+/* Adding a border on click (active state) */
+.button:active, 
+.view-all:active,
+.dropdown-buttons-container button:active {
+  border: 1px solid #333; /* Black border when clicked */
+}
 
+/* Optionally, if you want to add the same effect for focused items */
+.button:focus, 
+.view-all:focus,
+.dropdown-buttons-container button:focus {
+  border: 1px solid #333; /* Black border when focused */
+}
+.dropdown-button{
+  border: 1px solid #333;
+}

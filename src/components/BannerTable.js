@@ -1038,10 +1038,6 @@ const Banner = () => {
   };
 
 
-
-    // Repeat the same structure for 2023, 2022, 2021 with dummy data
-  
-
   const [selectedRanking, setSelectedRanking] = useState("Indiatoday");
   const [selectedYear, setSelectedYear] = useState("2024");
 
@@ -1078,7 +1074,11 @@ const Banner = () => {
             </div>
             <div className="buttons-container">
               {Object.keys(allColleges[selectedYear]).map((rankingKey) => (
-                <button key={rankingKey} onClick={() => handleRankingChange(rankingKey)}>
+                <button
+                  key={rankingKey}
+                  onClick={() => handleRankingChange(rankingKey)}
+                  className={selectedRanking === rankingKey ? 'active' : ''}
+                >
                   {rankingKey}
                 </button>
               ))}
@@ -1118,4 +1118,5 @@ const Banner = () => {
     </div>
   );
 };
+
 export default Banner;
