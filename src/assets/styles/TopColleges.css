@@ -129,18 +129,19 @@
 .thead th {
   padding: 15px 10px; /* Add more padding for better spacing inside the header cells */
 }
-.course-buttons{
+
+.course-buttons {
   display: flex;
   flex-wrap: wrap;
   max-width: 1170px;
   gap: 12px; /* Reduced gap between buttons */
   justify-content: center; /* Center the buttons */
   margin-bottom: 27px;
-  margin-top: 8px;
+  margin-top: 18px;
   color: #666;
-  margin-left: -27px;
-  
+  margin-left: -7px;
 }
+
 .course-buttons button,
 .course-button {
   padding: 9px 16px; /* Reduced padding for smaller buttons */
@@ -150,7 +151,6 @@
   border-radius: 100px; /* Rounded corners */
   cursor: pointer;
   margin: 2px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for buttons */
   transition: transform 0.2s; /* Smooth transition on hover */
   font-size: 16px; /* Smaller font size */
   width: auto;
@@ -160,13 +160,19 @@
   white-space: nowrap;
   margin-left: 0px;
 }
-.arrow-button{
+
+.course-buttons .active-button {
+  border: 1px solid #444;
+  color: #444;
+}
+
+.arrow-button {
   background-color: rgb(40, 111, 173);
   color: #666;
   font-size: 28px;
- 
   border-radius: 50%;
 }
-.thread{
+
+.thread {
   color: #666;
 }

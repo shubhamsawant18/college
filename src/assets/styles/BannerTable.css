@@ -265,7 +265,7 @@
 .button:focus, 
 .view-all:focus,
 .dropdown-buttons-container button:focus {
-  border: 1px solid #333; /* Black border when focused */
+  border: 1px solid #444; /* Black border when focused */
 }
 .dropdown-button{
   border: 1px solid #333;
