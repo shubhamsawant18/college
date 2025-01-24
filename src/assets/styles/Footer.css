@@ -126,9 +126,12 @@
   justify-content: flex-start; /* Align elements to the left */
   max-width: 800px;
   margin: 0 auto; /* Center the form */
-  width: 100%;
+  width: 50%;
   margin-left: 320px;
   margin-right: 20px;
+  margin-top: -28px;
+  height: 75px;
+  background-color: #fff;
   
 }
 
@@ -202,7 +205,8 @@
 /* Responsive Design - For smaller screens */
 
 .subscription-container{
-  background-color: white;
+  background-color: #fff;
+  margin-top: -50px;
 }
 .Subscribe{
   padding-left: 550px;
