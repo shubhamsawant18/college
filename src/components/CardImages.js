@@ -77,7 +77,7 @@ const CardImages = () => {
   return (
     <div className="container">
       <h2>Top Universities/Colleges</h2>
-      <div className="row">
+      <div className="row1">
         {cardData.map((card, index) => (
           <div className="col-md-3 card-container" key={index}>
             <div className="card">

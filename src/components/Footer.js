@@ -123,7 +123,7 @@ const Footer = () => {
 
       <div className="other-links">
         <p className="other-links1">Other Links</p>
-        <div className="links">
+        <div className="links3">
           <a href="/contact-us">Contact Us</a>
           <a href="/advertising">Advertising</a>
           <a href="/career">Career</a>

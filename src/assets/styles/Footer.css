@@ -25,20 +25,22 @@
 
 /* Adjusting the links container */
 /* Adjusting the links container */
-.other-links .links {
+.other-links .links3 {
   display: flex;
   justify-content: flex-start; /* Align links to the left, but allow shift */
   padding-left: 85px; /* Shift the links slightly to the right */
 }
 
-.other-links .links a {
+.other-links .links3 a {
   color: black; /* Light gray text */
   margin: 0 15px; /* Space between links */
   font-size: 14px; /* Slightly smaller font */
   text-decoration: none; /* Remove underlines */
   transition: color 0.3s ease; /* Smooth hover effect */
 }
-
+.other-links .links3 a:hover {
+  color: #ff7900; 
+}
 
 
 .other-links .links a:hover {
@@ -47,7 +49,7 @@
 
 /* Divider Line */
 .footer-divider {
-  border-top: 1px solid #777; /* Thin white divider line */
+  border-top: 1px solid #ddd; /* Thin white divider line */
   width: 100%;
   margin: 10px 0; /* Space above and below line */
 }
@@ -82,7 +84,7 @@
 }
 
 .footer-sections ul li:hover {
-  color: black;
+  color:  #ff7900; 
   text-decoration: underline; /* Ensure no underlines on hover */
 }
 
@@ -277,7 +279,7 @@
 }
 
 .social-icons a:hover {
-  color: grey;
+  color: #ff7900; 
   
 }
 .Subscribe{

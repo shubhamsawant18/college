@@ -12,8 +12,9 @@
   font-size: 28px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 10px;
-  margin-left: -720px;
+  margin-bottom: 20px;
+  margin-top: 2px;
+  margin-left: -735px;
 }
 
 .categories {
@@ -22,7 +23,7 @@
   gap: 8px; 
   margin-bottom: 30px;
   margin-top: 11px;
-  margin-left: -635px;
+  margin-left: -600px;
 }
 
 .category-btn {
@@ -46,8 +47,7 @@
 .category-btn.active {
   background-color: #fff;
   color: black;
-  border: 1px solid black;
-  box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+  border: 1.6px solid black;
 }
 
 /* Add padding to enforce spacing between slides */
