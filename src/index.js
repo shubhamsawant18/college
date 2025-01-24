@@ -60,9 +60,12 @@ const IndexPage = () => {
       <CardImages />
       <Divider />
       <BannerTable />
+      <Divider />
       <Topstudy />
       <Divider />
       <ExploreCourses />
+      <Divider />
+
       <CBSE />
       <TopExams />
       <LatestNews />

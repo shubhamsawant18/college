@@ -2,6 +2,8 @@
 .explore-programs{
   margin-top: -42px;
   max-width: 1100px;
+  margin-bottom: 20px;
+  
 }
 
 
@@ -84,7 +86,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: auto; /* Ensures the card height adjusts dynamically */
+  height: 200px; /* Set a fixed height to ensure consistent card sizes */
   margin-bottom: 20px; /* Add space below each card */
 }
 
@@ -92,6 +94,7 @@
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
+
 
 .full-time {
   background-color: rgb(244, 244, 244);
@@ -165,16 +168,16 @@
   height: 150px;
   position: relative; /* Required for pseudo-elements */
   margin-left: 30px;
+  margin-bottom: -0px;
 }
 
 /* Styling for the image */
 /* Styling for the image */
 .image-container1 img {
   max-width: 93.5%; /* Ensure the image remains responsive */
-  height: 121px; /* Increased height for the image */
+  height: 122.5px; /* Increased height for the image */
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 15px;
+  margin-top: 17px;
   object-fit: cover; /* Ensures the image maintains aspect ratio */
 }
 
@@ -193,12 +196,12 @@
 
 /* Border below the container (after) */
 .image-container1::after {
-  content: "";
+  
   position: absolute;
   bottom: -15px; /* Position below the container */
   left: 50%; /* Center horizontally */
   width: 140%; /* Wider than the container */
-  height: 0.5px; /* Border thickness */
+  height: 0.8px; /* Border thickness */
   background-color: #ddd; /* Border color */
   transform: translateX(-50%); /* Center alignment */
 }

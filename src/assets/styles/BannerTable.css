@@ -3,6 +3,8 @@
   font-family: Arial, sans-serif;
   max-width: 1080px;
   margin: 20px auto;
+  margin-top: -39px;
+  margin-bottom: -11px;
 }
 
 .Bannercontainer {
@@ -19,7 +21,6 @@
   padding: 20px;
   background-color: #fce9d2;
   border-radius: 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 39px;
   padding-bottom: 55px;
 }
@@ -57,7 +58,7 @@
   margin-right: 700px;
   color: #333;
   font-size: 28px;
-  margin-top: 70px;
+  margin-top: 48px;
   margin-left: 10px;
 }
 
