@@ -19,7 +19,7 @@ import ExploreCourses from "./components/ExploreCourses";
 import CBSE from "./components/CBSE";
 import TopExams from "./components/TopExams";
 import LatestNews from "./components/LatestNews";
-
+import NEET from "./pages/NEETForm"; // Ensure path is correct
 
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -70,9 +70,9 @@ const IndexPage = () => {
       <TopExams />
       <LatestNews />
       <Divider />
-      
+
       <Footer />
-     
+
       <RegistrationModal show={isModalVisible} onClose={closeModal} />
     </div>
   );
@@ -87,6 +87,7 @@ const App = () => {
         <Route path="/" element={<IndexPage />} />
         <Route path="/login" element={<Login setAuthenticated={setAuthenticated} />} />
         <Route path="/admin" element={authenticated ? <AdminPage /> : <Navigate to="/login" />} />
+        <Route path="/neet" element={<NEET />} /> {/* Add the NEET page route */}
       </Routes>
     </Router>
   );

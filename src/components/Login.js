@@ -42,7 +42,7 @@ const Login = ({ setAuthenticated }) => {
         }}
       >
         <form onSubmit={handleSubmit}>
-          <h2>Admin Login</h2>
+          <h2 class="h2admin">Admin Login</h2>
           <div className="input-group">
             <input
               type="text"

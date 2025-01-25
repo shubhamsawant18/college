@@ -141,6 +141,7 @@
   margin-bottom: 0px; /* Reduced space between rows */
   font-size: 14px; /* Smaller font size */
   color: #666;
+  cursor: pointer;
 }
 
 /* Specific styles for "IIT Madras vs IIT Delhi" */

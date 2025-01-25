@@ -12,7 +12,7 @@ const App = () => {
                 <Navbar />
                 <main>
                     <Routes> {/* Use Routes instead of Switch */}
-                        <Route path="/admin" element={<AdminPage />} /> {/* Route for AdminPage */}
+                        <Route path="/admin" element={<AdminPage />} />
                     </Routes>
                 </main>
                 <Footer />

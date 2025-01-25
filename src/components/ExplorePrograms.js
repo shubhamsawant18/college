@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../assets/styles/ExplorePrograms.css';
 
 const ExplorePrograms = () => {
   const [selectedCourse, setSelectedCourse] = useState('All');
+  const navigate = useNavigate();
 
   const courseData = {
     All: {
@@ -184,7 +186,6 @@ const ExplorePrograms = () => {
             findColleges: ['Best B.Sc Nursing colleges in India', 'Best B.Sc Nursing colleges in Mumbai'],
           },
   };
-
   useEffect(() => {
     // Display all courses information by default on initial load
     setSelectedCourse('All');
@@ -194,6 +195,11 @@ const ExplorePrograms = () => {
     setSelectedCourse(course);
   };
 
+  const handlePredictorClick = (predictor) => {
+    if (predictor === 'NEET') {
+      navigate('/neet'); // Navigate to NEETForm page
+    }
+  };
   const currentCourseData = courseData[selectedCourse];
 
   return (
@@ -301,7 +307,9 @@ const ExplorePrograms = () => {
           <div className="bottom-section">
             <div className="predictor-exams">
               {currentCourseData.predictor.map((exam, index) => (
-                <div key={index}>{exam}</div>
+                <div key={index} onClick={() => handlePredictorClick(exam)}>
+                  {exam}
+                </div>
               ))}
             </div>
             <a className="endings" href="#">Find Where you may get Admission</a>
@@ -331,4 +339,3 @@ const ExplorePrograms = () => {
 };
 
 export default ExplorePrograms;
-
