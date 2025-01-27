@@ -11,9 +11,26 @@ app.use(express.json());
 
 // Routes
 const userRoutes = require("./routes/userRoutes");
-const adminRoutes = require("./routes/adminRoutes"); // Import admin routes
+const adminRoutes = require("./routes/adminRoutes");
+
+
+const cityRoute = require('./routes/form-routes/city-route');
+const categoryRoute = require('./routes/form-routes/category-route');
+const courseRoute = require('./routes/form-routes/course-route');
+const collegeRoute = require('./routes/form-routes/college-route');
+
+
+
+// const resultsRoutes = require("./routes/results"); // Import results routes
+
 app.use("/api", userRoutes);
-app.use("/api/admin", adminRoutes); // Use admin routes
+app.use("/api/admin", adminRoutes);
+// app.use("/api/results", resultsRoutes); // Use results routes
+app.use('/api/city', cityRoute);
+app.use('/api/category', categoryRoute);
+app.use('/api/course', courseRoute);
+app.use('/api/college', collegeRoute);
+
 
 // MongoDB connection
 mongoose
