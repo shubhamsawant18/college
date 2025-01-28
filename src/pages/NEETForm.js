@@ -1,39 +1,25 @@
-import React, { useState } from 'react';
-import Navbar from '../components/Navbar'; // Keep Navbar as is
-import '../assets/styles1/NEETForm.css';
-import axios from 'axios';
+import React, { useState } from "react";
+import Navbar from "../components/Navbar"; // Keep Navbar as is
+import "../assets/styles1/NEETForm.css";
+import axios from "axios";
 
 const NEETForm = () => {
   const [formData, setFormData] = useState({
-    rank: '',
-    city: '',
-    reservation: '67974b97114034b38e1b71f1',  // Default to 'General' category ID
-    course: '',
+    rank: "",
+    city: "",
+    reservation: "", // Default to 'General' category ID
+    course: "",
   });
 
   const [results, setResults] = useState([]); // State to store API results
-  const [error, setError] = useState(''); // State to handle errors
+  const [error, setError] = useState(""); // State to handle errors
 
   // Predefined cities, reservations, and courses
-  const [cities] = useState([
-    { _id: '679742528144d9a79d4493f4', name: 'Satara' },
-    { _id: '6797435b798748a613b211f3', name: 'Mumbai' },
-    { _id: '67977ed2de4e5932ec336ea8', name: 'Nagpur' },
-    { _id: '6798a85d103c5a2e747cbeb0', name: 'Pune' },
-  ]);
+  const [cities] = useState([]);
 
-  const [reservations] = useState([
-    { _id: '67974b80114034b38e1b71eb', name: 'SC/ST' },
-    { _id: '67974b97114034b38e1b71f1', name: 'General' },
-    { _id: '67974bfa114034b38e1b71f3', name: 'OBC' },
-    { _id: '67974c45114034b38e1b71f5', name: 'NTC' },
-  ]);
+  const [reservations] = useState([]);
 
-  const [courses] = useState([
-    { _id: '6797593d622cc4b6a046a25c', coursename: 'B.Sc Nursing' },
-    { _id: '6798afe056edfdb1bae1e7c9', coursename: 'BDS' },
-    { _id: '6798b006b2b599f4a28ac59a', coursename: 'MBBS' },
-  ]);
+  const [courses] = useState([]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -42,35 +28,60 @@ const NEETForm = () => {
 
   const handleSelectChange = (e) => {
     const { name, value } = e.target;
-    const selectedOption = name === 'city' ? cities.find(city => city._id === value) 
-                          : name === 'reservation' ? reservations.find(res => res._id === value)
-                          : courses.find(course => course._id === value);
+    const selectedOption =
+      name === "city"
+        ? cities.find((city) => city._id === value)
+        : name === "reservation"
+        ? reservations.find((res) => res._id === value)
+        : courses.find((course) => course._id === value);
     setFormData({ ...formData, [name]: selectedOption._id });
   };
 
   const handleSubmit = async (e) => {
+    console.log("*********Clicked");
     e.preventDefault();
-    setError(''); // Clear previous errors
-
+    setError(""); // Clear previous errors
+    var queryParam = {};
+    if (formData.rank) {
+      queryParam["rank"] = formData.rank;
+    }
+    if (formData.reservation) {
+      queryParam["category"] = formData.reservation;
+    }
+    if (formData.course) {
+      queryParam["course"] = formData.course;
+    }
+    if (formData.city) {
+      queryParam["city"] = formData.city;
+      // queryParam["city"] = "679742528144d9a79d4493f4";
+    }
     try {
       // Fetch data from the filter API
-      const queryParams = new URLSearchParams({
-        rank: formData.rank,
-        category: formData.reservation,
-        course: formData.course,
-        city: formData.city,
-      }).toString();
+      const queryParams = new URLSearchParams(queryParam).toString();
+      // const queryParams = new URLSearchParams({
+      //   // rank: formData.rank,
+      //   // category: formData.reservation,
+      //   // course: formData.course,
+      //   // city: formData.city,
+      //   rank: 1,
+      //   category: '60b8c4ae5f484b6f6d7c6d4c',
+      //   course: '60b8c4ae5f484b6f6d7c6d4d',
+      //   city: '679742528144d9a79d4493f4',
 
-      const response = await axios.get(`http://localhost:5000/api/college/filter?${queryParams}`);
+      // }).toString();
+
+      const response = await axios.get(
+        `http://localhost:5000/api/college/filter?${queryParams}`
+      );
       const data = response.data;
 
       if (response.status === 200 && data.success) {
         setResults(data.data); // Update results with fetched colleges
       } else {
-        setError(data.msg || 'Failed to fetch colleges');
+        setError(data.msg || "Failed to fetch colleges");
       }
     } catch (err) {
-      setError('An error occurred while fetching results');
+      setError("An error occurred while fetching results");
     }
   };
 
@@ -79,7 +90,8 @@ const NEETForm = () => {
       <Navbar />
       <div className="form-unique-container">
         <h1 className="form-unique-title">
-          NEET College Predictor 2025: Predict Top MBBS/BDS Colleges based on your Rank and Scores
+          NEET College Predictor 2025: Predict Top MBBS/BDS Colleges based on
+          your Rank and Scores
         </h1>
         <form onSubmit={handleSubmit} className="form-unique">
           <div className="form-unique-row">
@@ -178,12 +190,16 @@ const NEETForm = () => {
                 {results.map((college) => (
                   <tr key={college._id}>
                     <td>{college.collegename}</td>
-                    <td>{college.cityid?.name || 'N/A'}</td>
+                    <td>{college.cityid?.name || "N/A"}</td>
                     <td>{college.rank}</td>
                     <td>
-                      {college.courses.map((course) => course.coursename).join(', ')}
+                      {college.courses
+                        .map((course) => course.coursename)
+                        .join(", ")}
                     </td>
-                    <td>{college.categoryid?.categoryname || 'N/A'}</td>
+                    <td>   {college.category
+                        .map((cat) => cat.categoryname)
+                        .join(", ")}</td>
                   </tr>
                 ))}
               </tbody>
