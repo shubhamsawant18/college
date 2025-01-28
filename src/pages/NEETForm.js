@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Navbar from "../components/Navbar"; // Keep Navbar as is
+import React, { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
 import "../assets/styles1/NEETForm.css";
 import axios from "axios";
 
@@ -7,19 +7,69 @@ const NEETForm = () => {
   const [formData, setFormData] = useState({
     rank: "",
     city: "",
-    reservation: "", // Default to 'General' category ID
+    reservation: "",
     course: "",
   });
 
-  const [results, setResults] = useState([]); // State to store API results
-  const [error, setError] = useState(""); // State to handle errors
+  const [results, setResults] = useState([]);
+  const [error, setError] = useState("");
 
-  // Predefined cities, reservations, and courses
-  const [cities] = useState([]);
+  // const cities = [
+  //   { _id: "679742528144d9a79d4493f4", name: "Satara" },
+  //   { _id: "6798a85d103c5a2e747cbeb0", name: "Pune" },
+  //   { _id: "6797435b798748a613b211f3", name: "Mumbai" },
+  //   { _id: "67977ed2de4e5932ec336ea8", name: "Nagpur" }
+  // ];
 
-  const [reservations] = useState([]);
+  // const reservations = [
+  //   { _id: "67974b97114034b38e1b71f1", name: "General" },
+  //   { _id: "6798bc47fca11d74df40e45c", name: "OBC" },
+  //   { _id: "67974b80114034b38e1b71eb", name: "SC/ST" },
+  //   { _id: "67974c45114034b38e1b71f5", name: "NTC" }
+  // ];
+  const [categories, setCategories] = useState([]);
+  const [courses, setCourses]= useState([]);
+  const [cities, setCities]= useState([]);
+  useEffect(() => {
+    const fetchCategoryApi = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/category');
+        setCategories(response.data.data); // Ensure correct setting of categories
+      } catch (err) {
+        console.error('Error fetching categories:', err);
+      }
+    };
+    fetchCategoryApi();
+  }, []);
+  useEffect(() => {
+    const fetchCoursesApi = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/course');
+        setCourses(response.data.data); // Ensure correct setting of categories
+      } catch (err) {
+        console.error('Error fetching course:', err);
+      }
+    };
+    fetchCoursesApi();
+  }, []);
 
-  const [courses] = useState([]);
+  useEffect(() => {
+    const fetchCityApi = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/city');
+        setCities(response.data.data); // Ensure correct setting of categories
+      } catch (err) {
+        console.error('Error fetching cities:', err);
+      }
+    };
+    fetchCityApi();
+  }, []);
+
+  // const courses = [
+  //   { _id: "6798afe056edfdb1bae1e7c9", coursename: "MBBS" },
+  //   { _id: "6798b006b2b599f4a28ac59a", coursename: "BDS" },
+  //   { _id: "6797593d622cc4b6a046a25c", coursename: "Bsc (nursing)" }
+  // ];
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +82,7 @@ const NEETForm = () => {
       name === "city"
         ? cities.find((city) => city._id === value)
         : name === "reservation"
-        ? reservations.find((res) => res._id === value)
+        ? categories.find((res) => res._id === value)
         : courses.find((course) => course._id === value);
     setFormData({ ...formData, [name]: selectedOption._id });
   };
@@ -40,7 +90,7 @@ const NEETForm = () => {
   const handleSubmit = async (e) => {
     console.log("*********Clicked");
     e.preventDefault();
-    setError(""); // Clear previous errors
+    setError("");
     var queryParam = {};
     if (formData.rank) {
       queryParam["rank"] = formData.rank;
@@ -53,30 +103,15 @@ const NEETForm = () => {
     }
     if (formData.city) {
       queryParam["city"] = formData.city;
-      // queryParam["city"] = "679742528144d9a79d4493f4";
     }
     try {
-      // Fetch data from the filter API
       const queryParams = new URLSearchParams(queryParam).toString();
-      // const queryParams = new URLSearchParams({
-      //   // rank: formData.rank,
-      //   // category: formData.reservation,
-      //   // course: formData.course,
-      //   // city: formData.city,
-      //   rank: 1,
-      //   category: '60b8c4ae5f484b6f6d7c6d4c',
-      //   course: '60b8c4ae5f484b6f6d7c6d4d',
-      //   city: '679742528144d9a79d4493f4',
-
-      // }).toString();
-
       const response = await axios.get(
         `http://localhost:5000/api/college/filter?${queryParams}`
       );
       const data = response.data;
-
       if (response.status === 200 && data.success) {
-        setResults(data.data); // Update results with fetched colleges
+        setResults(data.data);
       } else {
         setError(data.msg || "Failed to fetch colleges");
       }
@@ -119,9 +154,10 @@ const NEETForm = () => {
                 onChange={handleSelectChange}
                 className="form-unique-select"
               >
-                {reservations.map((res) => (
+                
+                {categories.map((res) => (
                   <option key={res._id} value={res._id}>
-                    {res.name}
+                    {res.categoryname}
                   </option>
                 ))}
               </select>
@@ -172,7 +208,6 @@ const NEETForm = () => {
           </button>
         </form>
 
-        {/* Display Results */}
         <div className="results-container">
           {error && <p className="error-message">{error}</p>}
           {results.length > 0 && (
@@ -197,9 +232,11 @@ const NEETForm = () => {
                         .map((course) => course.coursename)
                         .join(", ")}
                     </td>
-                    <td>   {college.category
+                    <td>
+                      {college.category
                         .map((cat) => cat.categoryname)
-                        .join(", ")}</td>
+                        .join(", ")}
+                    </td>
                   </tr>
                 ))}
               </tbody>
