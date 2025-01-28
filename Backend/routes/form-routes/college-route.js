@@ -1,8 +1,9 @@
 const express = require('express');
+const { postCollege, getColleges, queryColleges } = require('../../controllers/collegeController');
 const router = express.Router();
-const {postCollege,getColleges,queryColleges}  = require('../../controllers/collegeController');
-router.post('/',postCollege,);
-router.get('/',getColleges,);
-router.get('/filter',queryColleges,);
+
+router.post('/', postCollege);
+router.get('/', getColleges);
+router.get('/filter', queryColleges);
 
 module.exports = router;

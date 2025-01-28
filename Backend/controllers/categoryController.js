@@ -5,10 +5,19 @@ const router = express.Router();
 
 router.use(express.json()); // Middleware to parse JSON bodies
 
+// Define the allowed categories
+const allowedCategories = ['General', 'OBC', 'SC/ST', 'NTC'];
+
 const postCategory = async (req, res) => {
   try {
     const { name } = req.body;
-    const category = new Category({categoryname: name });
+
+    // Check if the category is allowed
+    if (!allowedCategories.includes(name)) {
+      return res.status(400).json({ msg: 'Category not allowed' });
+    }
+
+    const category = new Category({ categoryname: name });
     await category.save();
     return res.status(201).json({
       msg: "success",
@@ -21,18 +30,17 @@ const postCategory = async (req, res) => {
 
 const getCategory = async (req, res) => {
   try {
-    let data = await Category.find();
+    const categories = await Category.find();
     return res.status(200).json({
       msg: "success",
-      data: data,
+      data: categories,
     });
   } catch (error) {
     res.status(400).json({ msg: error.message });
   }
 };
 
- // Define the route for GET /categories
-
 module.exports = {
- postCategory,getCategory
+  postCategory,
+  getCategory
 };

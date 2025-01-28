@@ -6,12 +6,19 @@ const router = express.Router();
 
 router.use(express.json()); // Middleware to parse JSON bodies
 
+// Define the allowed courses
+const allowedCourses = ['B.Sc Nursing', 'MBBS', 'BDS'];
+
 const postCourse = async (req, res) => {
   try {
     const { name, duration } = req.body;
-    
-    const course = new Course({coursename
-      : name, duration:duration });
+
+    // Check if the course is allowed
+    if (!allowedCourses.includes(name)) {
+      return res.status(400).json({ msg: 'Course not allowed' });
+    }
+
+    const course = new Course({ coursename: name, duration: duration });
     await course.save();
     return res.status(201).json({
       msg: "success",
@@ -34,8 +41,6 @@ const getCourse = async (req, res) => {
   }
 };
 
-// Define the route for GET /courses
-
 module.exports ={
-  postCourse,getCourse
+  postCourse, getCourse
 };
