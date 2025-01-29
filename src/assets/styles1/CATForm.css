@@ -1,0 +1,74 @@
+/* Remove body styles to avoid global changes */
+
+.form-unique-container {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    background-color: #ffffff;
+    padding: 30px 50px;
+    border-radius: 8px;
+    text-align: center;
+    width: 95%;
+    max-width: 700px;
+    margin: 20px auto;
+  }
+  
+  .form-unique-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .form-unique {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adjusted overall gap between rows */
+    width: 550px;
+    margin: 0 auto;
+  }
+  
+  .form-unique-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Horizontal gap between boxes */
+  }
+  
+  .form-unique-group {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .form-unique-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .form-unique-input,
+  .form-unique-select {
+    width: 72%; /* Consistent width for all inputs and dropdowns */
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+  }
+  
+  .form-unique-button {
+    background-color: #ff7f00;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 35%;
+    margin: 1px auto 0; /* Moved the button slightly up */
+  }
+  
+  .form-unique-button:hover {
+    background-color: #e66b00;
+  }
+  

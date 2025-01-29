@@ -197,9 +197,12 @@ const ExplorePrograms = () => {
 
   const handlePredictorClick = (predictor) => {
     if (predictor === 'NEET') {
-      navigate('/neet'); // Navigate to NEETForm page
+        navigate('/neet'); // Navigate to NEETForm page
+    } else if (predictor === 'CAT') {
+        navigate('/cat'); // Navigate to CATForm page
     }
-  };
+};
+
   const currentCourseData = courseData[selectedCourse];
 
   return (

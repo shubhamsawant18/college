@@ -19,7 +19,9 @@ import ExploreCourses from "./components/ExploreCourses";
 import CBSE from "./components/CBSE";
 import TopExams from "./components/TopExams";
 import LatestNews from "./components/LatestNews";
-import NEET from "./pages/NEETForm"; // Ensure path is correct
+import NEET from "./pages/NEETForm";
+import CATForm from "./pages/CATForm";
+
 
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -87,7 +89,8 @@ const App = () => {
         <Route path="/" element={<IndexPage />} />
         <Route path="/login" element={<Login setAuthenticated={setAuthenticated} />} />
         <Route path="/admin" element={authenticated ? <AdminPage /> : <Navigate to="/login" />} />
-        <Route path="/neet" element={<NEET />} /> {/* Add the NEET page route */}
+        <Route path="/neet" element={<NEET />} /> {/* NEET page route */}
+        <Route path="/cat" element={<CATForm />} /> {/* CAT page route */}
       </Routes>
     </Router>
   );

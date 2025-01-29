@@ -14,19 +14,6 @@ const NEETForm = () => {
   const [results, setResults] = useState([]);
   const [error, setError] = useState("");
 
-  // const cities = [
-  //   { _id: "679742528144d9a79d4493f4", name: "Satara" },
-  //   { _id: "6798a85d103c5a2e747cbeb0", name: "Pune" },
-  //   { _id: "6797435b798748a613b211f3", name: "Mumbai" },
-  //   { _id: "67977ed2de4e5932ec336ea8", name: "Nagpur" }
-  // ];
-
-  // const reservations = [
-  //   { _id: "67974b97114034b38e1b71f1", name: "General" },
-  //   { _id: "6798bc47fca11d74df40e45c", name: "OBC" },
-  //   { _id: "67974b80114034b38e1b71eb", name: "SC/ST" },
-  //   { _id: "67974c45114034b38e1b71f5", name: "NTC" }
-  // ];
   const [categories, setCategories] = useState([]);
   const [courses, setCourses]= useState([]);
   const [cities, setCities]= useState([]);
@@ -65,11 +52,7 @@ const NEETForm = () => {
     fetchCityApi();
   }, []);
 
-  // const courses = [
-  //   { _id: "6798afe056edfdb1bae1e7c9", coursename: "MBBS" },
-  //   { _id: "6798b006b2b599f4a28ac59a", coursename: "BDS" },
-  //   { _id: "6797593d622cc4b6a046a25c", coursename: "Bsc (nursing)" }
-  // ];
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

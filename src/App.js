@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import AdminPage from './components/AdminPage'; // Import the AdminPage component
 import './App.css';
-import ResultsPage from './pages/ResultsPage'; // Adjust the path as needed
 
 const App = () => {
     return (
