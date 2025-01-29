@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import "../assets/styles1/CATForm.css"; // Ensure the correct path to the CSS file
+import axios from "axios";  // Ensure axios is imported for API calls
 
 const CATForm = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,9 @@ const CATForm = () => {
     reservation: "",
     course: "",
   });
+  
+  const [results, setResults] = useState([]);
+  const [error, setError] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -17,6 +21,34 @@ const CATForm = () => {
   const handleSubmit = async (e) => {
     console.log("*********Clicked");
     e.preventDefault();
+    setError("");
+    
+    const queryParam = {};
+    
+    if (formData.percentile) {
+      queryParam["percentile"] = formData.percentile;
+    }
+    if (formData.reservation) {
+      queryParam["category"] = formData.reservation;
+    }
+    if (formData.course) {
+      queryParam["course"] = formData.course;
+    }
+
+    try {
+      const queryParams = new URLSearchParams(queryParam).toString();
+      const response = await axios.get(
+        `http://localhost:5000/api/cat/colleges?${queryParams}`
+      );
+      const data = response.data;
+      if (response.status === 200 && data.success) {
+        setResults(data.data);
+      } else {
+        setError(data.msg || "Failed to fetch colleges");
+      }
+    } catch (err) {
+      setError("An error occurred while fetching results");
+    }
   };
 
   return (
@@ -81,6 +113,35 @@ const CATForm = () => {
             Check results
           </button>
         </form>
+
+        {/* Display results */}
+        <div className="results-container">
+          {error && <p className="error-message">{error}</p>}
+          {results.length > 0 && (
+            <table className="results-table">
+              <thead>
+                <tr>
+                  <th>College Name</th>
+                  <th>City</th>
+                  <th>Percentile Range</th>
+                  <th>Course</th>
+                  <th>Category</th>
+                </tr>
+              </thead>
+              <tbody>
+                {results.map((college) => (
+                  <tr key={college._id}>
+                    <td>{college.collegename}</td>
+                    <td>{college.city || "N/A"}</td>
+                    <td>{college.percentilerange}</td>
+                    <td>{college.course}</td>
+                    <td>{college.category}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
       </div>
     </div>
   );
