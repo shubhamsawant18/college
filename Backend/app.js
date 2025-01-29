@@ -15,14 +15,21 @@ const adminRoutes = require("./routes/adminRoutes");
 const cityRoute = require('./routes/form-routes/city-route');
 const categoryRoute = require('./routes/form-routes/category-route');
 const courseRoute = require('./routes/form-routes/course-route');
-const collegeRoute = require('./routes/form-routes/college-route'); // Import the college route
+const collegeRoute = require('./routes/form-routes/college-route'); // Import college routes
+const catCategoryRoute = require('./routes/form-routes/catCategoryRoutes');
+const catCourseRoute = require('./routes/form-routes/catCourseRoutes');
+const catCollegeRoute = require('./routes/form-routes/catCollegeRoutes'); // Import catCollege routes
 
+// Use routes
 app.use("/api", userRoutes);
 app.use("/api/admin", adminRoutes);
 app.use('/api/city', cityRoute);
 app.use('/api/category', categoryRoute);
 app.use('/api/course', courseRoute);
-app.use('/api/college', collegeRoute); // Ensure this line is present
+app.use('/api/college', collegeRoute);
+app.use('/api/catcategory', catCategoryRoute);
+app.use('/api/catcourse', catCourseRoute);
+app.use('/api/catcollege', catCollegeRoute); // Use catCollege routes
 
 // MongoDB connection
 mongoose

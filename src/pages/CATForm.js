@@ -52,7 +52,6 @@ const CATForm = () => {
                 onChange={handleInputChange}
                 className="form-unique-select"
               >
-                <option value="">Select Category</option>
                 <option value="general">General</option>
                 <option value="obc">OBC</option>
                 <option value="scst">SC/ST</option>
