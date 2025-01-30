@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import "../assets/styles1/CATForm.css"; // Ensure the correct path to the CSS file
-import axios from "axios";  // Ensure axios is imported for API calls
+import "../assets/styles1/CATForm.css"; // Ensure correct path
+import axios from "axios";
 
 const CATForm = () => {
   const [formData, setFormData] = useState({
@@ -9,45 +9,40 @@ const CATForm = () => {
     reservation: "",
     course: "",
   });
-  
+
   const [results, setResults] = useState([]);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
-    console.log("*********Clicked");
     e.preventDefault();
     setError("");
-    
-    const queryParam = {};
-    
-    if (formData.percentile) {
-      queryParam["percentile"] = formData.percentile;
-    }
-    if (formData.reservation) {
-      queryParam["category"] = formData.reservation;
-    }
-    if (formData.course) {
-      queryParam["course"] = formData.course;
+    setResults([]);
+    setLoading(true);
+
+    if (!formData.percentile || !formData.reservation || !formData.course) {
+      setError("Please fill in all fields.");
+      setLoading(false);
+      return;
     }
 
+    const queryParams = new URLSearchParams(formData).toString();
+
     try {
-      const queryParams = new URLSearchParams(queryParam).toString();
-      const response = await axios.get(
-        `http://localhost:5000/api/cat/colleges?${queryParams}`
-      );
-      const data = response.data;
-      if (response.status === 200 && data.success) {
-        setResults(data.data);
+      const response = await axios.get(`http://localhost:5000/api/cat/colleges?${queryParams}`);
+      if (response.status === 200 && response.data.success) {
+        setResults(response.data.data);
       } else {
-        setError(data.msg || "Failed to fetch colleges");
+        setError(response.data.msg || "No colleges found.");
       }
     } catch (err) {
-      setError("An error occurred while fetching results");
+      setError("An error occurred while fetching results.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -65,12 +60,15 @@ const CATForm = () => {
                 Enter your percentile
               </label>
               <input
-                type="text"
+                type="number"
                 id="percentile"
                 name="percentile"
                 value={formData.percentile}
                 onChange={handleInputChange}
                 className="form-unique-input"
+                min="0"
+                max="100"
+                required
               />
             </div>
             <div className="form-unique-group">
@@ -83,7 +81,9 @@ const CATForm = () => {
                 value={formData.reservation}
                 onChange={handleInputChange}
                 className="form-unique-select"
+                required
               >
+                <option value="">Select Category</option>
                 <option value="general">General</option>
                 <option value="obc">OBC</option>
                 <option value="scst">SC/ST</option>
@@ -102,6 +102,7 @@ const CATForm = () => {
                 value={formData.course}
                 onChange={handleInputChange}
                 className="form-unique-select"
+                required
               >
                 <option value="">Select Course</option>
                 <option value="mba">MBA/PGDM</option>
@@ -109,12 +110,12 @@ const CATForm = () => {
               </select>
             </div>
           </div>
-          <button type="submit" className="form-unique-button">
-            Check results
+          <button type="submit" className="form-unique-button" disabled={loading}>
+            {loading ? "Fetching Results..." : "Check Results"}
           </button>
         </form>
 
-        {/* Display results */}
+        {/* Display Results */}
         <div className="results-container">
           {error && <p className="error-message">{error}</p>}
           {results.length > 0 && (
@@ -129,8 +130,8 @@ const CATForm = () => {
                 </tr>
               </thead>
               <tbody>
-                {results.map((college) => (
-                  <tr key={college._id}>
+                {results.map((college, index) => (
+                  <tr key={index}>
                     <td>{college.collegename}</td>
                     <td>{college.city || "N/A"}</td>
                     <td>{college.percentilerange}</td>

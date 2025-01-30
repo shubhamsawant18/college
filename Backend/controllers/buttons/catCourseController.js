@@ -20,29 +20,50 @@ const postCourse = async (req, res) => {
 
     // Return the created course in the response
     return res.status(201).json({
-      msg: "success",
+      msg: "Course successfully added",
       data: course,  // Return the saved course data
     });
   } catch (error) {
     // If an error occurs, return a detailed error message
-    res.status(400).json({ msg: error.message });
+    return res.status(400).json({ msg: 'Error adding course: ' + error.message });
   }
 };
 
-// Get courses - to fetch all courses
+// Get courses - to fetch courses with filtering options (category, percentile, courses)
 const getCourse = async (req, res) => {
   try {
-    // Fetch all courses from the database
-    const courses = await CatCourse.find();
-    
+    const { category, percentile, courses } = req.query; // Extract query parameters
+
+    let filter = {}; // Initialize filter object
+
+    // Apply category filter if provided
+    if (category) {
+      filter.category = category;
+    }
+
+    // Apply percentile filter if provided
+    if (percentile) {
+      filter.percentile = { $gte: percentile };
+    }
+
+    // Apply courses filter if provided
+    if (courses) {
+      // Split courses in case multiple are passed
+      const courseArray = courses.split(',').map(course => course.trim());
+      filter.coursename = { $in: courseArray };
+    }
+
+    // Fetch courses from the database using filters
+    const coursesList = await CatCourse.find(filter);
+
     // Return the fetched courses in the response
     return res.status(200).json({
       msg: "success",
-      data: courses,  // Return the courses data
+      data: coursesList,  // Return the filtered courses data
     });
   } catch (error) {
     // If an error occurs, return a detailed error message
-    res.status(400).json({ msg: error.message });
+    return res.status(400).json({ msg: 'Error fetching courses: ' + error.message });
   }
 };
 

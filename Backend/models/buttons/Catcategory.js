@@ -1,8 +1,9 @@
+// models/buttons/Catcategory.js
 const mongoose = require('mongoose');
 
 const CatCategorySchema = new mongoose.Schema({
-  categoryname: { type: String, required: true },
+  name: { type: String, required: true },
 });
 
-const Catcategory = mongoose.model('CatCategory', CatCategorySchema);
-module.exports = Catcategory;
+module.exports = mongoose.model('CatCategory', CatCategorySchema);
+
