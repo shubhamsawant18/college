@@ -24,16 +24,23 @@ const CATForm = () => {
     setResults([]);
     setLoading(true);
 
-    if (!formData.percentile || !formData.reservation || !formData.course) {
+    const { percentile, reservation, course } = formData;
+
+    if (!percentile || !reservation || !course) {
       setError("Please fill in all fields.");
       setLoading(false);
       return;
     }
 
-    const queryParams = new URLSearchParams(formData).toString();
-
     try {
-      const response = await axios.get(`http://localhost:5000/api/cat/colleges?${queryParams}`);
+      const response = await axios.get(`http://localhost:5000/api/catcollege/filter`, {
+        params: {
+          category: reservation,
+          percentile,
+          courses: course,
+        },
+      });
+
       if (response.status === 200 && response.data.success) {
         setResults(response.data.data);
       } else {
@@ -84,10 +91,10 @@ const CATForm = () => {
                 required
               >
                 <option value="">Select Category</option>
-                <option value="general">General</option>
-                <option value="obc">OBC</option>
-                <option value="scst">SC/ST</option>
-                <option value="ntc">NTC</option>
+                <option value="General">General</option>
+                <option value="OBC">OBC</option>
+                <option value="SC/ST">SC/ST</option>
+                <option value="NTC">NTC</option>
               </select>
             </div>
           </div>
@@ -105,8 +112,8 @@ const CATForm = () => {
                 required
               >
                 <option value="">Select Course</option>
-                <option value="mba">MBA/PGDM</option>
-                <option value="exec-mba">Executive MBA</option>
+                <option value="MBA">MBA/PGDM</option>
+                <option value="Executive MBA">Executive MBA</option>
               </select>
             </div>
           </div>
@@ -123,20 +130,18 @@ const CATForm = () => {
               <thead>
                 <tr>
                   <th>College Name</th>
-                  <th>City</th>
-                  <th>Percentile Range</th>
-                  <th>Course</th>
                   <th>Category</th>
+                  <th>Percentile</th>
+                  <th>Courses</th>
                 </tr>
               </thead>
               <tbody>
                 {results.map((college, index) => (
                   <tr key={index}>
                     <td>{college.collegename}</td>
-                    <td>{college.city || "N/A"}</td>
-                    <td>{college.percentilerange}</td>
-                    <td>{college.course}</td>
-                    <td>{college.category}</td>
+                    <td>{college.category.map(cat => cat.categoryname).join(', ')}</td>
+                    <td>{college.percentile}</td>
+                    <td>{college.courses.map(course => course.coursename).join(', ')}</td>
                   </tr>
                 ))}
               </tbody>
