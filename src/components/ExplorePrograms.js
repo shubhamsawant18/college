@@ -200,8 +200,12 @@ const ExplorePrograms = () => {
         navigate('/neet'); // Navigate to NEETForm page
     } else if (predictor === 'CAT') {
         navigate('/cat'); // Navigate to CATForm page
+    } else if (predictor === 'JEE Main') {
+        navigate('/jeem'); // Navigate to JEEMForm page
+        
     }
 };
+
 
   const currentCourseData = courseData[selectedCourse];
 

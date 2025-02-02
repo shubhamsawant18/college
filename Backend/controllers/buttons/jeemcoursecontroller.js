@@ -1,5 +1,5 @@
 const express = require('express');
-const Course = require('../../models/buttons/jeemcourse'); // Correct import path
+const JeemCourse = require('../../models/buttons/jeemcourse'); // Correct import path
 
 // Define the allowed courses
 const allowedCourses = ['B.E/BTech', 'B.Pharmacy'];
@@ -15,7 +15,7 @@ const postCourse = async (req, res) => {
     }
 
     // Create and save the new course
-    const course = new Course({ coursename });
+    const course = new JeemCourse({ coursename });
     await course.save();
 
     // Return the created course in the response
@@ -29,10 +29,10 @@ const postCourse = async (req, res) => {
   }
 };
 
-// Get courses - to fetch courses with filtering options (category, percentile, courses)
+// Get courses - to fetch courses with filtering options
 const getCourse = async (req, res) => {
   try {
-    const { category, percentile, courses } = req.query; // Extract query parameters
+    const { category, rank, courses } = req.query; // Extract query parameters
 
     let filter = {}; // Initialize filter object
 
@@ -41,9 +41,9 @@ const getCourse = async (req, res) => {
       filter.category = category;
     }
 
-    // Apply percentile filter if provided
-    if (percentile) {
-      filter.percentile = { $gte: percentile };
+    // Apply rank filter if provided
+    if (rank) {
+      filter.rank = { $gte: rank };
     }
 
     // Apply courses filter if provided
@@ -54,7 +54,7 @@ const getCourse = async (req, res) => {
     }
 
     // Fetch courses from the database using filters
-    const coursesList = await Course.find(filter);
+    const coursesList = await JeemCourse.find(filter);
 
     // Return the fetched courses in the response
     return res.status(200).json({

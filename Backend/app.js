@@ -18,7 +18,11 @@ const courseRoute = require('./routes/form-routes/course-route');
 const collegeRoute = require('./routes/form-routes/college-route');
 const catCategoryRoute = require('./routes/form-routes/catCategoryRoutes');
 const catCourseRoute = require('./routes/form-routes/catCourseRoutes');
-const catCollegeRoute = require('./routes/form-routes/catCollegeRoutes');  // Import catCollege routes
+const catCollegeRoute = require('./routes/form-routes/catCollegeRoutes');
+const jeemCategoryRoute = require('./routes/form-routes/jeemcategoryroute');
+// const jeemCollegeRoute = require('./routes/form-routes/jeemcollegeroute');
+const jeemDistrictRoute = require('./routes/form-routes/jeemdistrictroute');
+const jeemCourseRoute = require('./routes/form-routes/jeemcourseroute'); // Import jeemcourse routes
 
 // Use routes
 app.use("/api", userRoutes);
@@ -29,10 +33,11 @@ app.use('/api/course', courseRoute);
 app.use('/api/college', collegeRoute);
 app.use('/api/catcategory', catCategoryRoute);
 app.use('/api/catcourse', catCourseRoute);
-
-// Fix: Updated path for catCollege routes
-app.use('/api/catcollege', catCollegeRoute);  // Make sure this line is correct
-
+app.use('/api/catcollege', catCollegeRoute);
+app.use('/api/jeemcategory', jeemCategoryRoute);
+// app.use('/api/jeemcollege', jeemCollegeRoute);
+app.use('/api/jeemdistrict', jeemDistrictRoute);
+app.use('/api/jeemcourse', jeemCourseRoute); // Use jeemcourse routes
 
 // MongoDB connection
 mongoose
