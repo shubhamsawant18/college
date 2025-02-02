@@ -20,7 +20,7 @@ const catCategoryRoute = require('./routes/form-routes/catCategoryRoutes');
 const catCourseRoute = require('./routes/form-routes/catCourseRoutes');
 const catCollegeRoute = require('./routes/form-routes/catCollegeRoutes');
 const jeemCategoryRoute = require('./routes/form-routes/jeemcategoryroute');
-// const jeemCollegeRoute = require('./routes/form-routes/jeemcollegeroute');
+const jeemCollegeRoute = require('./routes/form-routes/jeemcollegeroute');
 const jeemDistrictRoute = require('./routes/form-routes/jeemdistrictroute');
 const jeemCourseRoute = require('./routes/form-routes/jeemcourseroute'); // Import jeemcourse routes
 
@@ -35,7 +35,7 @@ app.use('/api/catcategory', catCategoryRoute);
 app.use('/api/catcourse', catCourseRoute);
 app.use('/api/catcollege', catCollegeRoute);
 app.use('/api/jeemcategory', jeemCategoryRoute);
-// app.use('/api/jeemcollege', jeemCollegeRoute);
+app.use('/api/jeemcollege', jeemCollegeRoute);
 app.use('/api/jeemdistrict', jeemDistrictRoute);
 app.use('/api/jeemcourse', jeemCourseRoute); // Use jeemcourse routes
 
