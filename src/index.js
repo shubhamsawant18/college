@@ -22,6 +22,7 @@ import LatestNews from "./components/LatestNews";
 import NEET from "./pages/NEETForm";
 import CATForm from "./pages/CATForm";
 import JEEForm from "./pages/JEEForm"; // Updated import path
+import JEEADVForm from "./pages/JEEADVForm";
 
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -35,9 +36,12 @@ const IndexPage = () => {
       navigate('/neet'); // Navigate to NEETForm page
     } else if (predictor === 'CAT') {
       navigate('/cat'); // Navigate to CATForm page
-    } else if (predictor === 'JEE MAIN') {
+    } else if (predictor === 'JEE Main') {
       navigate('/jeem'); // Navigate to JEEForm page
+    }else if (predictor === 'JEE Advanced'){
+      navigate('jeea');
     }
+
   };
 
   return (
@@ -64,6 +68,8 @@ const IndexPage = () => {
           <button onClick={() => handlePredictorClick('NEET')}>NEET Predictor</button>
           <button onClick={() => handlePredictorClick('CAT')}>CAT Predictor</button>
           <button onClick={() => handlePredictorClick('JEE MAIN')}>JEE Main Predictor</button>
+          <button onClick={() => handlePredictorClick('JEE Advanced')}>JEE Main Predictor</button>
+
         </div>
       </div>
 
@@ -81,12 +87,10 @@ const IndexPage = () => {
       <Divider />
       <ExploreCourses />
       <Divider />
-
       <CBSE />
       <TopExams />
       <LatestNews />
       <Divider />
-
       <Footer />
 
       <RegistrationModal show={isModalVisible} onClose={closeModal} />
@@ -106,6 +110,8 @@ const App = () => {
         <Route path="/neet" element={<NEET />} /> {/* NEET page route */}
         <Route path="/cat" element={<CATForm />} /> {/* CAT page route */}
         <Route path="/jeem" element={<JEEForm />} /> {/* JEEForm page route */}
+        <Route path="/jeea" element={<JEEADVForm />} /> {/* JEEForm page route */}
+
       </Routes>
     </Router>
   );

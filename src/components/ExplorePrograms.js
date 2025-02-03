@@ -201,8 +201,10 @@ const ExplorePrograms = () => {
     } else if (predictor === 'CAT') {
         navigate('/cat'); // Navigate to CATForm page
     } else if (predictor === 'JEE Main') {
-        navigate('/jeem'); // Navigate to JEEMForm page
-        
+        navigate('/jeem'); // Navigate to JEEMForm page 
+    }
+    else if(predictor === 'JEE Advanced'){
+        navigate('/jeea')
     }
 };
 
