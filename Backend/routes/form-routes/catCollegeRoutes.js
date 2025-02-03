@@ -1,15 +1,15 @@
+// routes/form-routes/catCollegeRoutes.js
 const express = require('express');
-const { postCollege, getColleges } = require('../../controllers/buttons/jeeadvcollegecontroller');
-
 const router = express.Router();
+const { postCollege, getColleges, queryColleges } = require('../../controllers/buttons/catCollegeController');
 
-// Middleware to parse JSON bodies
-router.use(express.json());
-
-// POST route to create a new college entry
+// Route to create a new college
 router.post('/', postCollege);
 
-// GET route to retrieve all college entries
+// Route to get all colleges
 router.get('/', getColleges);
+
+// Route to filter colleges based on query parameters
+router.get('/filter', queryColleges);
 
 module.exports = router;

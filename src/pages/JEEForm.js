@@ -36,8 +36,11 @@ const JEEForm = () => {
         }
       });
 
+      console.log('API Response:', response.data); // Log the API response
       setResults(response.data.data);
+      console.log('Results:', response.data.data); // Log the results data
     } catch (err) {
+      console.error('Error fetching results:', err); // Log the error
       setError('Error fetching results');
     } finally {
       setLoading(false);

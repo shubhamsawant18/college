@@ -65,10 +65,7 @@ const IndexPage = () => {
           <button className="counselling-button" onClick={openModal}>
             Need Counselling
           </button>
-          <button onClick={() => handlePredictorClick('NEET')}>NEET Predictor</button>
-          <button onClick={() => handlePredictorClick('CAT')}>CAT Predictor</button>
-          <button onClick={() => handlePredictorClick('JEE MAIN')}>JEE Main Predictor</button>
-          <button onClick={() => handlePredictorClick('JEE Advanced')}>JEE Main Predictor</button>
+
 
         </div>
       </div>
