@@ -206,6 +206,9 @@ const ExplorePrograms = () => {
     else if(predictor === 'JEE Advanced'){
         navigate('/jeea')
     }
+    else if(predictor === 'GATE'){
+      navigate('/gate')
+  }
 };
 
 

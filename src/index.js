@@ -23,6 +23,7 @@ import NEET from "./pages/NEETForm";
 import CATForm from "./pages/CATForm";
 import JEEForm from "./pages/JEEForm"; // Updated import path
 import JEEADVForm from "./pages/JEEADVForm";
+import GATEForm from "./pages/GATEForm";
 
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -40,8 +41,9 @@ const IndexPage = () => {
       navigate('/jeem'); // Navigate to JEEForm page
     }else if (predictor === 'JEE Advanced'){
       navigate('jeea');
+    }else if (predictor === 'GATE'){
+      navigate('gate');
     }
-
   };
 
   return (
@@ -108,6 +110,7 @@ const App = () => {
         <Route path="/cat" element={<CATForm />} /> {/* CAT page route */}
         <Route path="/jeem" element={<JEEForm />} /> {/* JEEForm page route */}
         <Route path="/jeea" element={<JEEADVForm />} /> {/* JEEForm page route */}
+        <Route path="/gate" element={<GATEForm />} /> {/* JEEForm page route */}
 
       </Routes>
     </Router>
