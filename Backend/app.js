@@ -25,7 +25,9 @@ const jeemDistrictRoute = require('./routes/form-routes/jeemdistrictroute');
 const jeemCourseRoute = require('./routes/form-routes/jeemcourseroute');
 const jeeadvCategoryRoutes = require('./routes/form-routes/jeeadvcategoryroute'); 
 const jeeadvCollegeRoutes = require('./routes/form-routes/jeeadvcollegeroute'); 
-const gateCategoryRoute = require('./routes/form-routes/gatecategoryroute'); // New route
+const gateCategoryRoute = require('./routes/form-routes/gatecategoryroute'); 
+const gateStreamRoute = require('./routes/form-routes/gatestreamroute'); 
+const gateCollegeRoute = require('./routes/form-routes/gatecollegeroute'); // New route
 
 // Use routes
 app.use("/api", userRoutes);
@@ -43,7 +45,9 @@ app.use('/api/jeemdistrict', jeemDistrictRoute);
 app.use('/api/jeemcourse', jeemCourseRoute);
 app.use('/api/jeeadvcategory', jeeadvCategoryRoutes); 
 app.use('/api/jeeadvcollege', jeeadvCollegeRoutes); 
-app.use('/api/gatecategory', gateCategoryRoute); // New route usage
+app.use('/api/gatecategory', gateCategoryRoute); 
+app.use('/api/gatestream', gateStreamRoute); 
+app.use('/api/gatecollege', gateCollegeRoute); // New route usage
 
 // MongoDB connection
 mongoose
