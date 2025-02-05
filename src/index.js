@@ -24,6 +24,7 @@ import CATForm from "./pages/CATForm";
 import JEEForm from "./pages/JEEForm"; // Updated import path
 import JEEADVForm from "./pages/JEEADVForm";
 import GATEForm from "./pages/GATEForm";
+import NEETResult from "./pages/NEETResult"; // Import the NEETResult component
 
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -67,8 +68,6 @@ const IndexPage = () => {
           <button className="counselling-button" onClick={openModal}>
             Need Counselling
           </button>
-
-
         </div>
       </div>
 
@@ -111,7 +110,7 @@ const App = () => {
         <Route path="/jeem" element={<JEEForm />} /> {/* JEEForm page route */}
         <Route path="/jeea" element={<JEEADVForm />} /> {/* JEEForm page route */}
         <Route path="/gate" element={<GATEForm />} /> {/* JEEForm page route */}
-
+        <Route path="/neet-result" element={<NEETResult />} /> {/* NEETResult page route */}
       </Routes>
     </Router>
   );

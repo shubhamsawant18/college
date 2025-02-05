@@ -1,73 +1,1213 @@
-/* Remove body styles to avoid global changes */
 
-.form-unique-container {
+
+.neet-form-unique-container {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  background-color: #ffffff;
-  padding: 30px 50px;
-  border-radius: 8px;
-  text-align: center;
-  width: 95%;
-  max-width: 700px;
+  background-color: #ffffff; /* Set background to white */
+  padding: 30px 40px;
+  border-radius: 10px;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  width: 100%;
   margin: 20px auto;
+  font-weight: 200;
 }
 
-.form-unique-title {
-  font-size: 20px;
-  margin-bottom: 30px;
+.neet-form-unique-title {
+  text-align: left;
+  font-size: 22px;
+  margin-bottom:25px;
   color: #333;
   font-weight: bold;
+  font-weight: 400;
 }
 
-.form-unique {
+.neet-form-unique {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Adjusted overall gap between rows */
-  width: 550px;
-  margin: 0 auto;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
 }
 
-.form-unique-row {
+.neet-form-unique-row {
   display: flex;
   justify-content: space-between;
-  gap: 30px; /* Horizontal gap between boxes */
+  gap: 50px;
+  width: 100%;
 }
 
-.form-unique-group {
+.neet-form-unique-group {
   flex: 1;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
-.form-unique-label {
-  display: block;
-  margin-bottom: 8px;
+.neet-form-unique-label {
+  margin-bottom: 6px;
   font-weight: bold;
   color: #333;
   font-size: 14px;
 }
 
-.form-unique-input,
-.form-unique-select {
-  width: 72%; /* Consistent width for all inputs and dropdowns */
+.neet-form-unique-input,
+.neet-form-unique-select {
+  font-weight: 200;
+  width: 80%;
   padding: 12px;
   border: 1px solid #ced4da;
   border-radius: 6px;
   font-size: 14px;
-  background-color: #f9f9f9;
+  background-color: #ffffff; /* Set input and select background to white */
+  transition: border 0.3s ease-in-out;
 }
 
-.form-unique-button {
+.neet-form-unique-input:focus,
+.neet-form-unique-select:focus {
+  border-color: #ff7f00;
+  outline: none;
+}
+
+.neet-form-unique-button {
   background-color: #ff7f00;
   color: #ffffff;
-  padding: 12px 20px;
+  padding: 10px 0;
   border: none;
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
-  width: 35%;
-  margin: 1px auto 0; /* Moved the button slightly up */
+  width: 30%;
+  margin-top: 15px;
+  transition: background 0.3s ease;
 }
 
-.form-unique-button:hover {
+.neet-form-unique-button:hover {
   background-color: #e66b00;
+}
+
+/* Information Section */
+.neet-info-section {
+  padding: 0px 0px;
+  background-color: #ffffff; /* Set background to white */
+  margin: auto;
+}
+
+.neet-info-section p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.neet-info-section h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.neet-form-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.neet-form-container th,
+.neet-form-container td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.neet-form-container th {
+  background-color: #ff7f00;
+  color: white;
+}
+
+.neet-form-container td {
+  background-color: #ffffff;
+}
+
+
+.neet-main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.neet-left-container {
+  width: 70%;
+  background-color: #ffffff; /* Set background to white */
+  padding-right: 1rem;
+
+  border-radius: 10px;
+}
+
+.neet-right-container {
+  width: 28%;
+  background-color: #ffffff; /* Set background to white */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.neet-form-unique-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%; 
+  background-color: #fff;
+  border-radius: 10px;
+  border: 0.5px solid rgba(93, 156, 204, 0.57);
+  text-align: center;
+}
+
+.neet-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.neet-btn {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-orange {
+  background-color: #ff7f00;
+  color: white;
+}
+
+.btn-orange:hover {
+  background-color: #e66b00;
+}
+
+.btn-white {
+  background-color: #ffffff; /* Set background to white */
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.btn-teal {
+  background-color: #3eba9f;
+  color: white;
+}
+
+.btn-teal:hover {
+  background-color: #1a9a93;
+}
+
+@media (max-width: 768px) {
+  .neet-main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .neet-left-container,
+  .neet-right-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .neet-form-container .neet-form-unique-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+h1{
+  font-weight:600;
+}
+
+.form-unique{
+  justify-self: center;
+  align-self: center;
+}
+.view-all-btn-container{
+  margin: 1rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view-all-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ff9434;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid grey;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.view-all-btn:hover {
+  color: grey;
+}
+
+.check-result-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CollegeRanKList {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.CollegeRanKList img{
+  align-self: center;
+}
+
+.neet-btn {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  padding: 0.75rem 0.8rem;
+}
+
+.icon-right {
+  margin-left: auto; /* Push icon to the right */
+}
+
+/* Container for the table */
+.neet-table-container {
+  overflow-x: auto;
+}
+
+/* Table styles */
+.neet-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #d1d5db; /* Border for the entire table */
+  /* margin: auto; Optional: Center the table horizontally */
+}
+
+/* Row styles */
+.neet-table-row {
+  border: 1px solid #d1d5db; /* Border for rows */
+}
+
+/* Even row styles */
+.neet-table-row:nth-child(even) {
+  background-color: #f9fafb; /* Light background for even rows */
+}
+
+/* Odd row styles */
+.neet-table-row:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+/* Cell styles */
+.neet-table-cell {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #3b82f6; /* Blue text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #d1d5db; /* Border for cells */
+}
+
+/* Hover effect for table cells */
+.neet-table-cell:hover {
+  text-decoration: underline;
+  background-color: #f1f5f9; /* Light gray background on hover */
+}
+
+/* Table container */
+.neet-table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+/* Table styles */
+.neet-mbbs-table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #d1d5db;
+}
+
+/* Header styles */
+.neet-table-header {
+  background-color: #6ab1c2;
+  color: #ffffff;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  text-align: center;
+}
+
+/* Cell styles */
+.neet-table-cell {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  text-align: center;
+}
+
+/* Even row styles */
+.neet-table-row:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Odd row styles */
+.neet-table-row:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.neet-table-container {
+  /* margin: 20px 0; */
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling on small screens */
+  padding: 0;
+  margin: 0;
+  min-height: 20vh
+}
+
+.neet-marks-rank-table {
+  width: 100%; /* Table width remains full */
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  text-align: center; /* Aligns text in the center of table cells */
+}
+
+.neet-marks-rank-table th, 
+.neet-marks-rank-table td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Padding for readability */
+  text-align: center; /* Ensures text is centered */
+}
+
+.neet-marks-rank-table th {
+  background-color: #b2dfdb; /* Light teal color */
+  color: #000;
+  font-weight: bold;
+}
+
+.neet-marks-rank-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.neet-marks-rank-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.neet-marks-rank-table td {
+  color: #333;
+}
+
+.neet-table-container {
+  /* margin: 20px 0; */
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling on small screens */
+  padding: 0;
+  margin: 0;
+  min-height: 20vh
+}
+
+.neet-marks-rank-table {
+  width: 100%; /* Table width remains full */
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  text-align: center; /* Aligns text in the center of table cells */
+}
+
+.neet-marks-rank-table th, 
+.neet-marks-rank-table td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Padding for readability */
+  text-align: center; /* Ensures text is centered */
+}
+
+.neet-marks-rank-table th {
+  background-color: #b2dfdb; /* Light teal color */
+  color: #000;
+  font-weight: bold;
+}
+
+.neet-marks-rank-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.neet-marks-rank-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.neet-marks-rank-table td {
+  color: #333;
+}
+
+.neet-containe {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.neet-exam-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0vh 2vh;
+
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.neet-exam-card h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.neet-exam-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.neet-exam-card li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.neet-exam-card li:last-child {
+  border-bottom: none;
+}
+
+.neet-exam-card a {
+  text-decoration: none;
+  color: #ff7f00;
+  font-weight: 500;
+}
+
+.neet-exam-card a:hover {
+  text-decoration: underline;
+}
+
+/* Table Container */
+.neet-table-container {
+  width: 100%;
+  /* margin: 30px auto; */
+  overflow-x: auto;
+}
+
+/* Table Styling */
+.neet-college-table {
+  width: 98.5%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+/* Table Header */
+.neet-college-table thead {
+  background-color: #a5c6d5 !important; /* Ensure background color is applied */
+  color: white !important; 
+}
+
+/* .college-table thead tr {
+  /* background-color: #a5c6d5 !important; Apply to entire row 
+} */
+
+.neet-college-table th {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: left;
+  font-weight: bold;
+  background-color: #a5c6d5 !important; /* Apply color to individual header cells */
+  color: #000 !important; /* Make sure text is readable */
+}
+
+/* Table Body */
+.neet-college-table tbody tr {
+  background-color: #f8f9fa;
+  transition: background-color 0.3s;
+}
+
+.neet-college-table tbody tr:hover {
+  background-color: #eef5f9;
+}
+
+/* Table Data Cells */
+.neet-college-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+/* College Name Links */
+.neet-college-name {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight:200;
+  font-size:100%;
+}
+
+.neet-college-name:hover {
+  text-decoration: underline;
+}
+
+/* Closing Rank Styling */
+.neet-closing-rank {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Container for all cards */
+.college-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual card styling */
+.college-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.college-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Section */
+.college-image {
+  position: relative;
+}
+
+.college-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.college-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background-color: #000;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+/* Content Section */
+.college-content {
+  padding: 16px;
+}
+
+.college-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 8px; /* Added space to ensure no overlap */
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.college-location {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Accreditation */
+.accreditation {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.accreditation-badge {
+  background-color: #e7f9e7;
+  color: #2a9d2a;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 12px;
+}
+
+/* Rankings */
+.rankings .ranking {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+/* Programs */
+.programs {
+  margin-bottom: 16px;
+}
+
+.program-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.program-details {
+  font-size: 12px;
+  color: #555;
+}
+
+.program-fees {
+  font-weight: bold;
+  color: #e85d04;
+}
+
+/* Button */
+.apply-button {
+  width: 100%;
+  background-color: #f97316;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #ea580c;
+}
+
+.category-score-table {
+  width: 100%; /* Full width */
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+.category-score-table th, 
+.category-score-table td {
+  border: 1px solid #ddd; /* Border for table cells */
+  padding: 12px; /* Padding inside table cells */
+  text-align: center; /* Center align text */
+}
+
+.category-score-table th {
+  background-color: #b2dfdb; /* Light teal for header background */
+  color: #ffffff; /* White text for header */
+  font-weight: bold;
+}
+
+.category-score-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light grey for alternate rows */
+}
+
+.category-score-table tbody tr:hover {
+  background-color: #f1f1f1; /* Slight highlight on hover */
+}
+
+.table-container {
+  overflow-x: auto; /* Horizontal scroll for small screens */
+}
+
+/* CardComponent.css */
+.card-container {
+  max-width: 30%;
+  max-height: 1%;
+  /* margin: 1rem; */
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background: white;
+}
+
+.card-container:hover {
+  transform: translateY(-5px);
+}
+
+.card-image-container {
+  position: relative;
+  height: 180px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.card-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+}
+
+.text-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.card-badges {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-title {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  /* margin-bottom: 0.5rem; */
+  line-height: 1.3;
+  z-index: 2;
+}
+
+.card-location {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* margin-bottom: 0.5rem; */
+}
+
+.accreditation-badge {
+  background: #4CAF50;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.rankings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* margin-bottom: 1rem; */
+}
+
+.ranking {
+  font-size: 0.8rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.program-details {
+  margin-bottom: 1rem;
+}
+
+.program-name {
+  font-weight: 600;
+  color: #333;
+  /* margin-bottom: 0.25rem; */
+}
+
+.program-info {
+  font-size: 0.8rem;
+  color: #666;
+  /* margin-bottom: 0.25rem; */
+}
+
+.program-fees {
+  font-weight: 600;
+  color: #4CAF50;
+  font-size: 1.1rem;
+}
+
+.fees-label {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.apply-button {
+  width: 100%;
+  padding: 10px;
+  background: #FF6F00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.apply-button:hover {
+  background: #E65100;
+}
+
+/* Card Image Section */
+.card-image-container {
+  position: relative;
+  height: 180px;
+}
+
+/* Ensure the title and other content within the overlay are on top */
+.card-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  z-index: 1; /* Ensures it's above the image */
+}
+
+/* Text container for the college name */
+.text-overlay {
+  position: relative;
+  z-index: 2; /* Make sure the text appears above the overlay */
+  color: white; /* Ensure text is white */
+}
+
+/* Title Style */
+.card-title {
+  font-size: 1.2rem;  /* Adjust the font size as needed */
+  font-weight: 600;
+  /* margin-bottom: 0.5rem; */
+  line-height: 1.3;
+  z-index: 2; /* Ensures the title stays above */
+}
+
+/* Location Styling */
+.card-location {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* margin-bottom: 0.5rem; */
+  z-index: 2; /* Ensures the location stays above */
+}
+
+/* Card container */
+.card {
+  flex: 1 1 calc(33.33% - 20px); /* 3 cards per row with spacing */
+  max-width: calc(33.33% - 20px);
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  padding: 0;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  /* justify-content: center; */
+  padding: 1rem 0rem;
+  box-sizing: border-box;
+}
+
+/* Image container with overlay */
+.card-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+/* Reduce gap between title and location */
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Ensure subtitle stays close */
+.card-subtitle {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  /* Small bottom margin */
+  color: white;
+  line-height: 1.2;
+}
+
+/* Ensure the overlay covers the whole image */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Full overlay */
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+/* Position the badge at the exact bottom-left */
+.card-badge {
+  position: absolute;
+  bottom: 0;
+  /* Stick to bottom */
+  left: 0;
+  /* Stick to left */
+  background: #4caf50;
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  width: auto;
+  text-align: center;
+  margin: 0;
+  /* Remove extra margin */
+}
+
+
+/* Card body */
+.card-body {
+  padding: 0;
+  margin: 0;
+}
+
+/* Scrollable Rankings (Now with visible scrollbar) */
+.scrollable-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding-bottom: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: #aaa #eee;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 3px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 3px;
+}
+
+/* Ranking badges */
+.ranking-badge {
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+/* Course styles */
+.card-courses {
+  background-color: #ecf9fc;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  border-top: 1px solid #ddd;
+  padding-top: 16px;
+}
+
+.card-course {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #444;
+  margin-bottom: 12px;
+  font-size: small;
+}
+
+.card-course:last-child {
+  margin-bottom: 0;
+}
+
+/* Show More / Show Less Button */
+.card-toggle {
+  display: block;
+  margin: 1vh auto;
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+}
+
+/* Apply Button */
+.card-button {
+  display: block;
+  text-align: center;
+  background-color: #f97316;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.card-button:hover {
+  background-color: #ea580c;
+}
+
+/* Icon Badge Styles */
+.icon-badges {
+  width: 1rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.icon-badge {
+  color: white;
+  padding: 2px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vh;
+}
+
+.desc-left{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.desc-right{
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.title-txt,.fee-txt{
+  font-weight:bold;
+}
+
+.feeDesc-txt,.desc-txt{
+  font-size:x-small;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+      flex: 1 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
+      max-width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+      flex: 1 1 100%; /* 1 card per row on mobile screens */
+      max-width: 100%;
+  }
+}
+
+/* Table container */
+.BDS-table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center; /* Align table container to the center */
+  width: 100%;
+}
+
+/* Table styles */
+.BDS-styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center; /* This aligns all the content of the table to center */
+  font-size: 16px;
+}
+
+/* Header styles */
+.BDS-styled-table thead tr {
+  background-color: #6ab1c2; 
+  color: #ffffff;
+  text-align: center;
+}
+
+.BDS-styled-table th {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center; /* Ensures the header text is centered */
+}
+
+/* Row styles */
+.BDS-styled-table tbody tr {
+  border: 1px solid #ddd;
+}
+
+.BDS-styled-table tbody tr:nth-child(even) {
+  background-color: #f9fafb; /* Light gray background for even rows */
+}
+
+.BDS-styled-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+.BDS-styled-table td {
+  padding: 10px;
+  border: 1px solid #ddd; /* Border for data cells */
+  text-align: center; /* Ensures the text in data cells is centered */
 }
