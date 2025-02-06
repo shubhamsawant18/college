@@ -13,6 +13,10 @@ const queryColleges = async (req, res) => {
     // Validate and log the provided IDs
     let cityId, categoryId, courseId;
 
+    if (!rank && !category && !city && !course) {
+      return res.status(400).json({ success: false, msg: 'No query parameters provided' });
+    }
+
     if (city) {
       if (mongoose.Types.ObjectId.isValid(city)) {
         cityId = new mongoose.Types.ObjectId(city);
@@ -94,6 +98,7 @@ const queryColleges = async (req, res) => {
     });
   }
 };
+
 
 // POST request to add a new college
 const postCollege = async (req, res) => {

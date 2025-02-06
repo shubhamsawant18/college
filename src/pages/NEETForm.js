@@ -419,24 +419,30 @@ const NEETForm = () => {
         : name === "reservation"
           ? categories.find((res) => res._id === value)
           : courses.find((course) => course._id === value);
-    setFormData({ ...formData, [name]: value }); // Update this line to use value directly
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleRankChange = (value) => {
+    const newRank = Math.max(1, Number(formData.rank) + value);
+    setFormData({ ...formData, rank: newRank });
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    const queryParam = {};
-    if (formData.rank) {
-      queryParam.rank = formData.rank;
+
+    if (!formData.rank || !formData.city || !formData.reservation || !formData.course) {
+      setError("Please fill all the fields before submitting the form.");
+      return;
     }
-    if (formData.reservation) {
-      queryParam.category = formData.reservation;
-    }
-    if (formData.course) {
-      queryParam.course = formData.course;
-    }
-    if (formData.city) {
-      queryParam.city = formData.city;
-    }
+
+    const queryParam = {
+      rank: formData.rank,
+      category: formData.reservation,
+      course: formData.course,
+      city: formData.city
+    };
+    
+    console.log('Query parameters:', queryParam);
+   
     try {
       const queryParams = new URLSearchParams(queryParam).toString();
       const response = await axios.get(
@@ -452,7 +458,6 @@ const NEETForm = () => {
       setError("An error occurred while fetching results");
     }
   };
-  
   
   return (
     <div>
@@ -470,12 +475,13 @@ const NEETForm = () => {
                     Enter your rank
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     id="rank"
                     name="rank"
                     value={formData.rank}
                     onChange={handleInputChange}
                     className="neet-form-unique-input"
+                    min="1"
                   />
                 </div>
                 <div className="neet-form-unique-group">
@@ -555,6 +561,7 @@ const NEETForm = () => {
                   Check results
                 </button>
               </div>
+              {error && <p className="error-message">{error}</p>}
             </form>
           </div>
 
