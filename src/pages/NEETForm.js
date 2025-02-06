@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import '../assets/styles1/NEETForm.css';
@@ -9,7 +7,7 @@ import { Album01Icon, VideoReplayIcon } from "hugeicons-react";
 // const CollegeRanKList = require('../../public/assets/college-rank-list/NEET_College_List_Rank_Wise_01_e1704f98f7317beeff12f6c1d26bff77.webp');
 
 
-import  { useEffect } from 'react'; // React and hooks are imported here
+import { useEffect } from 'react'; // React and hooks are imported here
 import { Mail, MessageCircle, FileText } from "lucide-react"; // Separate imports for icons
 import { useNavigate } from 'react-router-dom'; // For navigation
 import axios from 'axios'; // For making HTTP requests
@@ -359,206 +357,203 @@ const NEETForm = () => {
   const [showReadBtn, setShowReadBtn] = useState(true); // If it's a boolean state
 
   const [showInfo, setShowInfo] = useState(false);
- 
-    const [formData, setFormData] = useState({
-      rank: "",
-      city: "",
-      reservation: "",
-      course: "",
-    });
-  
-    const [results, setResults] = useState([]);
-    const [error, setError] = useState("");
-    const [categories, setCategories] = useState([]);
-    const [courses, setCourses] = useState([]);
-    const [cities, setCities] = useState([]);
-    const navigate = useNavigate();
-  
-    useEffect(() => {
-      const fetchCategoryApi = async () => {
-        try {
-          const response = await axios.get('http://localhost:5000/api/category');
-          setCategories(response.data.data);
-        } catch (err) {
-          console.error('Error fetching categories:', err);
-        }
-      };
-      fetchCategoryApi();
-    }, []);
-  
-    useEffect(() => {
-      const fetchCoursesApi = async () => {
-        try {
-          const response = await axios.get('http://localhost:5000/api/course');
-          setCourses(response.data.data);
-        } catch (err) {
-          console.error('Error fetching course:', err);
-        }
-      };
-      fetchCoursesApi();
-    }, []);
-  
-    useEffect(() => {
-      const fetchCityApi = async () => {
-        try {
-          const response = await axios.get('http://localhost:5000/api/city');
-          setCities(response.data.data);
-        } catch (err) {
-          console.error('Error fetching cities:', err);
-        }
-      };
-      fetchCityApi();
-    }, []);
-  
-    const handleInputChange = (e) => {
-      const { name, value } = e.target;
-      setFormData({ ...formData, [name]: value });
+
+  const [formData, setFormData] = useState({
+    rank: "",
+    city: "",
+    reservation: "",
+    course: "",
+  });
+
+  const [results, setResults] = useState([]);
+  const [error, setError] = useState("");
+  const [categories, setCategories] = useState([]);
+  const [courses, setCourses] = useState([]);
+  const [cities, setCities] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchCategoryApi = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/category');
+        setCategories(response.data.data);
+      } catch (err) {
+        console.error('Error fetching categories:', err);
+      }
     };
-  
-    const handleSelectChange = (e) => {
-      const { name, value } = e.target;
-      const selectedOption =
-        name === "city"
-          ? cities.find((city) => city._id === value)
-          : name === "reservation"
+    fetchCategoryApi();
+  }, []);
+
+  useEffect(() => {
+    const fetchCoursesApi = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/course');
+        setCourses(response.data.data);
+      } catch (err) {
+        console.error('Error fetching course:', err);
+      }
+    };
+    fetchCoursesApi();
+  }, []);
+
+  useEffect(() => {
+    const fetchCityApi = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/city');
+        setCities(response.data.data);
+      } catch (err) {
+        console.error('Error fetching cities:', err);
+      }
+    };
+    fetchCityApi();
+  }, []);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSelectChange = (e) => {
+    const { name, value } = e.target;
+    const selectedOption =
+      name === "city"
+        ? cities.find((city) => city._id === value)
+        : name === "reservation"
           ? categories.find((res) => res._id === value)
           : courses.find((course) => course._id === value);
-      setFormData({ ...formData, [name]: selectedOption._id });
-    };
-  
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      setError("");
-      var queryParam = {};
-      if (formData.rank) {
-        queryParam["rank"] = formData.rank;
-      }
-      if (formData.reservation) {
-        queryParam["category"] = formData.reservation;
-      }
-      if (formData.course) {
-        queryParam["course"] = formData.course;
-      }
-      if (formData.city) {
-        queryParam["city"] = formData.city;
-      }
-      try {
-        const queryParams = new URLSearchParams(queryParam).toString();
-        const response = await axios.get(
-          `http://localhost:5000/api/college/filter?${queryParams}`
-        );
-        const data = response.data;
-        if (response.status === 200 && data.success) {
-          setResults(data.data);
-          navigate("/neet-result", { state: { results: data.data } });
-        } else {
-          setError(data.msg || "Failed to fetch colleges");
-        }
-      } catch (err) {
-        setError("An error occurred while fetching results");
-      }
-    };
+    setFormData({ ...formData, [name]: selectedOption._id });
+  };
 
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    var queryParam = {};
+    if (formData.rank) {
+      queryParam["rank"] = formData.rank;
+    }
+    if (formData.reservation) {
+      queryParam["category"] = formData.reservation;
+    }
+    if (formData.course) {
+      queryParam["course"] = formData.course;
+    }
+    if (formData.city) {
+      queryParam["city"] = formData.city;
+    }
+    try {
+      const queryParams = new URLSearchParams(queryParam).toString();
+      const response = await axios.get(
+        `http://localhost:5000/api/college/filter?${queryParams}`
+      );
+      const data = response.data;
+      if (response.status === 200 && data.success) {
+        setResults(data.data);
+        navigate("/neet-result", { state: { results: data.data } });
+      } else {
+        setError(data.msg || "Failed to fetch colleges");
+      }
+    } catch (err) {
+      setError("An error occurred while fetching results");
+    }
+  };
+
+
   return (
     <div>
       <Navbar />
       <div className="neet-main-container">
         <div className="neet-left-container">
-             
+
           <h1 className="neet-form-unique-title" style={{ fontWeight: '600' }}>
             NEET College Predictor 2025: Predict Top MBBS/BDS Colleges based on your Rank and Scores
           </h1>
           <div className="neet-form-unique-container">
-  <h1 className="form-unique-title">
-    NEET College Predictor 2025: Predict Top MBBS/BDS Colleges based on your Rank and Scores
-  </h1>
-  <form onSubmit={handleSubmit} className="form-unique">
-    <div className="neet-form-unique-row">
-      <div className="neet-form-unique-group">
-        <label htmlFor="rank" className="form-unique-label">
-          Enter your rank
-        </label>
-        <input
-          type="text"
-          id="rank"
-          name="rank"
-          value={formData.rank}
-          onChange={handleInputChange}
-          className="neet-form-unique-input"
-        />
-      </div>
-      <div className="neet-form-unique-group">
-        <label htmlFor="reservation" className="neet-form-unique-label">
-          Reservation Category
-        </label>
-        <select
-          id="reservation"
-          name="reservation"
-          value={formData.reservation}
-          onChange={handleSelectChange}
-          className="neet-form-unique-select"
-        >
-          {categories && categories.length > 0 ? (
-            categories.map((res) => (
-              <option key={res._id} value={res._id}>
-                {res.categoryname}
-              </option>
-            ))
-          ) : (
-            <option disabled>No categories available</option>
-          )}
-        </select>
-      </div>
-    </div>
-    <div className="neet-form-unique-row">
-      <div className="neet-form-unique-group">
-        <label htmlFor="city" className="form-unique-label">
-          Select City
-        </label>
-        <select
-          id="city"
-          name="city"
-          value={formData.city}
-          onChange={handleSelectChange}
-          className="neet-form-unique-select"
-        >
-          <option value="">Select City</option>
-          {cities && cities.length > 0 ? (
-            cities.map((city) => (
-              <option key={city._id} value={city._id}>
-                {city.name}
-              </option>
-            ))
-          ) : (
-            <option disabled>No cities available</option>
-          )}
-        </select>
-      </div>
-      <div className="neet-form-unique-group">
-        <label htmlFor="course" className="form-unique-label">
-          Select Course
-        </label>
-        <select
-          id="course"
-          name="course"
-          value={formData.course}
-          onChange={handleSelectChange}
-          className="neet-form-unique-select"
-        >
-          <option value="MBBS">MBBS</option>
-          <option value="BSC (Nursing)">BSC (Nursing)</option>
-          <option value="BDS">BDS</option>
-        </select>
-      </div>
-    </div>
-    <div className="check-result-container">
-      <button type="submit" className="neet-form-unique-button">
-        Check results
-      </button>
-    </div>
-  </form>
-</div>
+            <form onSubmit={handleSubmit} className="form-unique">
+              <div className="neet-form-unique-row">
+                <div className="neet-form-unique-group">
+                  <label htmlFor="rank" className="form-unique-label">
+                    Enter your rank
+                  </label>
+                  <input
+                    type="text"
+                    id="rank"
+                    name="rank"
+                    value={formData.rank}
+                    onChange={handleInputChange}
+                    className="neet-form-unique-input"
+                  />
+                </div>
+                <div className="neet-form-unique-group">
+                  <label htmlFor="reservation" className="neet-form-unique-label">
+                    Reservation Category
+                  </label>
+                  <select
+                    id="reservation"
+                    name="reservation"
+                    value={formData.reservation}
+                    onChange={handleSelectChange}
+                    className="neet-form-unique-select"
+                  >
+                    {categories && categories.length > 0 ? (
+                      categories.map((res) => (
+                        <option key={res._id} value={res._id}>
+                          {res.categoryname}
+                        </option>
+                      ))
+                    ) : (
+                      <option disabled>No categories available</option>
+                    )}
+                  </select>
+                </div>
+              </div>
+              <div className="neet-form-unique-row">
+                <div className="neet-form-unique-group">
+                  <label htmlFor="city" className="form-unique-label">
+                    Select City
+                  </label>
+                  <select
+                    id="city"
+                    name="city"
+                    value={formData.city}
+                    onChange={handleSelectChange}
+                    className="neet-form-unique-select"
+                  >
+                    <option value="">Select City</option>
+                    {cities && cities.length > 0 ? (
+                      cities.map((city) => (
+                        <option key={city._id} value={city._id}>
+                          {city.name}
+                        </option>
+                      ))
+                    ) : (
+                      <option disabled>No cities available</option>
+                    )}
+                  </select>
+                </div>
+                <div className="neet-form-unique-group">
+                  <label htmlFor="course" className="form-unique-label">
+                    Select Course
+                  </label>
+                  <select
+                    id="course"
+                    name="course"
+                    value={formData.course}
+                    onChange={handleSelectChange}
+                    className="neet-form-unique-select"
+                  >
+                    <option value="MBBS">MBBS</option>
+                    <option value="BSC (Nursing)">BSC (Nursing)</option>
+                    <option value="BDS">BDS</option>
+                  </select>
+                </div>
+              </div>
+              <div className="check-result-container">
+                <button type="submit" className="neet-form-unique-button">
+                  Check results
+                </button>
+              </div>
+            </form>
+          </div>
 
 
           <div className="neet-info-section">
@@ -567,7 +562,7 @@ const NEETForm = () => {
               Using our college predictor tool, you can predict your admission chances to the top MBBS/ BDS/ BAMS/ BHMS/ BUMS/ B.Sc Nursing colleges based on NEET scores. Just input the AIR obtained in the exam, your category and course preference to use NEET 2024 college predictor.
             </p>
           </div>
-          {showReadBtn && (
+          {!showInfo && (
             <button
               style={{
                 display: 'block', // Ensures the button takes up full width
@@ -607,13 +602,13 @@ const NEETForm = () => {
               </div> */}
               <div className="predictor-info">
                 <h3 style={{ color: '#7f92bd' }}>State-wise NEET College Predictor 2024</h3>
-                <div className="neet-table-container">
-                  <table className="neet-table">
+                <div className="neet-neettable-container">
+                  <table className="neet-neettable">
                     <tbody>
                       {Predictortabledata.map((row, rowIndex) => (
-                        <tr key={rowIndex} className="neet-table-row">
+                        <tr key={rowIndex} className="neet-neettable-row">
                           {row.map((item, colIndex) => (
-                            <td key={colIndex} className="neet-table-cell">
+                            <td key={colIndex} className="neet-neettable-cell">
                               {item}
                             </td>
                           ))}
@@ -628,24 +623,24 @@ const NEETForm = () => {
                 <p>
                   We have provided below NEET UG Cutoff for MBBS Government Colleges. Based on previous year cutoff trends, <strong>you need NEET 2024 rank below 100 to get admission to AIIMS Delhi & MAMC Delhi and rank below 200 for MBBS admission to VMMC Delhi & JIPMER Puducherry.</strong> NEET Cutoff for MBBS Government Colleges below is the last year closing ranks for 15% AIQ Seats.
                 </p>
-                <div className="neet-table-container">
-                  <table className="neet-mbbs-table">
+                <div className="neet-neettable-container">
+                  <table className="neet-mbbs-neettable">
                     <thead>
                       <tr>
-                        <th className="neet-table-header">College Name</th>
-                        <th className="neet-table-header">General</th>
-                        <th className="neet-table-header">EWS</th>
-                        <th className="neet-table-header">OBC</th>
-                        <th className="neet-table-header">SC</th>
-                        <th className="neet-table-header">ST</th>
-                        <th className="neet-table-header">PwD</th>
+                        <th className="neet-neettable-header">College Name</th>
+                        <th className="neet-neettable-header">General</th>
+                        <th className="neet-neettable-header">EWS</th>
+                        <th className="neet-neettable-header">OBC</th>
+                        <th className="neet-neettable-header">SC</th>
+                        <th className="neet-neettable-header">ST</th>
+                        <th className="neet-neettable-header">PwD</th>
                       </tr>
                     </thead>
                     <tbody>
                       {Mbbstabledata.map((row, rowIndex) => (
-                        <tr key={rowIndex} className="neet-table-row">
+                        <tr key={rowIndex} className="neet-neettable-row">
                           {row.map((item, colIndex) => (
-                            <td key={colIndex} className="neet-table-cell">{item}</td>
+                            <td key={colIndex} className="neet-neettable-cell">{item}</td>
                           ))}
                         </tr>
                       ))}
@@ -658,8 +653,8 @@ const NEETForm = () => {
                 <p>
                   NEET UG Cutoff for BDS Government Colleges usually ranges between 762 to 20,041. You can check the table below to check NEET BDS cutoff for top Government Colleges.
                 </p>
-                <div className="BDS-table-container">
-                  <table className="BDS-styled-table">
+                <div className="BDS-neettable-container">
+                  <table className="BDS-styled-neettable">
                     <thead>
                       <tr>
                         <th>BDS Government College</th>
@@ -694,8 +689,8 @@ const NEETForm = () => {
                 <p>
                   Given below is the NEET Marks vs Rank analysis based on this year’s result data to help candidates get an idea of the rank range they can expect based on their marks.
                 </p>
-                <div className="neet-table-container">
-                  <table className="neet-marks-rank-table">
+                <div className="neet-neettable-container">
+                  <table className="neet-marks-rank-neettable">
                     <thead>
                       <tr>
                         <th>Marks</th>
@@ -721,8 +716,8 @@ const NEETForm = () => {
                 <p>
                   430-510 is a good score for admission to private medical colleges in India. However, 550-650 scores can easily get you any government MBBS/ BDS college. Based on a previous year analysis we have provided you a range of good score in NEET 2024 for MBBS/ BDS admissions. You can also check NEET college list rank-wise in the article below.
                 </p>
-                <div className="category-table-container">
-                  <table className="category-score-table">
+                <div className="category-neettable-container">
+                  <table className="category-score-neettable">
                     <thead>
                       <tr>
                         <th>Category</th>
@@ -772,24 +767,24 @@ const NEETForm = () => {
           <div className="acceptingColleges">
             <h3>Top Medical colleges accepting NEET</h3>
 
-            <div className="card-list">
+            <div className="neetcard-list">
               {cardData.map((data, cardIndex) => (
-                <div className="card" key={cardIndex}>
+                <div className="neetcard" key={cardIndex}>
                   {/* Image Container with Overlay */}
-                  <div className="card-image-container">
+                  <div className="neetcard-image-container">
                     <img
                       src={data.image}
                       alt={data.title}
-                      className="card-image"
+                      className="neetcard-image"
                     />
                     {/* Card Overlay */}
-                    <div className="card-overlay">
-                      <h4 className="card-title">{data.title}</h4>
-                      <span className="card-subtitle">{data.subtitle}</span>
+                    <div className="neetcard-overlay">
+                      <h4 className="neetcard-title">{data.title}</h4>
+                      <span className="neetcard-subtitle">{data.subtitle}</span>
                     </div>
 
                     {/* Badge */}
-                    <span className="card-badge">{data.badge}</span>
+                    <span className="neetcard-badge">{data.badge}</span>
 
                     {/* Image and Video Icon Badges */}
                     <div className="icon-badges">
@@ -803,9 +798,9 @@ const NEETForm = () => {
                   </div>
 
                   {/* Card Body */}
-                  <div className="card-body">
+                  <div className="neetcard-body">
                     {/* Rankings */}
-                    <div className="card-rankings scrollable-container">
+                    <div className="neetcard-rankings scrollable-container">
                       {data.rankings.map((rank, index) => (
                         <span key={index} className="ranking-badge">
                           {rank}
@@ -814,11 +809,11 @@ const NEETForm = () => {
                     </div>
 
                     {/* Courses */}
-                    <div className="card-courses">
+                    <div className="neetcard-courses">
                       {data.courses
                         .slice(0, showMore[cardIndex] ? data.courses.length : 2)
                         .map((course, index) => (
-                          <div key={index} className="card-course">
+                          <div key={index} className="neetcard-course">
                             <div className="desc-left">
                               <span className="title-txt">{course.title}</span>
                               <span className="desc-txt">{course.desc}</span>
@@ -834,13 +829,13 @@ const NEETForm = () => {
                     {/* Show More / Show Less Button */}
                     <button
                       onClick={() => toggleShowMore(cardIndex)}
-                      className="card-toggle"
+                      className="neetcard-toggle"
                     >
                       {showMore[cardIndex] ? "SHOW LESS" : "SHOW MORE"}
                     </button>
 
                     {/* Apply Button */}
-                    <a href="#" className="card-button">
+                    <a href="#" className="neetcard-button">
                       APPLY NOW
                     </a>
                   </div>
@@ -851,8 +846,8 @@ const NEETForm = () => {
           </div>
           <div className="AcceptingNEETColleges">
             <h3>List of Colleges Accepting NEET</h3>
-            <div className="neet-table-container">
-              <table className="neet-college-table">
+            <div className="neet-neettable-container">
+              <table className="neet-college-neettable">
                 <thead>
                   <tr>
                     <th>College</th>
@@ -903,7 +898,7 @@ const NEETForm = () => {
               {/* <span className="icon">📄</span> */}
             </button>
             <div className="neet-containe">
-              <div className="neet-exam-card">
+              <div className="neet-exam-neetcard">
                 <h3>You can also check</h3>
                 <ul>
                   <li><a href="#">NEET Overview</a></li>
@@ -920,7 +915,7 @@ const NEETForm = () => {
                 </ul>
               </div>
 
-              <div className="neet-exam-card">
+              <div className="neet-exam-neetcard">
                 <h3>Category wise exam pages</h3>
                 <ul>
                   <li><a href="#">MBBS</a></li>
@@ -934,10 +929,11 @@ const NEETForm = () => {
           </div>
         </div>
       </div>
+      <hr/>
       <Footer />
-     
+
     </div>
-    
+
   );
 };
 
