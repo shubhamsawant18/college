@@ -1,46 +1,72 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const Course = require('../models/Course'); // Import the Course model
-
-const router = express.Router();
-
-router.use(express.json()); // Middleware to parse JSON bodies
+const Course = require('../models/Course'); // Correct import path
 
 // Define the allowed courses
-const allowedCourses = ['B.Sc Nursing', 'MBBS', 'BDS'];
+const allowedCourses = ['MBBS', 'BDS', 'BSc (Nursing)'];
 
+// Post course - to add a new course
 const postCourse = async (req, res) => {
   try {
-    const { name, duration } = req.body;
+    const { coursename } = req.body; // Extract coursename from the request body
 
     // Check if the course is allowed
-    if (!allowedCourses.includes(name)) {
+    if (!allowedCourses.includes(coursename)) {
       return res.status(400).json({ msg: 'Course not allowed' });
     }
 
-    const course = new Course({ coursename: name, duration: duration });
+    // Create and save the new course
+    const course = new Course({ coursename });
     await course.save();
+
+    // Return the created course in the response
     return res.status(201).json({
-      msg: "success",
-      data: course, 
+      msg: "Course successfully added",
+      data: course, // Return the saved course data
     });
   } catch (error) {
-    res.status(400).json({ msg: error.message });
+    // If an error occurs, return a detailed error message
+    return res.status(400).json({ msg: 'Error adding course: ' + error.message });
   }
 };
 
+// Get courses - to fetch courses with filtering options
 const getCourse = async (req, res) => {
   try {
-    let data = await Course.find();
+    const { category, rank, courses } = req.query; // Extract query parameters
+
+    let filter = {}; // Initialize filter object
+
+    // Apply category filter if provided
+    if (category) {
+      filter.category = category;
+    }
+
+    // Apply rank filter if provided
+    if (rank) {
+      filter.rank = { $gte: rank };
+    }
+
+    // Apply courses filter if provided
+    if (courses) {
+      // Split courses in case multiple are passed
+      const courseArray = courses.split(',').map(course => course.trim());
+      filter.coursename = { $in: courseArray };
+    }
+
+    // Fetch courses from the database using filters
+    const coursesList = await Course.find(filter);
+
+    // Return the fetched courses in the response
     return res.status(200).json({
       msg: "success",
-      data: data,
+      data: coursesList, // Return the filtered courses data
     });
   } catch (error) {
-    res.status(400).json({ msg: error.message });
+    // If an error occurs, return a detailed error message
+    return res.status(400).json({ msg: 'Error fetching courses: ' + error.message });
   }
 };
 
-module.exports ={
-  postCourse, getCourse
+module.exports = {
+  postCourse,
+  getCourse,
 };

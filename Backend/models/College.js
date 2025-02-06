@@ -1,11 +1,30 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const collegeSchema = new mongoose.Schema({
-  collegename: String,
-  cityid: { type: mongoose.Schema.Types.ObjectId, ref: 'City' },
-  category: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Category' }],
-  rank: Number,
-  courses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }], // Correct reference
+const collegeSchema = new Schema({
+  collegename: {
+    type: String,
+    required: true
+  },
+  cityid: {
+    type: Schema.Types.ObjectId,
+    ref: 'City',
+    required: true
+  },
+  category: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Category',
+    required: true
+  }],
+  rank: {
+    type: Number,
+    required: true
+  },
+  courses: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Course',
+    required: true
+  }]
 });
 
-module.exports = mongoose.model('College', collegeSchema);
+module.exports = mongoose.models.College || mongoose.model('College', collegeSchema);

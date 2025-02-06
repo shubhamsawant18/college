@@ -1,11 +1,5 @@
-const express = require('express');
-const City = require('../models/City');  // Import the City model
+const City = require('../models/City');
 
-const router = express.Router();
-
-router.use(express.json()); // Middleware to parse JSON bodies
-
-// Define the allowed cities
 const allowedCities = ['Satara', 'Mumbai', 'Pune', 'Nagpur'];
 
 const postCity = async (req, res) => {
@@ -21,14 +15,14 @@ const postCity = async (req, res) => {
     await city.save();
     return res.status(201).json({
       msg: "success",
-      data: city, // Return the saved city document
+      data: city,
     });
   } catch (error) {
     res.status(400).json({ msg: error.message });
   }
 };
 
-const getCity = async (req, res) => {
+const getCities = async (req, res) => {
   try {
     const cities = await City.find();
     return res.status(200).json({
@@ -42,5 +36,5 @@ const getCity = async (req, res) => {
 
 module.exports = {
   postCity,
-  getCity
+  getCities,
 };

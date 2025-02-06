@@ -1,27 +1,21 @@
-const express = require('express');
-const Category = require('../models/Category'); // Import the Category model
+const Category = require('../models/Category');
 
-const router = express.Router();
-
-router.use(express.json()); // Middleware to parse JSON bodies
-
-// Define the allowed categories
 const allowedCategories = ['General', 'OBC', 'SC/ST', 'NTC'];
 
 const postCategory = async (req, res) => {
   try {
-    const { name } = req.body;
+    const { categoryname } = req.body;
 
-    // Check if the category is allowed
-    if (!allowedCategories.includes(name)) {
+    if (!allowedCategories.includes(categoryname)) {
       return res.status(400).json({ msg: 'Category not allowed' });
     }
 
-    const category = new Category({ categoryname: name });
+    const category = new Category({ categoryname });
     await category.save();
+
     return res.status(201).json({
       msg: "success",
-      data: category, // Return the saved category document
+      data: category,
     });
   } catch (error) {
     res.status(400).json({ msg: error.message });

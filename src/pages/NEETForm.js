@@ -355,7 +355,6 @@ const NEETForm = () => {
   };
 
   const [showReadBtn, setShowReadBtn] = useState(true); // If it's a boolean state
-
   const [showInfo, setShowInfo] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -364,14 +363,14 @@ const NEETForm = () => {
     reservation: "",
     course: "",
   });
-
+  
   const [results, setResults] = useState([]);
   const [error, setError] = useState("");
   const [categories, setCategories] = useState([]);
   const [courses, setCourses] = useState([]);
   const [cities, setCities] = useState([]);
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     const fetchCategoryApi = async () => {
       try {
@@ -383,7 +382,7 @@ const NEETForm = () => {
     };
     fetchCategoryApi();
   }, []);
-
+  
   useEffect(() => {
     const fetchCoursesApi = async () => {
       try {
@@ -395,7 +394,7 @@ const NEETForm = () => {
     };
     fetchCoursesApi();
   }, []);
-
+  
   useEffect(() => {
     const fetchCityApi = async () => {
       try {
@@ -407,12 +406,11 @@ const NEETForm = () => {
     };
     fetchCityApi();
   }, []);
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
+  
   const handleSelectChange = (e) => {
     const { name, value } = e.target;
     const selectedOption =
@@ -421,49 +419,46 @@ const NEETForm = () => {
         : name === "reservation"
           ? categories.find((res) => res._id === value)
           : courses.find((course) => course._id === value);
-    setFormData({ ...formData, [name]: selectedOption._id });
+    setFormData({ ...formData, [name]: value }); // Update this line to use value directly
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    var queryParam = {};
+    const queryParam = {};
     if (formData.rank) {
-      queryParam["rank"] = formData.rank;
+      queryParam.rank = formData.rank;
     }
     if (formData.reservation) {
-      queryParam["category"] = formData.reservation;
+      queryParam.category = formData.reservation;
     }
     if (formData.course) {
-      queryParam["course"] = formData.course;
+      queryParam.course = formData.course;
     }
     if (formData.city) {
-      queryParam["city"] = formData.city;
+      queryParam.city = formData.city;
     }
     try {
       const queryParams = new URLSearchParams(queryParam).toString();
       const response = await axios.get(
         `http://localhost:5000/api/college/filter?${queryParams}`
       );
-      const data = response.data;
-      if (response.status === 200 && data.success) {
-        setResults(data.data);
-        navigate("/neet-result", { state: { results: data.data } });
+      if (response.status === 200 && response.data.success) {
+        setResults(response.data.data);
+        navigate("/neet-result", { state: { results: response.data.data } });
       } else {
-        setError(data.msg || "Failed to fetch colleges");
+        setError(response.data.msg || "Failed to fetch colleges");
       }
     } catch (err) {
       setError("An error occurred while fetching results");
     }
   };
-
-
+  
+  
   return (
     <div>
       <Navbar />
       <div className="neet-main-container">
         <div className="neet-left-container">
-
           <h1 className="neet-form-unique-title" style={{ fontWeight: '600' }}>
             NEET College Predictor 2025: Predict Top MBBS/BDS Colleges based on your Rank and Scores
           </h1>
@@ -494,6 +489,7 @@ const NEETForm = () => {
                     onChange={handleSelectChange}
                     className="neet-form-unique-select"
                   >
+                    <option value="">Select Reservation</option>
                     {categories && categories.length > 0 ? (
                       categories.map((res) => (
                         <option key={res._id} value={res._id}>
@@ -541,9 +537,16 @@ const NEETForm = () => {
                     onChange={handleSelectChange}
                     className="neet-form-unique-select"
                   >
-                    <option value="MBBS">MBBS</option>
-                    <option value="BSC (Nursing)">BSC (Nursing)</option>
-                    <option value="BDS">BDS</option>
+                    <option value="">Select Course</option>
+                    {courses && courses.length > 0 ? (
+                      courses.map((course) => (
+                        <option key={course._id} value={course._id}>
+                          {course.coursename}
+                        </option>
+                      ))
+                    ) : (
+                      <option disabled>No courses available</option>
+                    )}
                   </select>
                 </div>
               </div>
