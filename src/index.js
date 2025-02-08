@@ -25,6 +25,9 @@ import JEEForm from "./pages/JEEForm"; // Updated import path
 import JEEADVForm from "./pages/JEEADVForm";
 import GATEForm from "./pages/GATEForm";
 import NEETResult from "./pages/NEETResult"; // Import the NEETResult component
+import BScNursing from "./coursesjs/BSc_Nursing";
+import B_Tech from './coursesjs/B_Tech';
+
 
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -111,6 +114,8 @@ const App = () => {
         <Route path="/jeea" element={<JEEADVForm />} /> {/* JEEForm page route */}
         <Route path="/gate" element={<GATEForm />} /> {/* JEEForm page route */}
         <Route path="/neet-result" element={<NEETResult />} /> {/* NEETResult page route */}
+        <Route path="/bsc-nursing-colleges" element={<BScNursing/>} />
+        <Route path="/btech_colleges" element={<B_Tech />} />
       </Routes>
     </Router>
   );

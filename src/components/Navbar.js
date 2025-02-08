@@ -1134,8 +1134,9 @@ const Navbar = () => {
           </li>
 
           {/* Static Navigation Links */}
+      
           <li>
-            <a href="#">B.Tech</a>
+            <a href="/btech_colleges">B.Tech</a>
           </li>
           <li>
             <a href="#">MBA</a>
@@ -1153,7 +1154,7 @@ const Navbar = () => {
             <a href="#">B.Sc</a>
           </li>
           <li>
-            <a href="#">B.Sc(Nursing)</a>
+            <a href="/bsc-nursing-colleges">B.Sc(Nursing)</a>
           </li>
           <li>
             <a href="#">B.A</a>
