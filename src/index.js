@@ -27,7 +27,8 @@ import GATEForm from "./pages/GATEForm";
 import NEETResult from "./pages/NEETResult"; // Import the NEETResult component
 import BScNursing from "./coursesjs/BSc_Nursing";
 import B_Tech from './coursesjs/B_Tech';
-
+import BSc from "./coursesjs/BSC.js";
+import MBA from "./coursesjs/MBA.js";
 
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -116,6 +117,8 @@ const App = () => {
         <Route path="/neet-result" element={<NEETResult />} /> {/* NEETResult page route */}
         <Route path="/bsc-nursing-colleges" element={<BScNursing/>} />
         <Route path="/btech_colleges" element={<B_Tech />} />
+        <Route path="/bsc" element={<BSc />} />
+        <Route path="/mba" element={<MBA />} />
       </Routes>
     </Router>
   );

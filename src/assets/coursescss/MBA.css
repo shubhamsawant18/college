@@ -1,0 +1,1296 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    /* line-height: 1.6; */
+    margin: 0;
+    padding: 0;
+    /* background-color:rgb(126, 112, 112); */
+  }
+  
+  /* Breadcrumb */
+  .mba_m_breadcrumb {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin: 1rem;
+  }
+  
+  /* Title */
+  .mba_m_title {
+    color: #f97316;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem;
+    text-align: left;
+  }
+  
+    /* Flex container for banners */
+    .mba_m_flex-container {
+      padding-left: 150px;
+      padding-right: 150px;
+      display: flex;
+      /* flex-wrap: wrap; */
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      justify-content: center; /* Center align banners */
+      background-color: #F4F4F4;
+      height: 20vh;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    
+    /* Banner/card styles */
+    .mba_m_banner {
+      flex: 1 1 calc(33.333% - 1rem);
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 350px;
+    }
+    
+    /* Shared styles for banner content */
+    .mba_m_banner-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .mba_m_banner-content img {
+      width:110%;
+      /* height: 120%; */
+      object-fit:contain;
+    }
+  
+    /* Banner information */
+    .mba_m_banner-info {
+      margin-bottom: 1rem;
+    }
+    
+    .mba_m_bca-info {
+      color: #1e40af;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    
+    .mba_m_admission-status,
+    .mba_m_last-date {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    
+    .mba_m_apply-button,
+    .mba_m_search-button,
+    .mba_m_predict-button {
+      background-color: #ef4444;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      border: none;
+    }
+    
+    .mba_m_apply-button:hover {
+      background-color: #dc2626;
+    }
+    
+    .mba_m_search-button,
+    .mba_m_predict-button {
+      background-color: white;
+      color: #3b82f6;
+      border: 2px solid #3b82f6;
+    }
+    
+    .mba_m_search-button:hover,
+    .mba_m_predict-button:hover {
+      background-color: #e0f2fe;
+    }
+    
+    .mba_m_banner-image {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-top: 1rem;
+      border-radius: 8px;
+    }
+  
+    --------------------READ MORE------------------------------
+    .mba-m-read-more-container {
+      color: #3d3e3e;
+      background-color: #eeeded;
+      padding: 10px;
+      margin: 15px;
+      width: 100%;
+      max-width: 196vh;
+      margin-left: 18px;
+    }
+    
+    .mba-m-profile-section {
+      margin: 0%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .mba-m-profile-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+      border-radius: 50%;
+      color: #4b4b4b; /* Adjust the color if needed */
+    }
+    
+    .mba-m-profile-info {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .mba-m-profile-name {
+      margin: 0%;
+      font-weight: bold;
+      color: #f77b0b;
+      display: flex;
+      align-items: center;
+      gap: 5px; /* Space between name and checkmark */
+    }
+    
+    .mba-m-checkmark {
+      color: green;
+      font-size: 14px;
+    }
+    
+    .mba-m-designation {
+      font-size: 14px;
+      color: #555;
+    }
+    .mba-m-content.expanded {
+      max-height: 200px; /* Set to a height that accommodates all content */
+    }
+    
+    .mba-m-para {
+      padding: 5px;
+    }
+    
+    .mba-m-readmore-btn {
+      width: 100%;
+      margin-top: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .mba-m-readmore-btn:hover {
+      background-color: #0056b3;
+    }
+    
+    .mba-m-top-bba-clgs {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #fffdfd;
+    }
+    
+    .mba-m-Top_10_bba {
+      background-color: #fffdfd;
+      justify-content: left;
+      text-align: left;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 15px;
+    }
+    
+    .mba-m-Top_10_bba h2,
+    .mba-m-Top_10_bba p {
+      text-align: left;
+      margin-left: 6px;
+      margin-bottom: 0px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    
+    .mba-m-Top_10_bba h2 {
+      font-size: 20px;
+    }
+    
+    .mba-m-Top_10_bba h3 {
+      text-align: left;
+      margin-left: 6px;
+      margin-bottom: 0px;
+      margin-top: 0%;
+      font-size: 18px;
+      color: #007bff;
+    }
+    
+    /* Top Colleges table */
+    .mba-m-college-table-container {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow-x: auto;
+      padding: 16px;
+    }
+    
+    .mba-m-all-college-table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #ccc;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+    
+    .mba-m-all-college-table th,
+    .mba-m-all-college-table td {
+      font-size: 16px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center !important;
+      background-color: white;
+    }
+    
+    /* Header background colors */
+    .mba-m-all-college-table thead th {
+      color: white;
+      text-align: center;
+      background-color: #8bbdc4;
+    }
+    
+    .mba-m-all-college-table thead th:nth-child(1) {
+      background-color: #8bbdc4;
+    }
+    
+    .mba-m-all-college-table thead th:nth-child(2) {
+      background-color: #7c9cab;
+    }
+    
+    .mba-m-all-college-table thead th:nth-child(3) {
+      background-color: #6a8795;
+    }
+    .mba-m-all-college-table thead th:nth-child(4) {
+      background-color: #4c6c7b;
+    }
+    .mba-m-all-college-table thead th:nth-child(4) {
+      background-color: #3b5564;
+    }
+  
+  
+  
+  
+    -------------------------------------------------------------------
+  
+  .mba_m_table-of-content {
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .mba_m_table-of-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .mba_m_table-of-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .mba_m_table-of-content li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* ----------------------------------------------------- */
+  
+  .btn_m {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn_m:hover {
+    background-color: #0056b3;
+  }
+  /* ------------------------------------------------------------ */
+  
+  
+  
+  /* Content Placeholder */
+  .mba_m_content-placeholder {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e5e7eb;
+    border-radius: 8px;
+    text-align: center;
+  }
+  /* General Styles */
+  .mba_m_table-container {
+    /* padding: 10 px; */
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+  
+  
+  -----------soring--------------
+  
+  
+  
+  -----------------------------
+  
+  .mba_m_sort-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    padding: 0 15px;
+    margin-bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* Ensures the heading remains on the left */
+  .mba_m_heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+    flex-grow: 1; /* Allows it to take available space */
+  }
+  
+  .mba_m_soring_bg {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  }
+  
+  .mba_m_sort-options {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 12px;
+    margin-left: auto; 
+  }
+  
+  
+  .mba_m_sort-container h6 {
+    font-size: 16px; /* Adjust heading size */
+    /* margin: 0; */
+    line-height: 30px; 
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  .mba_m_heading{
+    font-size: medium;
+  }
+  
+  .mba_m_sort-options label {
+    font-size: 12px;
+  }
+  
+  .mba_m_sort-options input[type="radio"] {
+    transform: scale(0.8);
+    margin-right: 4px; /* Space between radio and text */
+  }
+  
+  /* View options container */
+  .mba_m_view-options {
+    display: flex;
+    align-items: right;
+    gap: 0.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .mba_m_view-options {
+    display: flex;
+    gap: 15px; /* Add spacing between buttons */
+  }
+  
+  
+  .mba_m_view-button {
+    width: 35px; /* Set a fixed width */
+    height: 35px; /* Set a fixed height */
+    padding: 0;
+    background: none;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .mba_m_view-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .mba_m_view-button.active {
+    background-color: #f97316;
+    border-color: #f97316;
+    color: white;
+  }
+  
+  /* Ensure the icons are visible */
+  .mba_m_view-icon {
+    width: 24px; /* Increase width */
+    height: 24px; /* Increase height */
+    fill: black; /* Ensure visibility */
+  }
+  
+  .mba_m_view-button.active .mba_m_view-icon {
+    fill: white; /* Ensure visibility in active state */
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* ---------------------------------------------------------------------------------------------- */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Table Styles */
+  .mba_m_college-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .mba_m_college-table th,
+  .mba_m_college-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  .mba_m_college-table thead th {
+    background-color: #88BDC4;
+  }
+  
+  .mba_m_college-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+  }
+  
+  .mba_m_college-table tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  .mba_m_college-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Column Alignments */
+  .mba_m_center {
+    text-align: center;
+  }
+  
+  .mba_m_clg-fees{
+    color: #4caf50;
+  }
+  /* College Info Styles */
+  .mba_m_college-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mba_m_college-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .mba_m_college-name {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .mba_m_college-name:hover {
+    text-decoration: underline;
+  }
+  
+  .mba_m_college-location {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* Actions */
+  .mba_m_college-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .mba_m_action-link {
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .mba_m_action-link.apply {
+    color: #ff5722;
+  }
+  
+  .mba_m_action-link.brochure {
+    color: #4caf50;
+  }
+  
+  .mba_m_action-link:hover {
+    text-decoration: underline;
+  }
+  
+  .mba_m_compare-checkbox {
+    margin-left: 5px;
+  }
+  
+  /* Reviews and Ranking */
+  .mba_m_highlight {
+    color: #ff9800;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* ----------------------------FILTER ----------------------------------- */
+  /* Additional adjustments */
+  .mba_m_filter-bar {
+  padding: 0; /* Ensure no extra padding in the filter bar */
+  }
+  
+   /* Filter Bar Styles */
+   .mba_m_filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    gap: 10px;
+  }
+  
+  /* Sticky Filter Bar */
+  .mba_m_sticky-filter-bar {
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: #ffffff; /* Background to prevent transparency */
+  }
+  
+    /* Filter Buttons */
+    .mba_m_filter-button,
+    .mba_m_dropdown-button {
+      background-color: white;
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      color: #374151;
+      cursor: pointer;
+      
+    }
+    
+    .mba_m_dropdown-button.active {
+      background-color: #f97316;
+      color: white;
+      border: none;
+    }
+  
+      /* Selected Filters Styles */
+      .mba_m_selected-filters {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 1rem 0;
+        flex-wrap: wrap;
+      }
+      
+      .mba_m_filter-tag {
+        background-color: #fef3c7;
+        color: #f97316;
+        border: 1px solid #fcd34d;
+        padding: 0.25rem 0.75rem;
+        border-radius: 16px;
+        font-size: 0.875rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    
+  
+      .mba_m_remove-tag {
+        cursor: pointer;
+        font-size: 0.875rem;
+        color: #f97316;
+      }
+      
+      .mba_m_clear-all-button {
+        background-color: transparent;
+        color: #1f2937;
+        border: none;
+        cursor: pointer;
+        font-size: 0.875rem;
+        text-decoration: underline;
+      }
+    
+  
+      .mba_m_filter-dropdown-container {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .mba_m_filter-dropdown-menu {
+        position: absolute;
+        top: 100%;  /* Ensure it is positioned below the button */
+        left: 0;
+        z-index: 1000;
+        min-width: 200px;
+        background-color: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.375rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        
+        /* Ensure it doesn't force a scrollbar unless necessary */
+        max-height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        
+        /* Prevents unwanted scrolling issues */
+        white-space: nowrap;
+      }
+      
+      .mba_m_filter-option {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        color: #374151;
+        transition: all 0.2s ease;
+      }
+      
+      .mba_m_filter-option:hover {
+        background-color: #f3f4f6;
+      }
+      
+      .mba_m_filter-option.selected {
+        background-color: #f97316;
+        color: white;
+      }
+      
+      .mba_m_active-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1rem 0;
+        padding: 0.75rem;
+        background-color: #f9fafb;
+        border-radius: 0.5rem;
+        border: 1px solid #e5e7eb;
+      }
+      .mba_m_filter-tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.75rem;
+        background-color: #f97316;
+        color: white;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        transition: all 0.2s ease;
+      }
+      
+      .mba_m_remove-filter {
+        margin-left: 0.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 1.125
+      }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      /* ------------------------------------TABLE----------------------- */
+  
+    /* Table Wrapper */
+  .mba_m_table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+  }
+  /* Table Header Styling */
+  .mba_m_college-table thead {
+    background-color: #008000; /* Green Background */
+    color: #ffffff; /* White Text */
+    text-align: left;
+  }
+  
+  .mba_m_college-table th {
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  
+  /* Table Styling */
+  .mba_m_college-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+  
+  /* Header Styling */
+  .mba_m_college-table thead {
+    background-color: #7fb3c9;
+    color: #fff;
+    text-align: left;
+  }
+  
+  .mba_m_college-table th {
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* Row Styling */
+  .mba_m_college-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .mba_m_college-table td {
+    padding: 12px;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  
+  /* CD Rank Column */
+  .mba_m_cd-rank {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* College Info Column */
+  .mba_m_college-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mba_m_college-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .mba_m_college-name {
+    font-weight: bold;
+    color: #0073b1;
+    font-size: 16px;
+  }
+  
+  .mba_m_college-location {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* Course Fees Column */
+  .mba_m_fees-info {
+    text-align: left;
+  }
+  
+  .mba_m_fees-amount {
+    color: #008000;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .mba_m_fees-note {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .mba_m_compare-fees {
+    color: #ff6600;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  
+  .mba_m_compare-fees:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .mba_m_bg{
+    background-color: #009933;
+  }
+  
+    
+  /* User Reviews Column */
+  .mba_m_reviews-info {
+    text-align: left;
+  }
+  
+  .mba_m_rating-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mba_m_rating {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffa500;
+  }
+  
+  .mba_m_star {
+    color: #ffa500;
+    margin-left: 3px;
+  }
+  
+  .mba_m_rating-scale {
+    font-size: 12px;
+    color: #666;
+    margin-left: 5px;
+  }
+  
+  .mba_m_review-count {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .mba_m_review-badge {
+    font-size: 12px;
+    color: #ff6600;
+    background-color: #ffe4b5;
+    padding: 2px 6px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  
+  /* Ranking Column */
+  .mba_m_ranking-info {
+    text-align: left;
+  }
+  
+  .mba_m_ranking-position {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .mba_m_ranking-details {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .mba_m_ranking-details span {
+    color: #ff6600;
+  }
+  
+  .mba_m_college-ranking-logo {
+    width: 100px;
+    margin-top: 5px;
+  }
+  
+  /* ---------------------TABLE----------------------------------------------------- */
+  
+   /* ------------------------------------------------- */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* ------------banner_bsc_nursing------------------ */
+  
+  
+  .mba_m_carousel-container {
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 20px 0;
+      background-color: #FFF3EB;
+      /* margin-left: 20px;
+      margin-right: 20px; */
+      margin-top: 2rem;
+  }
+  
+  .mba_m_carousel-container h3 {
+      margin-left: 15px;
+  }
+  
+  /* Wrapper to align items horizontally */
+  .mba_m_carousel-wrapper {
+      display: flex;
+      gap: 16px;
+  }
+  
+  /* Individual university card styling */
+  .mba_m_university-card {
+      width: 200px;
+      flex-shrink: 0;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .mba_m_green {
+      width: 6rem;
+      color: rgb(20, 156, 111);
+      font-size: x-small;
+      margin-left: 1rem;
+      background-color: rgb(200, 254, 236);
+  }
+  
+  /* Hover effect */
+  .mba_m_university-card:hover {
+      transform: scale(1.05);
+  }
+  
+  /* Image styling - Ensures it fits properly */
+  .mba_m_university-image {
+      width: 100%;
+      object-fit: cover;
+  }
+  
+  /* Content styling inside the card */
+  .mba_m_university-details {
+      margin-left: 1rem;
+  }
+  
+  /* Title - Now properly aligned with other text */
+  .mba_m_university-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      white-space: normal;  /* Allow text to wrap */
+      word-wrap: break-word;
+      margin-bottom: 1px;
+      margin-left: 0; 
+  }
+  
+  /* Location appears below the title */
+  .mba_m_university-location {
+      font-size: smaller;
+      color: #777;
+      margin-bottom: 5px;
+  }
+  
+  /* Description */
+  .mba_m_university-description {
+      font-size: smaller;
+      color: gray;
+      margin: 10px 0;
+  }
+  
+  .mba_m_green-text{
+      color: rgb(20, 156, 111);
+      white-space: normal;  /* Allow text to wrap */
+      word-wrap: break-word;
+  }
+  
+  /* Apply Now as a text link with an arrow */
+  .mba_m_apply-link {
+      display: block;
+      font-size: 14px;
+      color: #ff6600;
+      text-decoration: none;
+      cursor: pointer;
+      margin-top: 8px;
+  }
+  
+  /* Add an arrow before Apply Now */
+  .mba_m_apply-link::before {
+      content: "→ ";
+      font-size: 14px;
+      color: #ff6600;
+  }
+  
+  /* .apply-link:hover {
+      text-decoration: underline;
+  }
+      */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* -------------top colleges in bsc nursing ------------- */
+  
+  
+  .mba_m_scroll-container {
+    padding: 16px;
+    background-color: #FFF3EB;
+    margin-top: 20px;
+  }
+  
+  /* .scroll-container h2 {
+    margin-left: 0%;
+  } */
+  
+  /* Horizontal scrolling container */
+  .mba_m_scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 16px;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  }
+  
+  /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+  .mba_m_scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Individual card styles */
+  .mba_m_scroll-card {
+    min-width: 200px;
+    width: 256px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+    position: relative;
+  }
+  
+  /* Image container with overlay */
+  .mba_m_scroll-card-image {
+    position: relative;
+    width: 100%;
+    height: 160px;
+  }
+  
+  .mba_m_scroll-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Overlay effect */
+  .mba_m_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.115)); /* Dark semi-transparent overlay */
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  /* Title on the overlay */
+  .mba_m_overlay-title {
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    white-space: normal;  /* Allow text to wrap */
+    word-wrap: break-word;
+    margin-bottom: 1px;
+    margin-left: 0; 
+  }
+  
+  /* Subtitle (count) on the overlay */
+  /* .overlay-subtitle {
+    font-size: 12px;
+    margin-top: 4px;
+  } */
+  
+  
+  /* Container for icons + count */
+  .mba_m_icon-container {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    /* margin-left: 20px; */
+  }
+  
+  /* Circular icons */
+  .mba_m_icon-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: -8px; /* Slight overlap effect */
+  }
+  
+  .mba_m_icon-container img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  /* Subtitle (count) */
+  .mba_m_overlay-subtitle {
+    font-size: 12px;
+    margin-left: 12px;
+    opacity: 0.9;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* -----------------rating---------------------- */
+  
+  .mba_m_rating-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1400px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mba_m_rating-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .mba_m_rating-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    padding: 0 20px;
+    transform: translateY(-10px); /* Moves the entire rating bar up */
+  }
+  
+  .mba_m_rating-label {
+    font-size: 14px;
+    color: #666;
+    position: absolute;
+  }
+  
+  .mba_m_rating-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
+  
+  .mba_m_rating-button:hover,
+  .mba_m_rating-button.hovered {
+    background-color: #f1f1f1;
+  }
+  
+  .mba_m_rating-button.selected {
+    background-color: #ec7f27;
+    color: white;
+    border: 1px solid #ec7f27;
+  }
+  
+  .mba_m_rating-button.hovered {
+    background-color: #ec7f27;
+  }
+  
+  /* Position the "Not so likely" label below button 1 */
+  .mba_m_rating-label.mba_m_first {
+    left: 0;
+    bottom: -20px;
+  }
+  
+  /* Position the "Highly likely" label below button 10 */
+  .mba_m_rating-label.mba_m_last {
+    right: 0;
+    bottom: -20px;
+  }

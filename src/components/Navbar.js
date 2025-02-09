@@ -1139,7 +1139,7 @@ const Navbar = () => {
             <a href="/btech_colleges">B.Tech</a>
           </li>
           <li>
-            <a href="#">MBA</a>
+            <a href="/mba">MBA</a>
           </li>
           <li>
             <a href="#">M.Tech</a>
@@ -1151,7 +1151,7 @@ const Navbar = () => {
             <a href="#">B.Com</a>
           </li>
           <li>
-            <a href="#">B.Sc</a>
+            <a href="/bsc">B.Sc</a>
           </li>
           <li>
             <a href="/bsc-nursing-colleges">B.Sc(Nursing)</a>
