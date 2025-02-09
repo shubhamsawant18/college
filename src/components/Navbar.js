@@ -1142,10 +1142,10 @@ const Navbar = () => {
             <a href="/mba">MBA</a>
           </li>
           <li>
-            <a href="#">M.Tech</a>
+            <a href="/mtech">M.Tech</a>
           </li>
           <li>
-            <a href="#">MBBS</a>
+            <a href="/mbbs">MBBS</a>
           </li>
           <li>
             <a href="#">B.Com</a>
@@ -1157,10 +1157,10 @@ const Navbar = () => {
             <a href="/bsc-nursing-colleges">B.Sc(Nursing)</a>
           </li>
           <li>
-            <a href="#">B.A</a>
+            <a href="/ba">B.A</a>
           </li>
           <li>
-            <a href="#">B.B.A</a>
+            <a href="/bba">B.B.A</a>
           </li>
           
 

@@ -29,6 +29,10 @@ import BScNursing from "./coursesjs/BSc_Nursing";
 import B_Tech from './coursesjs/B_Tech';
 import BSc from "./coursesjs/BSC.js";
 import MBA from "./coursesjs/MBA.js";
+import BBA from "./coursesjs/BBA";
+import Mtech from "./coursesjs/mtech";
+import BA from "./coursesjs/BA";
+import MBBS from "./coursesjs/MBBS";
 
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -119,6 +123,10 @@ const App = () => {
         <Route path="/btech_colleges" element={<B_Tech />} />
         <Route path="/bsc" element={<BSc />} />
         <Route path="/mba" element={<MBA />} />
+        <Route path="/BBA" element={<BBA />} /> 
+        <Route path="/mtech" element={<Mtech />} /> 
+        <Route path="/ba" element={<BA />} />
+        <Route path="/mbbs" element={<MBBS />} />
       </Routes>
     </Router>
   );

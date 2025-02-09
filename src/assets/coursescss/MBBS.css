@@ -1,0 +1,1204 @@
+.mbbs-p-container-ba {
+    padding: 1.5rem;
+    background-color: #f5f5f5;
+  }
+  
+  .mbbs-p-college-list {
+    font-family: Arial, sans-serif;
+    padding: 1.5rem;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .mbbs-p-breadcrumb {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mbbs-p-flex-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .mbbs-p-banner {
+    position: relative;
+    width: 400px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mbbs-p-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .mbbs-p-header {
+    color: #f97316;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  /* Read more */
+  .mbbs-p-read-more-container {
+    color: #3d3e3e;
+    background-color: #eeeded;
+    padding: 10px;
+    margin: 15px;
+    width: 100%;
+    max-width: 196vh;
+    margin-left: 18px;
+  }
+  
+  .mbbs-p-profile-section {
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .mbbs-p-profile-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 50%;
+    color: #4b4b4b; /* Adjust the color if needed */
+  }
+  
+  .mbbs-p-profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mbbs-p-profile-name {
+    margin: 0%;
+    font-weight: bold;
+    color: #f77b0b;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between name and checkmark */
+  }
+  
+  .mbbs-p-checkmark {
+    color: green;
+    font-size: 14px;
+  }
+  
+  .mbbs-p-designation {
+    font-size: 14px;
+    color: #555;
+  }
+  .mbbs-p-content.expanded {
+    max-height: 200px; /* Set to a height that accommodates all content */
+  }
+  
+  .mbbs-p-para {
+    padding: 5px;
+  }
+  
+  .mbbs-p-readmore-btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .mbbs-p-readmore-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .mbbs-p-top-bba-clgs {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fffdfd;
+  }
+  
+  .mbbs-p-Top_10_bba {
+    background-color: #fffdfd;
+    justify-content: left;
+    text-align: left;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px;
+  }
+  
+  .mbbs-p-Top_10_bba h2,
+  .mbbs-p-Top_10_bba p {
+    text-align: left;
+    margin-left: 6px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .mbbs-p-Top_10_bba h2 {
+    font-size: 20px;
+  }
+  
+  .mbbs-p-Top_10_bba h3 {
+    text-align: left;
+    margin-left: 6px;
+    margin-bottom: 0px;
+    margin-top: 0%;
+    font-size: 18px;
+    color: #007bff;
+  }
+  
+  /* Top Colleges table  */
+  .mbbs-p-college-table-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-x: auto;
+    padding: 16px;
+  }
+  
+  .mbbs-p-all-college-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .mbbs-p-all-college-table th,
+  .mbbs-p-all-college-table td {
+    font-size: 16px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center !important;
+    background-color: white;
+  }
+  
+  /* Header background colors */
+  .mbbs-p-all-college-table thead th {
+    color: white;
+    text-align: center;
+    background-color: #8bbdc4;
+  }
+  
+  .mbbs-p-all-college-table thead th:nth-child(1) {
+    background-color: #8bbdc4;
+  }
+  
+  .mbbs-p-all-college-table thead th:nth-child(2) {
+    background-color: #7c9cab;
+  }
+  
+  .mbbs-p-all-college-table thead th:nth-child(3) {
+    background-color: #6a8795;
+  }
+  .mbbs-p-all-college-table thead th:nth-child(4) {
+    background-color: #4c6c7b;
+  }
+  .mbbs-p-all-college-table thead th:nth-child(4) {
+    background-color: #3b5564;
+  }
+  
+  .mbbs-p-placement-wise-clg {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .mbbs-p-placement-wise-clg img {
+    width: 130vh;
+    height: 60vh;
+  }
+  
+  /* ul {
+    list-style-type: disc;
+  } */
+  
+  .mbbs-p-Addmission-process ul li {
+    display: list-item; /* Ensures list items are recognized */
+  }
+  
+  .mbbs-p-read-more-list li {
+    display: list-item;
+  }
+  
+  .mbbs-p-filter-container {
+    /* margin-left: 50px; */
+    padding-left: 15px;
+    margin: 0 -10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 0.5rem;
+    max-width: 220vh;
+    width: 100%;
+    background-color: white;
+    overflow: visible;
+    z-index: 50;
+    transform: translateY(5px);
+  }
+  
+  .mbbs-p-filter-selection-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 220vh;
+    width: 100%;
+    height: 70px;
+    overflow: visible;
+  }
+  
+  .mbbs-p-container-filter {
+    scrollbar-width: none !important;
+    width: 100%;
+    position: static;
+    overflow: visible;
+  }
+  
+  .mbbs-p-filter-selection::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .mbbs-p-scroll-button {
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+  }
+  
+  .mbbs-p-scroll-button:hover {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #333;
+  }
+  
+  .mbbs-p-scroll-button.left {
+    left: -5px;
+  }
+  
+  .mbbs-p-scroll-button.right {
+    right: -5px;
+  }
+  
+  .mbbs-p-filter-selection {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    height: 70px;
+    padding: 8px 32px;
+    /* padding-bottom: 250px;
+    margin-bottom: -250px; */
+    background-color: white;
+    border-radius: 8px;
+    gap: 0.5rem;
+    flex-grow: 1;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+  
+  .mbbs-p-filter-selection::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .mbbs-p-filter-button {
+    padding: 6px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    background-color: white;
+    color: #4b5563;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 30px;
+  }
+  
+  .mbbs-p-filter-button:hover {
+    border-color: #9ca3af;
+  }
+  
+  .mbbs-p-filter-button.active {
+    border-color: #f97316;
+    color: #f97316;
+  }
+  
+  .mbbs-p-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .mbbs-p-dropdown-wrapper {
+    position: static !important;
+  }
+  
+  .mbbs-p-dropdown-button-filter {
+    margin: 0 5px;
+    padding: 6px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    background-color: white;
+    color: #4b5563;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 30px;
+  }
+  
+  .mbbs-p-dropdown-button-filter.active {
+    border-color: #f97316;
+    background-color: #fef3c7;
+    color: #f97316;
+  }
+  
+  .mbbs-p-dropdown-menu {
+    top: 100%;
+    left: auto;
+    margin-top: 5px;
+    z-index: 1000 !important;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    width: 360px;
+    max-height: 450px;
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+  
+  .mbbs-p-dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding-bottom: 8px;
+  }
+  
+  .mbbs-p-dropdown-header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .mbbs-p-dropdown-search {
+    width: 330px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  
+  .mbbs-p-dropdown-options {
+    max-height: 200px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  
+  .mbbs-p-dropdown-option {
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .mbbs-p-dropdown-option:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .mbbs-p-option-name {
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  .mbbs-p-dropdown-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #f97316;
+    cursor: pointer;
+    height: 25px;
+  }
+  
+  .mbbs-p-selected-filters {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0 8px;
+  }
+  
+  .mbbs-p-filter-tag {
+    border: 1px solid #f97316;
+    background-color: white;
+    color: #f97316;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+  
+  .mbbs-p-clear-btn {
+    background: none;
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .mbbs-p-clear-btn:hover {
+    background-color: #f97316;
+    color: white;
+  }
+  
+  .mbbs-p-recommendation-container {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin: 15px;
+    margin-left: 0px;
+  }
+  
+  .mbbs-p-recommendation-scale {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+  }
+  
+  .mbbs-p-number {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  .mbbs-p-number.hovered {
+    background-color: orange;
+    color: white;
+  }
+  
+  .mbbs-p-collection-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .mbbs-p-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.3),
+      transparent
+    );
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .mbbs-p-collection-title {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .mbbs-p-icons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .mbbs-p-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3 ease;
+  }
+  
+  .mbbs-p-icons:hover .icon-img {
+    transform: scale(1.1);
+  }
+  
+  .mbbs-p-icons:first-child {
+    margin-left: 0;
+  }
+  
+  .mbbs-p-more-count {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .mbbs-p-scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .mbbs-p-scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .mbbs-p-scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .mbbs-p-scroll-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .mbbs-p-scroll-btn.left {
+    left: 10px;
+  }
+  
+  .mbbs-p-scroll-btn.right {
+    right: 10px;
+  }
+  
+  .mbbs-p-horizontal-scroll-container {
+    background-color: #fff3eb;
+    position: relative;
+    width: 100%;
+    max-width: 200vh;
+    margin: 20px 15px;
+  }
+  
+  .mbbs-p-hori-scroll-header {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  
+  .mbbs-p-horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .mbbs-p-horizontal-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .mbbs-p-college-hori-card {
+    position: relative;
+    max-width: 190px;
+    max-height: 320px;
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .mbbs-p-college-hori-card p {
+    text-align: left;
+  }
+  
+  .mbbs-p-college-hori-card a {
+    text-align: left;
+  }
+  
+  .mbbs-p-college-hori-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    position: relative;
+  }
+  
+  .mbbs-p-college-details {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mbbs-p-scroll-college-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #000000;
+    overflow: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: left;
+  }
+  
+  .mbbs-p-scroll-college-location {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 4px;
+  }
+  
+  .mbbs-p-college-category {
+    color: #16a34a;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .mbbs-p-college-description {
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .mbbs-p-college-package {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .mbbs-p-rating {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  
+  .mbbs-p-rating span {
+    color: #ffd700;
+  }
+  
+  .mbbs-p-hori-action-link.hori-apply {
+    display: inline-block;
+    color: orange;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: left;
+    transition: background-color 0.3s;
+  }
+  
+  .mbbs-p-scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  
+  .mbbs-p-scroll-btn.left {
+    left: -20px;
+  }
+  
+  .mbbs-p-scroll-btn.right {
+    right: -20px;
+  }
+  
+  .mbbs-p-scroll-btn:hover {
+    background-color: #f8f8f8;
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .mbbs-p-college-hori-card {
+      flex: 0 0 260px;
+    }
+  
+    .mbbs-p-scroll-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 20px;
+    }
+  
+    .mbbs-p-scroll-btn.left {
+      left: -16px;
+    }
+  
+    .mbbs-p-scroll-btn.right {
+      right: -16px;
+    }
+  }
+  
+  .mbbs-p-found-colleges {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .mbbs-p-found-colleges span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #374151;
+    margin-top: 10px;
+  }
+  
+  .mbbs-p-sorting {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mbbs-p-sorting label {
+    margin-right: 1rem;
+  }
+  
+  .mbbs-p-radio-group {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .mbbs-p-radio-group label {
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  
+  .mbbs-p-radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+  }
+  
+  .mbbs-p-table-heading {
+    width: 115%;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .mbbs-p-college-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .mbbs-p-college-table th,
+  .mbbs-p-college-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .mbbs-p-college-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+  }
+  
+  .mbbs-p-college-table tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  .mbbs-p-college-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .mbbs-p-center.fixed-col {
+    width: 300px;
+  }
+  
+  .mbbs-p-center {
+    text-align: center;
+  }
+  
+  .mbbs-p-clg-fees {
+    color: #4caf50;
+  }
+  
+  .mbbs-p-college-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mbbs-p-college-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .mbbs-p-college-name {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .mbbs-p-college-name:hover {
+    text-decoration: underline;
+  }
+  
+  .mbbs-p-college-location {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .mbbs-p-college-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .mbbs-p-action-link {
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .mbbs-p-action-link.apply {
+    color: #ff5722;
+  }
+  
+  .mbbs-p-action-link.brochure {
+    color: #4caf50;
+  }
+  
+  .mbbs-p-action-link:hover {
+    text-decoration: underline;
+  }
+  
+  .mbbs-p-compare-checkbox {
+    margin-left: 5px;
+  }
+  
+  .mbbs-p-highlight {
+    color: #ff9800;
+  }
+  
+  .mbbs-p-more-link {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .mbbs-p-more-link:hover {
+    text-decoration: underline;
+  }
+  
+  .mbbs-p-filter-container {
+    margin: 0 -10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 0.5rem;
+    max-width: 220vh;
+    width: 100%;
+    background-color: white;
+    overflow: visible;
+    z-index: 50;
+    transform: translateY(5px);
+  }
+  
+  .mbbs-p-filter-selection-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 220vh;
+    width: 100%;
+    height: 70px;
+    overflow: visible;
+  }
+  
+  .mbbs-p-container-filter {
+    scrollbar-width: none !important;
+    width: 100%;
+    position: static;
+    overflow: visible;
+  }
+  
+  .mbbs-p-filter-selection::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .mbbs-p-scroll-button {
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+  }
+  
+  .mbbs-p-scroll-button:hover {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #333;
+  }
+  
+  .mbbs-p-scroll-button.left {
+    left: -5px;
+  }
+  
+  .mbbs-p-scroll-button.right {
+    right: -5px;
+  }
+  
+  .mbbs-p-filter-selection {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    height: 70px;
+    padding: 8px 32px;
+    /* padding-bottom: 250px;
+    margin-bottom: -250px; */
+    background-color: white;
+    border-radius: 8px;
+    gap: 0.5rem;
+    flex-grow: 1;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+  
+  .mbbs-p-filter-selection::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .mbbs-p-filter-button {
+    padding: 6px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    background-color: white;
+    color: #4b5563;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 30px;
+  }
+  
+  .mbbs-p-filter-button:hover {
+    border-color: #9ca3af;
+  }
+  
+  .mbbs-p-filter-button.active {
+    border-color: #f97316;
+    color: #f97316;
+  }
+  
+  .mbbs-p-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .mbbs-p-dropdown-wrapper {
+    position: static;
+  }
+  
+  .mbbs-p-dropdown-button-filter {
+    margin: 0 5px;
+    padding: 6px 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    background-color: white;
+    color: #4b5563;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 30px;
+  }
+  
+  .mbbs-p-dropdown-button-filter.active {
+    border-color: #f97316;
+    background-color: #fef3c7;
+    color: #f97316;
+  }
+  
+  .mbbs-p-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: auto;
+    margin-top: 5px;
+    z-index: 1000 !important;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    width: 360px;
+    max-height: 450px;
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+  
+  .mbbs-p-dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding-bottom: 8px;
+  }
+  
+  .mbbs-p-dropdown-header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .mbbs-p-dropdown-search {
+    width: 330px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  
+  .mbbs-p-dropdown-options {
+    max-height: 200px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  
+  .mbbs-p-dropdown-option {
+    display: flex;
+    align-items: center;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .mbbs-p-dropdown-option:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .mbbs-p-option-name {
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  .mbbs-p-dropdown-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #f97316;
+    cursor: pointer;
+    height: 25px;
+  }
+  
+  .mbbs-p-selected-filters {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0 8px;
+  }
+  
+  .mbbs-p-filter-tag {
+    border: 1px solid #f97316;
+    background-color: white;
+    color: #f97316;
+    padding: 4px 10px;
+    border-radius: 16px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+  
+  .mbbs-p-clear-btn {
+    background: none;
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .mbbs-p-clear-btn:hover {
+    background-color: #f97316;
+    color: white;
+  }
+  

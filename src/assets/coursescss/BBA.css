@@ -1,55 +1,256 @@
-.ba-p-container-ba {
-    padding: 1.5rem;
-    background-color: #f5f5f5;
-  }
-  
-  .ba-p-college-list {
+/* Body */
+body {
     font-family: Arial, sans-serif;
-    padding: 1.5rem;
-    color: #333;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
   }
   
-  .ba-p-breadcrumb {
+  /* Breadcrumb */
+  .breadcrumb {
     display: flex;
     align-items: center;
     color: #6b7280;
     font-size: 0.875rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
+    max-width: 190vh;
   }
   
-  .ba-p-flex-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .ba-p-banner {
-    position: relative;
-    width: 400px;
-    height: 100px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .ba-p-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .ba-p-header {
+  /* Title */
+  .title {
     color: #f97316;
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin: 1rem;
+    text-align: left;
   }
   
-  .ba-p-filter-container {
+    /* Flex container for banners */
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      justify-content: center; /* Center align banners */
+      align-items: center;
+      background-color: #ebebeb;
+      height: 16vh;
+      align-items: center;
+      margin: 15px;
+      width: 100%;
+      max-width: 190vh;
+      margin-left: 18px;
+    }
+  
+    
+  /* Read more */
+  .read-more-container {
+    color: #3d3e3e;
+    background-color: #eeeded;
+    padding: 10px;
+    margin: 15px;
+    width: 100%;
+    max-width: 187.5vh;
+    margin-left: 18px;
+  }
+  
+  .profile-section {
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    color: #4b4b4b;  /* Adjust the color if needed */
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .profile-name {
+    margin: 0%;
+    font-weight: bold;
+    color: #f77b0b;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between name and checkmark */
+    padding: 0%;
+  }
+  
+  .checkmark {
+    color: green;
+    font-size: 14px;
+  }
+  
+  .designation {
+    font-size: 14px;
+    color: #555;
+  }
+  .content.expanded {
+    max-height: 200px; /* Set to a height that accommodates all content */
+  }
+  
+  
+  .table-of-content {
+    color: rgb(79, 184, 221);
+    justify-content: left;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #000000;
+    border-radius: 8px;
+  }
+  
+  .table-of-content h2 {
+    text-align: left;
+    margin-top: 0%;
+    margin-left: 15px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .table-of-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .table-of-content li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .readmore-btn{
+    width: 100%;
+    color: #6897c0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #d1d8e4;
+  }
+  button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .top-bba-clgs{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fffdfd;
+  }
+  
+  .Top_10_bba{
+    background-color: #fffdfd;
+    justify-content: left;
+    text-align: left;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px;
+  }
+  
+  .Top_10_bba h2 ,p{
+    text-align: left;
+    margin-left: 6px;
+    margin-bottom: 0px;
+    margin-top: 0%;
+  }
+  
+  .Top_10_bba h2{
+    font-size: 20px;
+  }
+  
+  /* Top Colleges table of readmore section */
+  .college-table-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow-x: auto;
+    padding: 16px;
+  }
+  
+  .all-college-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .all-college-table th, 
+  .all-college-table td {
+    font-size: 16px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center !important;
+    background-color: white;
+  }
+  
+  /* Header background colors */
+  .all-college-table thead th:nth-child(1) {
+    color: white;
+    text-align: center;
+    background-color: #8bbdc4;
+  }
+  
+  .all-college-table thead th:nth-child(2) {
+    color: white;
+    text-align: center;
+    background-color: #7c9cab;
+  }
+  
+  .all-college-table thead th:nth-child(3) {
+    color: white;
+    text-align: center;
+    background-color: #6a8795;
+  }
+  .all-college-table thead th:nth-child(4) {
+    color: white;
+    text-align: center;
+    background-color: #4c6c7b;
+  }
+  
+  .placement-wise-clg{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+  }
+  .placement-wise-clg img{
+    width: 130vh;
+    height: 60vh;
+  }
+  
+  ul {
+    list-style-type: disc ; /* Forces bullets to appear */
+    /* padding-left: 10px; Ensures bullets are properly positioned */
+  }
+  
+  .Addmission-process ul li {
+    display: list-item ; /* Ensures list items are recognized */
+    /* margin-bottom: 8px; Adds spacing between list items */
+  }
+  
+  
+  /* Filter Container */
+  
+  .filter-container {
     margin: 0 -10px;
     padding: 10px;
     display: flex;
@@ -64,7 +265,7 @@
     transform: translateY(5px);
   }
   
-  .ba-p-filter-selection-container {
+  .filter-selection-container {
     display: flex;
     align-items: center;
     position: relative;
@@ -74,18 +275,18 @@
     overflow: visible;
   }
   
-  .ba-p-container-filter {
+  .container-filter {
     scrollbar-width: none !important;
     width: 100%;
-    /* position: static; */
+    position: static;
     overflow: visible;
   }
   
-  .ba-p-filter-selection::-webkit-scrollbar {
+  .filter-selection::-webkit-scrollbar {
     display: none;
   }
   
-  .ba-p-scroll-button {
+  .scroll-button {
     position: absolute;
     z-index: 10;
     background-color: white;
@@ -104,26 +305,28 @@
     color: #666;
   }
   
-  .ba-p-scroll-button:hover {
+  .scroll-button:hover {
     background-color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     color: #333;
   }
   
-  .ba-p-scroll-button.left {
+  .scroll-button.left {
     left: -5px;
   }
   
-  .ba-p-scroll-button.right {
+  .scroll-button.right {
     right: -5px;
   }
   
-  .ba-p-filter-selection {
+  .filter-selection {
     display: flex;
     align-items: center;
     white-space: nowrap;
     height: 70px;
     padding: 8px 32px;
+    /* padding-bottom: 250px;
+    margin-bottom: -250px; */
     background-color: white;
     border-radius: 8px;
     gap: 0.5rem;
@@ -134,11 +337,11 @@
     overflow-y: visible;
   }
   
-  .ba-p-filter-selection::-webkit-scrollbar {
+  .filter-selection::-webkit-scrollbar {
     display: none;
   }
   
-  .ba-p-filter-button {
+  .filter-button {
     padding: 6px 14px;
     border: 1px solid #d1d5db;
     border-radius: 16px;
@@ -152,25 +355,25 @@
     height: 30px;
   }
   
-  .ba-p-filter-button:hover {
+  .filter-button:hover {
     border-color: #9ca3af;
   }
   
-  .ba-p-filter-button.active {
+  .filter-button.active {
     border-color: #f97316;
     color: #f97316;
   }
   
-  .ba-p-icon {
+  .icon {
     width: 20px;
     height: 20px;
   }
   
-  .ba-p-dropdown-wrapper {
-    position: static;
+  .dropdown-wrapper {
+    position: static !important;
   }
   
-  .ba-p-dropdown-button-filter {
+  .dropdown-button-filter {
     margin: 0 5px;
     padding: 6px 10px;
     border: 1px solid #d1d5db;
@@ -185,16 +388,16 @@
     height: 30px;
   }
   
-  .ba-p-dropdown-button-filter.active {
+  .dropdown-button-filter.active {
     border-color: #f97316;
     background-color: #fef3c7;
     color: #f97316;
   }
   
-  .ba-p-dropdown-menu {
-    position: absolute;
+  .dropdown-menu {
     top: 100%;
     left: auto;
+    right: auto;
     margin-top: 5px;
     z-index: 1000 !important;
     background: white;
@@ -207,21 +410,21 @@
     overflow-x: hidden;
   }
   
-  .ba-p-dropdown-header {
+  .dropdown-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
     padding-bottom: 8px;
   }
   
-  .ba-p-dropdown-header button {
+  .dropdown-header button {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 16px;
   }
   
-  .ba-p-dropdown-search {
+  .dropdown-search {
     width: 330px;
     padding: 10px 12px;
     border: 1px solid #ccc;
@@ -231,7 +434,7 @@
     text-transform: uppercase;
   }
   
-  .ba-p-dropdown-options {
+  .dropdown-options {
     max-height: 200px;
     overflow-y: auto;
     display: grid;
@@ -239,7 +442,7 @@
     gap: 8px;
   }
   
-  .ba-p-dropdown-option {
+  .dropdown-option {
     display: flex;
     align-items: center;
     padding: 6px 8px;
@@ -247,16 +450,16 @@
     cursor: pointer;
   }
   
-  .ba-p-dropdown-option:hover {
+  .dropdown-option:hover {
     background-color: #f5f5f5;
   }
   
-  .ba-p-option-name {
+  .option-name {
     flex: 1;
     margin-left: 10px;
   }
   
-  .ba-p-dropdown-footer {
+  .dropdown-footer {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
@@ -266,7 +469,7 @@
     height: 25px;
   }
   
-  .ba-p-selected-filters {
+  .selected-filters {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -274,7 +477,7 @@
     padding: 0 8px;
   }
   
-  .ba-p-filter-tag {
+  .filter-tag {
     border: 1px solid #f97316;
     background-color: white;
     color: #f97316;
@@ -287,7 +490,7 @@
     cursor: pointer;
   }
   
-  .ba-p-clear-btn {
+  .clear-btn {
     background: none;
     color: black;
     border: none;
@@ -296,12 +499,14 @@
     cursor: pointer;
   }
   
-  .ba-p-clear-btn:hover {
+  .clear-btn:hover {
     background-color: #f97316;
     color: white;
   }
   
-  .ba-p-found-colleges {
+  /* Table Styles */
+  
+  .found-colleges {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -309,93 +514,102 @@
     margin-top: 1rem;
   }
   
-  .ba-p-found-colleges span {
+  .found-colleges span {
+    padding: 20px;
     font-size: 1rem;
     font-weight: 600;
     color: #374151;
     margin-top: 10px;
   }
   
-  .ba-p-sorting {
+  
+  .sorting {
     display: flex;
     align-items: center;
   }
   
-  .ba-p-sorting label {
+  .sorting label {
     margin-right: 1rem;
   }
   
-  .ba-p-radio-group {
+  .radio-group {
     display: flex;
     gap: 1rem;
   }
   
-  .ba-p-radio-group label {
+  .radio-group label {
     font-size: 0.875rem;
     cursor: pointer;
   }
   
-  .ba-p-radio-group input[type="radio"] {
+  .radio-group input[type="radio"] {
     margin-right: 0.5rem;
   }
   
-  .ba-p-table-heading {
+  .table-heading {
     width: 115%;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 15px;
   }
   
-  .ba-p-college-table {
+  .college-table {
+    margin-left: 2.5rem;
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    max-width: 187vh;
   }
   
-  .ba-p-college-table th,
-  .ba-p-college-table td {
+  .college-table th,
+  .college-table td {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 8px;
     text-align: left;
   }
   
-  .ba-p-college-table th {
-    background-color: #f9f9f9;
+  .college-table th {
+    color: white;
+    background-color: #7eb0c1;
     font-weight: bold;
   }
   
-  .ba-p-college-table tr:nth-child(even) {
+  .college-table tr:nth-child(even) {
     background-color: #f5f5f5;
   }
   
-  .ba-p-college-table tr:hover {
+  .college-table tr:hover {
     background-color: #f1f1f1;
   }
   
-  .ba-p-college-card-table {
+  .college-card-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
     background-color: #ffd7bb;
   }
   
-  .ba-p-college-card-table th,
-  .ba-p-college-card-table td {
+  .college-card-table th,
+  .college-card-table td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
   }
   
-  .ba-p-college-card-table th {
+  .college-card-table th {
     background-color: #f9f9f9;
     font-weight: bold;
   }
   
-  .ba-p-college-card-table tr:nth-child(even) {
-    background-color: #f5f5f5;
+  .college-card-table tr:nth-child(even) {
+  background-color: #f5f5f5;
   }
   
-  .ba-p-college-card-logo {
+  .college-card-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .college-card-logo {
     width: 40px;
     height: 40px;
     margin-right: 15px;
@@ -403,212 +617,193 @@
     margin-bottom: 15px;
   }
   
-  .ba-p-center.fixed-col {
+  .center.fixed-col {
     width: 300px;
   }
   
-  .ba-p-center {
+  /* Column Alignments */
+  .center {
     text-align: center;
   }
   
-  .ba-p-clg-fees {
+  .clg-fees{
     color: #4caf50;
   }
-  
-  .ba-p-college-info {
+  /* College Info Styles */
+  .college-info {
     display: flex;
     align-items: center;
   }
   
-  .ba-p-college-logo {
+  .college-logo {
     width: 40px;
     height: 40px;
-    margin-right: 15px;
     padding: 10px;
     margin-bottom: 15px;
   }
   
-  .ba-p-college-name {
-    color: #000000;
+  .college-name {
+    color: #528dc1;
     font-weight: bold;
     text-decoration: none;
   }
   
-  .ba-p-college-name:hover {
+  .college-name:hover {
     text-decoration: underline;
   }
   
-  .ba-p-college-location {
+  .college-location {
     font-size: 12px;
     color: #666;
   }
   
-  .ba-p-college-actions {
+  /* Actions */
+  .college-actions {
+    justify-content: space-evenly;
     margin-top: 10px;
     display: flex;
     gap: 15px;
   }
   
-  .ba-p-action-link {
+  .action-link {
     font-size: 14px;
     text-decoration: none;
   }
   
-  .ba-p-action-link.apply {
+  .action-link.apply {
     color: #ff5722;
   }
+  .action-link-2{
+    font-size: 12px;
+    color: #ff5722;
+    text-decoration: none;
   
-  .ba-p-action-link.brochure {
+  }
+  
+  .action-link.brochure {
     color: #4caf50;
   }
   
-  .ba-p-action-link:hover {
+  .action-link:hover {
     text-decoration: underline;
   }
   
-  .ba-p-compare-checkbox {
+  .compare-checkbox {
     margin-left: 5px;
   }
   
-  .ba-p-highlight {
+  /* Reviews and Ranking */
+  .highlight {
     color: #ff9800;
   }
   
-  .ba-p-more-link {
+  .more-link {
     color: #007bff;
     text-decoration: none;
   }
   
-  .ba-p-more-link:hover {
+  .more-link:hover {
     text-decoration: underline;
   }
   
-  .ba-p-college-hori-card {
-    width: 250px;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    position: relative;
+  
+  .grey-subtitle {
+    font-size: 10px;
+    color: rgb(130, 130, 130);
+    padding: 5px;
   }
   
-  .ba-p-college-hori-card img {
-    width: 100%;
-    height: 120px;
-    border-radius: 8px;
-  }
   
-  .ba-p-rating {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: black;
-    color: white;
-    padding: 3px 8px;
-    border-radius: 5px;
-    font-size: 12px;
-  }
   
-  /* IMP */
-  .ba-p-horizontal-scroll-container {
+  /* Horizontal component */
+  .horizontal-scroll-container {
     background-color: #fff3eb;
     position: relative;
     width: 100%;
-    max-width: 200vh;
+    max-width: 190.5vh;
     margin: 20px 15px;
   }
   
-  .ba-p-hori-scroll-header {
-    padding-top: 10px;
-    padding-left: 10px;
-  }
+  .horizontal-scroll-container h3{
+    padding: 15px;
+    margin-bottom: 5px;
   
-  .ba-p-horizontal-scroll {
+  }
+  .horizontal-scroll {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 20px;
     padding: 20px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
+    overflow-y: hidden;
+    overflow-x: scroll;
+    }
+    
   
-  .ba-p-horizontal-scroll::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .ba-p-college-hori-card {
+  .college-hori-card {
     position: relative;
-    max-width: 190px;
+    max-width: 193px;
     max-height: 320px;
     flex: 0 0 300px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+  
   }
   
-  .ba-p-college-hori-card p {
-    text-align: left;
-  }
-  
-  .ba-p-college-hori-card a {
-    text-align: left;
-  }
-  
-  .ba-p-college-hori-card img {
+  .college-hori-card img {
     width: 100%;
-    height: 100px;
+    height: 100px; 
     object-fit: cover;
     position: relative;
   }
   
-  .ba-p-college-details {
+  .college-details {
     padding: 15px;
     display: flex;
     flex-direction: column;
   }
   
-  .ba-p-scroll-college-name {
+  .scroll-college-name {
     font-weight: 700;
-    font-size: 16px;
-    line-height: 22.4px;
-    color: #000000;
-    overflow: hidden;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: initial;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    text-align: left;
+      font-size: 16px;
+      line-height: 22.4px;
+      color: #000000;
+      overflow: hidden;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      /* line-clamp:; */
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
   }
   
-  .ba-p-scroll-college-location {
+  .scroll-college-location {
     font-size: 14px;
     color: #666;
     margin-bottom: 4px;
   }
   
-  .ba-p-college-category {
+  .college-category {
     color: #16a34a;
     font-size: 12px;
     font-weight: 500;
   }
   
-  .ba-p-college-description {
+  .college-description {
     font-size: 14px;
     color: #444;
   }
   
-  .ba-p-college-package {
+  .college-package {
     font-size: 14px;
     font-weight: 500;
     color: #333;
   }
   
-  .ba-p-rating {
+  .rating {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -618,17 +813,18 @@
     border-radius: 4px;
     font-size: 12px;
     font-weight: 500;
-    z-index: 2;
+    z-index: 2; /* Ensure rating appears above image */
     display: flex;
     align-items: center;
     gap: 2px;
   }
   
-  .ba-p-rating span {
-    color: #ffd700;
+  .rating span {
+    color: #FFD700; /* Gold color for star */
   }
   
-  .ba-p-hori-action-link.hori-apply {
+  
+  .hori-action-link.hori-apply {
     display: inline-block;
     color: orange;
     padding: 8px 16px;
@@ -639,7 +835,7 @@
     transition: background-color 0.3s;
   }
   
-  .ba-p-scroll-btn {
+  .scroll-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -658,151 +854,55 @@
     transition: all 0.3s ease;
   }
   
-  .ba-p-scroll-btn.left {
+  .scroll-btn.left {
     left: -20px;
   }
   
-  .ba-p-scroll-btn.right {
+  .scroll-btn.right {
     right: -20px;
   }
   
-  .ba-p-scroll-btn:hover {
+  .scroll-btn:hover {
     background-color: #f8f8f8;
     transform: translateY(-50%) scale(1.1);
   }
   
   @media (max-width: 768px) {
-    .ba-p-college-hori-card {
+    .college-hori-card {
       flex: 0 0 260px;
     }
-  
-    .ba-p-scroll-btn {
+    
+    .scroll-btn {
       width: 32px;
       height: 32px;
       font-size: 20px;
     }
-  
-    .ba-p-scroll-btn.left {
+    
+    .scroll-btn.left {
       left: -16px;
     }
-  
-    .ba-p-scroll-btn.right {
+    
+    .scroll-btn.right {
       right: -16px;
     }
   }
-  /* IMP */
   
-  .ba-p-collection-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .ba-p-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.3),
-      transparent
-    );
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-  
-  .ba-p-collection-title {
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 12px;
-  }
-  
-  .ba-p-icons {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  
-  .ba-p-icon-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3 ease;
-  }
-  
-  .ba-p-icons:hover .icon-img {
-    transform: scale(1.1);
-  }
-  
-  .ba-p-icons:first-child {
-    margin-left: 0;
-  }
-  
-  .ba-p-more-count {
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  
-  .ba-p-scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .ba-p-scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  .ba-p-scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
-  }
-  
-  .ba-p-scroll-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-    transform: translateY(-50%) scale(1.1);
-  }
-  
-  .ba-p-scroll-btn.left {
-    left: 10px;
-  }
-  
-  .ba-p-scroll-btn.right {
-    right: 10px;
-  }
-  
-  .ba-p-recommendation-container {
+  .recommendation-container {
     padding: 20px;
     width: 100%;
+    max-width: 190vh;
     text-align: center;
-    margin: 15px;
     margin-left: 0px;
   }
   
-  .ba-p-recommendation-scale {
+  .recommendation-scale {
+    padding: 15px;
     display: flex;
     justify-content: space-evenly;
     gap: 15px;
   }
   
-  .ba-p-number {
+  .number {
     font-size: 20px;
     width: 50px;
     height: 50px;
@@ -816,192 +916,14 @@
     margin-bottom: 10px;
   }
   
-  .ba-p-number.hovered {
+  .number.hovered {
     background-color: orange;
     color: white;
   }
   
-  .ba-p-page-container {
-    min-height: 6vh;
-    background-color: #f9fafb;
-    padding: 1.5rem;
-  }
   
-  .ba-p-content-wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-  
-  .ba-p-college-card {
-    background-color: #fff1ec;
-    border-radius: 0.5rem;
-    position: relative;
-    margin-bottom: 1rem;
-  }
-  
-  .ba-p-featured-badge {
-    position: absolute;
-    top: -0.75rem;
-    left: 1rem;
-    background-color: #ef4444;
-    color: white;
-    font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-  }
-  
-  .ba-p-card-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 1rem;
-    padding: 1.5rem;
-    align-items: center;
-  }
-  
-  /* College Info Section */
-  .ba-p-college-info {
-    padding-right: 1rem;
-    border-right: 1px solid #e5e7eb;
-  }
-  
-  .ba-p-info-container {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .ba-p-college-logo {
-    width: 3rem;
-    height: 3rem;
-    object-fit: contain;
-  }
-  
-  .ba-p-college-details {
-    flex: 1;
-  }
-  
-  .ba-p-college-name {
-    color: #00a3ff;
-    font-weight: 500;
-    font-size: 1.125rem;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0.25rem;
-    text-align: left;
-  }
-  
-  .ba-p-location {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    color: #6b7280;
-    font-size: 0.875rem;
-  }
-  
-  .ba-p-approvals {
-    color: #6b7280;
-    font-size: 0.75rem;
-    margin-top: 0.25rem;
-  }
-  
-  .ba-p-action-buttons {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 0.75rem;
-  }
-  
-  .ba-p-apply-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    color: #f97316;
-    font-size: 0.875rem;
-  }
-  
-  .ba-p-brochure-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    color: #22c55e;
-    font-size: 0.875rem;
-  }
-  
-  .ba-p-compare-label {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    color: #6b7280;
-    font-size: 0.875rem;
-    cursor: pointer;
-  }
-  
-  .ba-p-compare-checkbox {
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid #d1d5db;
-    border-radius: 0.25rem;
-  }
-  
-  /* Fees Section */
-  .ba-p-fees-section {
-    text-align: center;
-    padding: 0 1rem;
-    border-right: 1px solid #e5e7eb;
-  }
-  
-  .ba-p-fees-amount {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #111827;
-  }
-  
-  .ba-p-fees-label {
-    font-size: 0.75rem;
-    color: #6b7280;
-    margin-top: 0.25rem;
-  }
-  
-  .ba-p-compare-fees {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.25rem;
-    color: #6b7280;
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-  }
-  
-  /* Placement Section */
-  .ba-p-placement-section {
-    padding-left: 1rem;
-  }
-  
-  .ba-p-placement-grid {
-    display: grid;
-    gap: 0.75rem;
-  }
-  
-  .ba-p-package-info {
-    text-align: left;
-  }
-  
-  .ba-p-package-amount {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #059669;
-  }
-  
-  .ba-p-package-label {
-    font-size: 0.75rem;
-    color: #6b7280;
-  }
-  
-  .ba-p-icon {
-    width: 1rem;
-    height: 1rem;
-  }
-  
-  .ba-p-collections-container {
+  /* BBACollection.css */
+  .collections-container {
     margin: 15px;
     max-width: 100%;
     padding: 20px;
@@ -1011,7 +933,7 @@
     background-color: #fdf6ddc8;
   }
   
-  .ba-p-collections-title {
+  .collections-title {
     font-size: 24px;
     font-weight: bold;
     margin: 0%;
@@ -1019,7 +941,7 @@
     padding: 10px;
   }
   
-  .ba-p-collections-scroll {
+  .collections-scroll {
     display: flex;
     overflow-x: auto;
     gap: 20px;
@@ -1029,33 +951,33 @@
     -ms-overflow-style: none;  /* IE and Edge */
   }
   
-  .ba-p-collections-scroll::-webkit-scrollbar {
+  .collections-scroll::-webkit-scrollbar {
     display: none;  /* Chrome, Safari and Opera */
   }
   
-  .ba-p-collection-card {
+  .collection-card {
     flex: 0 0 250px;  /* Fixed width for each card */
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
   }
   
-  .ba-p-collection-card:hover {
+  .collection-card:hover {
     transform: translateY(-4px);
   }
   
-  .ba-p-card-image-container {
+  .card-image-container {
     position: relative;
     height: 200px;
   }
   
-  .ba-p-card-image {
+  .card-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  .ba-p-gradient-overlay {
+  .gradient-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1064,7 +986,7 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
   }
   
-  .ba-p-card-content {
+  .card-content {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1073,7 +995,7 @@
     color: white;
   }
   
-  .ba-p-card-title {
+  .card-title {
     font-size: 16px;
     margin-bottom: 12px;
     white-space: nowrap;
@@ -1081,7 +1003,7 @@
     text-overflow: ellipsis;
   }
   
-  .ba-p-logo-container {
+  .logo-container {
     display: flex;
     align-items: left;
     text-align: left;
@@ -1091,11 +1013,11 @@
     padding-right: 10px;
   }
   
-  .ba-p-logo-stack {
+  .logo-stack {
     display: flex;
   }
   
-  .ba-p-collection-logo {
+  .collection-logo {
     text-align: left;
     width: 32px;
     height: 32px;
@@ -1104,11 +1026,11 @@
     margin-left: -8px;
   }
   
-  .ba-p-collection-logo:first-child {
+  .collection-logo:first-child {
     margin-left: 0;
   }
   
-  .ba-p-more-count {
+  .more-count {
     font-size: 14px;
     white-space: nowrap;
     padding: 15px;
@@ -1116,7 +1038,7 @@
   
   /* Add smooth scroll behavior */
   @media (hover: hover) {
-    .ba-p-collections-scroll {
+    .collections-scroll {
       scroll-behavior: smooth;
     }
   }
