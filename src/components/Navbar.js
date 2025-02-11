@@ -1162,6 +1162,9 @@ const Navbar = () => {
           <li>
             <a href="/bba">B.B.A</a>
           </li>
+          <li>
+            <a href="/bca">BCA</a>
+          </li>
           
 
           <li className="nav-item"> <Link className="nav-link" to="/login"> <button className="btn btn-outline-light">Login</button> </Link> </li>

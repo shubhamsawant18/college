@@ -1,1044 +1,870 @@
 /* Body */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Breadcrumb */
-  .breadcrumb {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Breadcrumb */
+.mtech_dm_breadcrumb {
+  display: flex;
+  align-items: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 1rem;
+  max-width: 190vh;
+}
+
+/* Title */
+.mtech_dm_title {
+  color: #f97316;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem;
+  text-align: left;
+}
+
+  /* Flex container for banners */
+  .mtech_dm_flex-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center; /* Center align banners */
     align-items: center;
-    color: #6b7280;
-    font-size: 0.875rem;
-    margin: 1rem;
-    max-width: 190vh;
-  }
-  
-  /* Title */
-  .title {
-    color: #f97316;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 1rem;
-    text-align: left;
-  }
-  
-    /* Flex container for banners */
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-bottom: 1.5rem;
-      justify-content: center; /* Center align banners */
-      align-items: center;
-      background-color: #ebebeb;
-      height: 16vh;
-      align-items: center;
-      margin: 15px;
-      width: 100%;
-      max-width: 190vh;
-      margin-left: 18px;
-    }
-  
-    
-  /* Read more */
-  .read-more-container {
-    color: #3d3e3e;
-    background-color: #eeeded;
-    padding: 10px;
+    background-color: #ebebeb;
+    height: 16vh;
+    align-items: center;
     margin: 15px;
     width: 100%;
-    max-width: 187.5vh;
+    max-width: 190vh;
     margin-left: 18px;
   }
-  
-  .profile-section {
-    margin: 0%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .profile-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 5px;
-    border-radius: 50%;
-    color: #4b4b4b;  /* Adjust the color if needed */
-  }
-  
-  .profile-info {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  
-  .profile-name {
-    margin: 0%;
-    font-weight: bold;
-    color: #f77b0b;
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Space between name and checkmark */
-    padding: 0%;
-  }
-  
-  .checkmark {
-    color: green;
-    font-size: 14px;
-  }
-  
-  .designation {
-    font-size: 14px;
-    color: #555;
-  }
-  .content.expanded {
-    max-height: 200px; /* Set to a height that accommodates all content */
-  }
-  
-  
-  .table-of-content {
-    color: rgb(79, 184, 221);
-    justify-content: left;
-    background-color: #f9f9f9;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #000000;
-    border-radius: 8px;
-  }
-  
-  .table-of-content h2 {
-    text-align: left;
-    margin-top: 0%;
-    margin-left: 15px;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .table-of-content ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-  }
-  
-  .table-of-content li {
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-  }
-  
-  .readmore-btn{
-    width: 100%;
-    color: #6897c0;
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    background-color: #d1d8e4;
-  }
-  button {
-    margin-top: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .top-bba-clgs{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #fffdfd;
-  }
-  
-  .Top_10_bba{
-    background-color: #fffdfd;
-    justify-content: left;
-    text-align: left;
-    padding: 15px;
-    border-radius: 5px;
-    margin: 15px;
-  }
-  
-  .Top_10_bba h2 ,p{
-    text-align: left;
-    margin-left: 6px;
-    margin-bottom: 0px;
-    margin-top: 0%;
-  }
-  
-  .Top_10_bba h2{
-    font-size: 20px;
-  }
-  
-  /* Top Colleges table of readmore section */
-  .college-table-container {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow-x: auto;
-    padding: 16px;
-  }
-  
-  .all-college-table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #ccc;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: white;
-  }
-  
-  .all-college-table th, 
-  .all-college-table td {
-    font-size: 16px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center !important;
-    background-color: white;
-  }
-  
-  /* Header background colors */
-  .all-college-table thead th:nth-child(1) {
-    color: white;
-    text-align: center;
-    background-color: #8bbdc4;
-  }
-  
-  .all-college-table thead th:nth-child(2) {
-    color: white;
-    text-align: center;
-    background-color: #7c9cab;
-  }
-  
-  .all-college-table thead th:nth-child(3) {
-    color: white;
-    text-align: center;
-    background-color: #6a8795;
-  }
-  .all-college-table thead th:nth-child(4) {
-    color: white;
-    text-align: center;
-    background-color: #4c6c7b;
-  }
-  
-  .placement-wise-clg{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  
-  }
-  .placement-wise-clg img{
-    width: 130vh;
-    height: 60vh;
-  }
-  
-  ul {
-    list-style-type: disc ; /* Forces bullets to appear */
-    /* padding-left: 10px; Ensures bullets are properly positioned */
-  }
-  
-  .Addmission-process ul li {
-    display: list-item ; /* Ensures list items are recognized */
-    /* margin-bottom: 8px; Adds spacing between list items */
-  }
-  
-  
-  /* Filter Container */
-  
-  .filter-container {
-    margin: 0 -10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    gap: 0.5rem;
-    max-width: 220vh;
-    width: 100%;
-    background-color: white;
-    overflow: visible;
-    z-index: 50;
-    transform: translateY(5px);
-  }
-  
-  .filter-selection-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    max-width: 220vh;
-    width: 100%;
-    height: 70px;
-    overflow: visible;
-  }
-  
-  .container-filter {
-    scrollbar-width: none !important;
-    width: 100%;
-    position: static;
-    overflow: visible;
-  }
-  
-  .filter-selection::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .scroll-button {
-    position: absolute;
-    z-index: 10;
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #666;
-  }
-  
-  .scroll-button:hover {
-    background-color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    color: #333;
-  }
-  
-  .scroll-button.left {
-    left: -5px;
-  }
-  
-  .scroll-button.right {
-    right: -5px;
-  }
-  
-  .filter-selection {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    height: 70px;
-    padding: 8px 32px;
-    /* padding-bottom: 250px;
-    margin-bottom: -250px; */
-    background-color: white;
-    border-radius: 8px;
-    gap: 0.5rem;
-    flex-grow: 1;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    overflow-x: hidden;
-    overflow-y: visible;
-  }
-  
-  .filter-selection::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .filter-button {
-    padding: 6px 14px;
-    border: 1px solid #d1d5db;
-    border-radius: 16px;
-    background-color: white;
-    color: #4b5563;
-    font-size: 12px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    height: 30px;
-  }
-  
-  .filter-button:hover {
-    border-color: #9ca3af;
-  }
-  
-  .filter-button.active {
-    border-color: #f97316;
-    color: #f97316;
-  }
-  
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .dropdown-wrapper {
-    position: static !important;
-  }
-  
-  .dropdown-button-filter {
-    margin: 0 5px;
-    padding: 6px 10px;
-    border: 1px solid #d1d5db;
-    border-radius: 16px;
-    background-color: white;
-    color: #4b5563;
-    font-size: 12px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    height: 30px;
-  }
-  
-  .dropdown-button-filter.active {
-    border-color: #f97316;
-    background-color: #fef3c7;
-    color: #f97316;
-  }
-  
-  .dropdown-menu {
-    top: 100%;
-    left: auto;
-    right: auto;
-    margin-top: 5px;
-    z-index: 1000 !important;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    width: 360px;
-    max-height: 450px;
-    overflow-y: visible;
-    overflow-x: hidden;
-  }
-  
-  .dropdown-header {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-    padding-bottom: 8px;
-  }
-  
-  .dropdown-header button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .dropdown-search {
-    width: 330px;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-  }
-  
-  .dropdown-options {
-    max-height: 200px;
-    overflow-y: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-  
-  .dropdown-option {
-    display: flex;
-    align-items: center;
-    padding: 6px 8px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .dropdown-option:hover {
-    background-color: #f5f5f5;
-  }
-  
-  .option-name {
-    flex: 1;
-    margin-left: 10px;
-  }
-  
-  .dropdown-footer {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-size: 12px;
-    color: #f97316;
-    cursor: pointer;
-    height: 25px;
-  }
-  
-  .selected-filters {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    padding: 0 8px;
-  }
-  
-  .filter-tag {
-    border: 1px solid #f97316;
-    background-color: white;
-    color: #f97316;
-    padding: 4px 10px;
-    border-radius: 16px;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-  }
-  
-  .clear-btn {
-    background: none;
-    color: black;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  .clear-btn:hover {
-    background-color: #f97316;
-    color: white;
-  }
-  
-  /* Table Styles */
-  
-  .found-colleges {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .found-colleges span {
-    padding: 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #374151;
-    margin-top: 10px;
-  }
-  
-  
-  .sorting {
-    display: flex;
-    align-items: center;
-  }
-  
-  .sorting label {
-    margin-right: 1rem;
-  }
-  
-  .radio-group {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .radio-group label {
-    font-size: 0.875rem;
-    cursor: pointer;
-  }
-  
-  .radio-group input[type="radio"] {
-    margin-right: 0.5rem;
-  }
-  
-  .table-heading {
-    width: 115%;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .college-table {
-    margin-left: 2.5rem;
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    max-width: 187vh;
-  }
-  
-  .college-table th,
-  .college-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .college-table th {
-    color: white;
-    background-color: #7eb0c1;
-    font-weight: bold;
-  }
-  
-  .college-table tr:nth-child(even) {
-    background-color: #f5f5f5;
-  }
-  
-  .college-table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .college-card-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    background-color: #ffd7bb;
-  }
-  
-  .college-card-table th,
-  .college-card-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-  }
-  
-  .college-card-table th {
-    background-color: #f9f9f9;
-    font-weight: bold;
-  }
-  
-  .college-card-table tr:nth-child(even) {
+
+  
+/* Read more */
+.mtech_dm_read-more-container {
+  color: #3d3e3e;
+  background-color: #eeeded;
+  padding: 10px;
+  margin: 15px;
+  width: 100%;
+  max-width: 187.5vh;
+  margin-left: 18px;
+}
+
+.mtech_dm_profile-section {
+  margin: 0%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mtech_dm_profile-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  color: #4b4b4b;  /* Adjust the color if needed */
+}
+
+.mtech_dm_profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.mtech_dm_profile-name {
+  margin: 0%;
+  font-weight: bold;
+  color: #f77b0b;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between name and checkmark */
+  padding: 0%;
+}
+
+.mtech_dm_heckmark {
+  color: green;
+  font-size: 14px;
+}
+
+.mtech_dm_designation {
+  font-size: 14px;
+  color: #555;
+}
+.mtech_dm_content.expanded {
+  max-height: 200px; /* Set to a height that accommodates all content */
+}
+
+
+.mtech_dm_table-of-content {
+  color: rgb(79, 184, 221);
+  justify-content: left;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #000000;
+  border-radius: 8px;
+}
+
+.mtech_dm_table-of-content h2 {
+  text-align: left;
+  margin-top: 0%;
+  margin-left: 15px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.mtech_dm_table-of-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.mtech_dm_table-of-content li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.mtech_dm_readmore-btn{
+  width: 100%;
+  padding: 5px;
+  color: #6897c0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #d1d8e4;
+}
+.mtech_dm_readmore-btn.mtech_dm_rmbtn {
+  padding: 5px;
+  width: 100%;
+  color: #6897c0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  background-color: #d1d8e4;
+}
+
+.mtech_dm_readmore-btn.mtech_dm_rmbtn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.mtech_dm_top-bba-clgs{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #fffdfd;
+}
+
+.mtech_dm_Top_10_bba{
+  background-color: #fffdfd;
+  justify-content: left;
+  text-align: left;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.mtech_dm_Top_10_bba h2 {
+  text-align: left;
+  margin-left: 6px;
+  margin-bottom: 0px;
+  margin-top: 0%;
+}
+
+.mtech_dm_Top_10_bba h2{
+  font-size: 20px;
+}
+
+/* Top Colleges table of readmore section */
+.mtech_dm_college-table-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-x: auto;
+  padding: 16px;
+}
+
+.mtech_dm_all-college-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.mtech_dm_all-college-table th, 
+.mtech_dm_all-college-table td {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center !important;
+  background-color: white;
+}
+
+/* Header background colors */
+.mtech_dm_all-college-table thead th:nth-child(1) {
+  color: white;
+  text-align: center;
+  background-color: #8bbdc4;
+}
+
+.mtech_dm_all-college-table thead th:nth-child(2) {
+  color: white;
+  text-align: center;
+  background-color: #7c9cab;
+}
+
+.mtech_dm_all-college-table thead th:nth-child(3) {
+  color: white;
+  text-align: center;
+  background-color: #6a8795;
+}
+.mtech_dm_all-college-table thead th:nth-child(4) {
+  color: white;
+  text-align: center;
+  background-color: #4c6c7b;
+}
+
+.mtech_dm_placement-wise-clg{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.mtech_dm_placement-wise-clg img{
+  width: 130vh;
+  height: 60vh;
+}
+
+ul {
+  list-style-type: disc ; /* Forces bullets to appear */
+  /* padding-left: 10px; Ensures bullets are properly positioned */
+}
+
+.mtech_dm_Addmission-process ul li {
+  display: list-item ; /* Ensures list items are recognized */
+  /* margin-bottom: 8px; Adds spacing between list items */
+}
+
+
+/* Filter Container */
+
+/* Filter Bar Styles */
+.mtech_dm_filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+/* Sticky Filter Bar */
+.mtech_dm_sticky-filter-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+}
+
+/* Filter Buttons */
+.mtech_dm_filter-button,
+.mtech_dm_dropdown-button {
+  background-color: white;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: #374151;
+  cursor: pointer;
+}
+
+.mtech_dm_dropdown-button.active {
+  background-color: #f97316;
+  color: white;
+  border: none;
+}
+
+/* Selected Filters Styles */
+.mtech_dm_selected-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.mtech_dm_filter-tag {
+  background-color: #fef3c7;
+  color: #f97316;
+  border: 1px solid #fcd34d;
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mtech_dm_remove-tag {
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #f97316;
+}
+
+.mtech_dm_clear-all-button {
+  background-color: transparent;
+  color: #1f2937;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
+/* Filter dropdown styles */
+.mtech_dm_filter-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.mtech_dm_filter-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 200px;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.mtech_dm_filter-option {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.mtech_dm_filter-option:hover {
+  background-color: #f3f4f6;
+}
+
+.mtech_dm_filter-option.selected {
+  background-color: #f97316;
+  color: white;
+}
+/* Table Styles */
+
+.mtech_dm_found-colleges {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.mtech_dm_found-colleges span {
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 10px;
+}
+
+
+.mtech_dm_sorting {
+  display: flex;
+  align-items: center;
+}
+
+.mtech_dm_sorting label {
+  margin-right: 1rem;
+}
+
+.mtech_dm_radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.mtech_dm_radio-group label {
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.mtech_dm_radio-group input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.mtech_dm_table-heading {
+  width: 115%;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.mtech_dm_college-table {
+  margin-left: 2.5rem;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  max-width: 187vh;
+}
+
+.mtech_dm_college-table th,
+.mtech_dm_college-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.mtech_dm_college-table th {
+  color: white;
+  background-color: #7eb0c1;
+  font-weight: bold;
+}
+
+.mtech_dm_college-table tr:nth-child(even) {
   background-color: #f5f5f5;
+}
+
+.mtech_dm_college-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+
+.mtech_dm_center.mtech_dm_fixed-col {
+  width: 300px;
+}
+
+/* Column Alignments */
+.mtech_dm_center {
+  text-align: center;
+}
+
+.mtech_dm_clg-fees{
+  color: #4caf50;
+}
+/* College Info Styles */
+.mtech_dm_college-info {
+  display: flex;
+  align-items: center;
+}
+
+.mtech_dm_college-logo {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.mtech_dm_college-name {
+  color: #528dc1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.mtech_dm_college-name:hover {
+  text-decoration: underline;
+}
+
+.mtech_dm_college-location {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Actions */
+.mtech_dm_college-actions {
+  justify-content: space-evenly;
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.mtech_dm_action-link {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.mtech_dm_action-link.mtech_dm_apply {
+  color: #ff5722;
+}
+.mtech_dm_action-link-2{
+  font-size: 12px;
+  color: #ff5722;
+  text-decoration: none;
+
+}
+
+.mtech_dm_action-link.mtech_dm_brochure {
+  color: #4caf50;
+}
+
+.mtech_dm_action-link:hover {
+  text-decoration: underline;
+}
+
+.mtech_dm_compare-checkbox {
+  margin-left: 5px;
+}
+
+/* Reviews and Ranking */
+.mtech_dm_highlight {
+  color: #ff9800;
+}
+
+.mtech_dm_more-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.mtech_dm_more-link:hover {
+  text-decoration: underline;
+}
+
+
+.mtech_dm_grey-subtitle {
+  font-size: 10px;
+  color: rgb(130, 130, 130);
+  padding: 5px;
+}
+
+
+
+/* Horizontal component */
+.mtech_dm_horizontal-scroll-container {
+  background-color: #fff3eb;
+  position: relative;
+  width: 100%;
+  max-width: 190.5vh;
+  margin: 20px 15px;
+}
+
+.mtech_dm_horizontal-scroll-container h3{
+  padding: 15px;
+  margin-bottom: 5px;
+
+}
+.mtech_dm_horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px;
+  overflow-y: hidden;
+  overflow-x: scroll;
   }
   
-  .college-card-table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .college-card-logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 15px;
-    padding: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .center.fixed-col {
-    width: 300px;
-  }
-  
-  /* Column Alignments */
-  .center {
-    text-align: center;
-  }
-  
-  .clg-fees{
-    color: #4caf50;
-  }
-  /* College Info Styles */
-  .college-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .college-logo {
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .college-name {
-    color: #528dc1;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .college-name:hover {
-    text-decoration: underline;
-  }
-  
-  .college-location {
-    font-size: 12px;
-    color: #666;
-  }
-  
-  /* Actions */
-  .college-actions {
-    justify-content: space-evenly;
-    margin-top: 10px;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .action-link {
-    font-size: 14px;
-    text-decoration: none;
-  }
-  
-  .action-link.apply {
-    color: #ff5722;
-  }
-  .action-link-2{
-    font-size: 12px;
-    color: #ff5722;
-    text-decoration: none;
-  
-  }
-  
-  .action-link.brochure {
-    color: #4caf50;
-  }
-  
-  .action-link:hover {
-    text-decoration: underline;
-  }
-  
-  .compare-checkbox {
-    margin-left: 5px;
-  }
-  
-  /* Reviews and Ranking */
-  .highlight {
-    color: #ff9800;
-  }
-  
-  .more-link {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .more-link:hover {
-    text-decoration: underline;
-  }
-  
-  
-  .grey-subtitle {
-    font-size: 10px;
-    color: rgb(130, 130, 130);
-    padding: 5px;
-  }
-  
-  
-  
-  /* Horizontal component */
-  .horizontal-scroll-container {
-    background-color: #fff3eb;
-    position: relative;
-    width: 100%;
-    max-width: 190.5vh;
-    margin: 20px 15px;
-  }
-  
-  .horizontal-scroll-container h3{
-    padding: 15px;
-    margin-bottom: 5px;
-  
-  }
-  .horizontal-scroll {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 20px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    }
-    
-  
-  .college-hori-card {
-    position: relative;
-    max-width: 193px;
-    max-height: 320px;
-    flex: 0 0 300px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  
-  }
-  
-  .college-hori-card img {
-    width: 100%;
-    height: 100px; 
-    object-fit: cover;
-    position: relative;
-  }
-  
-  .college-details {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .scroll-college-name {
-    font-weight: 700;
-      font-size: 16px;
-      line-height: 22.4px;
-      color: #000000;
-      overflow: hidden;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: initial;
-      display: -webkit-box;
-      /* line-clamp:; */
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-  }
-  
-  .scroll-college-location {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 4px;
-  }
-  
-  .college-category {
-    color: #16a34a;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  
-  .college-description {
-    font-size: 14px;
-    color: #444;
-  }
-  
-  .college-package {
-    font-size: 14px;
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .rating {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    font-weight: 500;
-    z-index: 2; /* Ensure rating appears above image */
-    display: flex;
-    align-items: center;
-    gap: 2px;
-  }
-  
-  .rating span {
-    color: #FFD700; /* Gold color for star */
-  }
-  
-  
-  .hori-action-link.hori-apply {
-    display: inline-block;
-    color: orange;
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    text-align: left;
-    transition: background-color 0.3s;
-  }
-  
-  .scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    transition: all 0.3s ease;
-  }
-  
-  .scroll-btn.left {
-    left: -20px;
-  }
-  
-  .scroll-btn.right {
-    right: -20px;
-  }
-  
-  .scroll-btn:hover {
-    background-color: #f8f8f8;
-    transform: translateY(-50%) scale(1.1);
-  }
-  
-  @media (max-width: 768px) {
-    .college-hori-card {
-      flex: 0 0 260px;
-    }
-    
-    .scroll-btn {
-      width: 32px;
-      height: 32px;
-      font-size: 20px;
-    }
-    
-    .scroll-btn.left {
-      left: -16px;
-    }
-    
-    .scroll-btn.right {
-      right: -16px;
-    }
-  }
-  
-  .recommendation-container {
-    padding: 20px;
-    width: 100%;
-    max-width: 190vh;
-    text-align: center;
-    margin-left: 0px;
-  }
-  
-  .recommendation-scale {
-    padding: 15px;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 15px;
-  }
-  
-  .number {
-    font-size: 20px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-bottom: 10px;
-  }
-  
-  .number.hovered {
-    background-color: orange;
-    color: white;
-  }
-  
-  
-  /* BBACollection.css */
-  .collections-container {
-    margin: 15px;
-    max-width: 100%;
-    padding: 20px;
-    overflow: hidden;
-    max-width: 182.1vh;
-    margin-left: 2.5rem;
-    background-color: #fdf6ddc8;
-  }
-  
-  .collections-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0%;
-    text-align: left;
-    padding: 10px;
-  }
-  
-  .collections-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 4px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-  }
-  
-  .collections-scroll::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari and Opera */
-  }
-  
-  .collection-card {
-    flex: 0 0 250px;  /* Fixed width for each card */
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
-  }
-  
-  .collection-card:hover {
-    transform: translateY(-4px);
-  }
-  
-  .card-image-container {
-    position: relative;
-    height: 200px;
-  }
-  
-  .card-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .gradient-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
-  }
-  
-  .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 16px;
-    color: white;
-  }
-  
-  .card-title {
+
+.mtech_dm_college-hori-card {
+  position: relative;
+  max-width: 193px;
+  max-height: 320px;
+  flex: 0 0 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+}
+
+.mtech_dm_college-hori-card img {
+  width: 100%;
+  height: 100px; 
+  object-fit: cover;
+  position: relative;
+}
+
+.mtech_dm_college-details {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mtech_dm_scroll-college-name {
+  font-weight: 700;
     font-size: 16px;
-    margin-bottom: 12px;
-    white-space: nowrap;
+    line-height: 22.4px;
+    color: #000000;
+    overflow: hidden;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    /* line-clamp:; */
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.mtech_dm_scroll-college-location {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.mtech_dm_college-category {
+  color: #16a34a;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.mtech_dm_college-description {
+  font-size: 14px;
+  color: #444;
+}
+
+.mtech_dm_college-package {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.mtech_dm_rating {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 2; /* Ensure rating appears above image */
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.mtech_dm_rating span {
+  color: #FFD700; /* Gold color for star */
+}
+
+
+.mtech_dm_hori-action-link.mtech_dm_hori-apply {
+  display: inline-block;
+  color: orange;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.mtech_dm_scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.mtech_dm_scroll-btn.left {
+  left: -20px;
+}
+
+.mtech_dm_scroll-btn.right {
+  right: -20px;
+}
+
+.mtech_dm_scroll-btn:hover {
+  background-color: #f8f8f8;
+  transform: translateY(-50%) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .mtech_dm_college-hori-card {
+    flex: 0 0 260px;
   }
   
-  .logo-container {
-    display: flex;
-    align-items: left;
-    text-align: left;
-    /* justify-content: center; */
-    justify-content: flex-start;
-    width: 100%;
-    padding-right: 10px;
-  }
-  
-  .logo-stack {
-    display: flex;
-  }
-  
-  .collection-logo {
-    text-align: left;
+  .mtech_dm_scroll-btn {
     width: 32px;
     height: 32px;
-    border-radius: 50%;
-    border: 2px solid white;
-    margin-left: -8px;
+    font-size: 20px;
   }
   
-  .collection-logo:first-child {
-    margin-left: 0;
+  .mtech_dm_scroll-btn.left {
+    left: -16px;
   }
   
-  .more-count {
-    font-size: 14px;
-    white-space: nowrap;
-    padding: 15px;
+  .mtech_dm_scroll-btn.right {
+    right: -16px;
   }
-  
-  /* Add smooth scroll behavior */
-  @media (hover: hover) {
-    .collections-scroll {
-      scroll-behavior: smooth;
-    }
+}
+
+.mtech_dm_recommendation-container {
+  padding: 20px;
+  width: 100%;
+  max-width: 190vh;
+  text-align: center;
+  margin-left: 0px;
+}
+
+.mtech_dm_recommendation-scale {
+  padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+.mtech_dm_number {
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.mtech_dm_number.mtech_dm_hovered {
+  background-color: orange;
+  color: white;
+}
+
+
+/* BBACollection.css */
+.mtech_dm_collections-container {
+  margin: 15px;
+  max-width: 100%;
+  padding: 20px;
+  overflow: hidden;
+  max-width: 182.1vh;
+  margin-left: 2.5rem;
+  background-color: #fdf6ddc8;
+}
+
+.mtech_dm_collections-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0%;
+  text-align: left;
+  padding: 10px;
+}
+
+.mtech_dm_collections-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.mtech_dm_collections-scroll::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
+
+.mtech_dm_collection-card {
+  flex: 0 0 250px;  /* Fixed width for each card */
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.mtech_dm_collection-card:hover {
+  transform: translateY(-4px);
+}
+
+.mtech_dm_card-image-container {
+  position: relative;
+  height: 200px;
+}
+
+.mtech_dm_card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mtech_dm_gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+}
+
+.mtech_dm_card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  color: white;
+}
+
+.mtech_dm_card-title {
+  font-size: 16px;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mtech_dm_logo-container {
+  display: flex;
+  align-items: left;
+  text-align: left;
+  /* justify-content: center; */
+  justify-content: flex-start;
+  width: 100%;
+  padding-right: 10px;
+}
+
+.mtech_dm_logo-stack {
+  display: flex;
+}
+
+.mtech_dm_collection-logo {
+  text-align: left;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -8px;
+}
+
+.mtech_dm_collection-logo:first-child {
+  margin-left: 0;
+}
+
+.mtech_dm_more-count {
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 15px;
+}
+
+/* Add smooth scroll behavior */
+@media (hover: hover) {
+  .mtech_dm_ollections-scroll {
+    scroll-behavior: smooth;
   }
+}

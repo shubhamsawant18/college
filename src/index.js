@@ -33,6 +33,8 @@ import BBA from "./coursesjs/BBA";
 import Mtech from "./coursesjs/mtech";
 import BA from "./coursesjs/BA";
 import MBBS from "./coursesjs/MBBS";
+import BCA from "./coursesjs/BCA.js";
+import CollegePredictor from "./components/CollegePredictor";
 
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -127,6 +129,8 @@ const App = () => {
         <Route path="/mtech" element={<Mtech />} /> 
         <Route path="/ba" element={<BA />} />
         <Route path="/mbbs" element={<MBBS />} />
+        <Route path="/bca" element ={<BCA/>}/>
+        <Route path="/collegepredicor" element ={<CollegePredictor/>}/>
       </Routes>
     </Router>
   );
