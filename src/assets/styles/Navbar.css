@@ -1,230 +1,1058 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Navbar Container */
-.navbar {
-    background-color: rgb(240, 240, 240); /* Light grey background */
-    padding: 10px 20px; /* Add horizontal padding for spacing */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    height:40px;
-}
-
 .navbar-container {
+
+    /* Changed to white */
+    background-color: transparent;
+    color: black;
+    /* Changed to black */
+    /* border-bottom: 1px solid #ccc; */
+    /* Light gray border */
+  top: 0;
+  left: 0;
+  width: 100%;
+    
+    
+}
+
+.navbar-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0rem 0.75rem;
+    background-color: transparent;
+    gap: 1rem;
+}
+
+.navbarlogo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 44px;
-    padding-left: 50px;
+    /* margin-right: 2rem; */
 }
 
-/* Logo Styles */
-.logo img {
-    height: 38px; /* Adjust logo height */
+.logo-image {
+    height: 40px;
 }
 
-/* Navigation Links */
-.nav-links {
-    font-size: 15px;
+.goal-dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.goalDropdown {
+    overflow-y: scroll;
+    border-radius: 1rem;
+}
+
+.goalSelectText{
+    font-size: 1rem; 
     display: flex;
-    list-style: none;
-    padding-left: 10;
-    padding-right: 100px;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.goal-button {
+    background: white;
+    cursor: pointer;
+    text-align: left;
+}
+
+.goalItemsContainer {
+    display: 'flex';
+    flex-direction: column;
+    text-align: left;
+}
+
+.goalDropdownHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.goal-dropdown-content {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    background: white;
+    padding: 0rem 0.5rem;
+    /* border: 1px solid #e0e0e0; */
+    border-radius: 12px;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    z-index: 1000;
+    overflow: hidden;
+    width: 100vh;
+}
+
+
+.goalOptionItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 12rem;
+}
+
+.goal-search {
+    /* padding: 16px; */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.goal-search input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f8f9fa url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23666" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>') no-repeat 16px center;
+}
+
+.goal-categories {
+    max-height: 480px;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.goal-category {
+    margin-bottom: 24px;
+}
+
+.goalCitiesSection {
+    display: grid;
+    grid-column: 4;
+    gap: 4;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.category-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.category-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
     margin: 0;
 }
 
-.nav-links li {
-    margin: 0 1zpx;
-    position: relative; /* For dropdown positioning */
+.goal-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-links a {
-    color: black; /* Dark text for visibility */
-    text-decoration: none;
-    font-size: 15px;
-    padding: 0px;
-    font-size: 18px;
-    border-radius: 5px;
-    margin-left: -20px;
-    margin-right: 20px; /* Adds space between each nav link */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-.nav-links a:hover {
-    background-color: rgb(200, 200, 200); /* Hover effect */
-    color: rgb(210, 88, 88);
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 340px;
-    max-height: 700px;
-    overflow-y: auto; /* Enable scrolling if content overflows */
-    z-index: 1000; /* Ensure dropdown is on top */
-    height: -70px;
-}
-
-.menu-header {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    background-color: rgb(245, 245, 245); /* Slightly distinct header color */
-}
-
-.heading {
+.goal-category li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 12px;
+    margin: 2px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #666;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.goal-category li:hover {
+    background: #f8f9fa;
     color: #333;
 }
 
-.f-18 {
-    font-size: 18px;
+.goal-category ul li {
+    transition: all 0.2s;
 }
 
-.font-weight-bold {
-    font-weight: bold;
+.goal-category ul li:hover {
+    background-color: #f8f9fa;
 }
 
-.line-height-26 {
-    line-height: 26px;
-}
-
-.mb-3 {
-    margin-bottom: 3px;
-}
-
-.icon {
-    cursor: pointer;
-}
-
-/* Search Bar */
-.search {
+.goalSelectText {
+    font-size: 0.875rem;
     display: flex;
     align-items: center;
-    padding-left: 10px;
-     background-color: rgb(255,238,238); 
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-    height: 40px; /* Adjust height for better appearance */
-    width: 300px; /* Fixed width for search box */
-}
-
-.search-icon {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.85-3.85zm-5.442 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z"/></svg>') no-repeat center center;
-    width: 16px;
-    height: 16px;
-    margin-right: 10px; /* Space between icon and input */
-    border-radius: 5px;
-    border-color: #333;
-}
-
-.course-search {
-    flex: 1; /* Take up remaining space */
-    border: none;
-    outline: none;
-    font-size: 16px;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* Adjust this value as needed */
+  }
+  
+  .goal-button {
+    background: white;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.375rem;
+  }
+  
+  .location-button {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
     color: #333;
-    height: 100%;
-    padding-left: 5px;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+/* City selection styles */
+/* .city-selection {
+    padding: 16px;
 }
 
-.course-search::placeholder {
-    color: #aaa; /* Subtle placeholder color */
-    font-size: 16px;
+.selected-goal {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #666;
 }
 
-/* Close Button */
-.close-button {
+.selected-goal span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.selected-goal .check {
+    color: #22c55e;
+}
+
+.modify-button {
+    color: #0284c7;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+.city-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.city-card {
+    aspect-ratio: 1;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.city-card:hover {
+    border-color: #0284c7;
+}
+
+.city-card.selected {
+    background: #f0f9ff;
+    border-color: #0284c7;
+}
+
+.city-icon {
+    width: 48px;
+    height: 48px;
+    color: #0284c7;
+}
+
+.city-name {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+} */
+
+/* Skip button */
+.skip-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #0284c7;
     background: none;
     border: none;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.close-button:hover {
-    background-color: rgba(255, 238, 238, 0.8); /* Light red hover effect */
-}
-
-/* Dropdown List */
-.dropdown-list {
-    list-style: none;
     padding: 0;
-    margin: 0;
-}
-
-.dropdown-list li {
-    padding: 10px;
+    font-size: 14px;
     cursor: pointer;
-    text-align: left;
 }
 
-.dropdown-list li:hover {
-    background-color: rgb(255,238,238); 
-    color:rgb(210, 88, 88);
+.city-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    /* padding: 1rem; */
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.city-card:hover {
+    border-color: #2196f3;
+}
+
+.city-card.selected {
+    border-color: #2196f3;
+    background-color: #e3f2fd;
+}
+
+
+
+.navbarSearch-container {
+    display: flex;
+    /* Make the container a flexbox */
+    flex-direction: row;
+    position: relative;
+    flex: 1;
+    /* max-width: 600px; */
+    /* margin: 0 1rem; */
+}
+
+.navbarsearch-icon {
+    order: 1;
+    /* Place the icon first */
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem 0rem;
+    border: 1px solid #ccc;
+    /* Added border */
+    border-radius: 0.375rem;
+    background-color: #f8f8f8;
+    /* Light gray background */
+    color: black;
+    /* Changed to black */
+    /* background-image: url("search_icon.png");  */
+    /* Replace with your icon path */
+    background-repeat: no-repeat;
+    background-position: 0.75rem center;
+    background-size: 1.2rem 1.2rem;
+    outline: none;
+    order: 2;
+    /* Place the input second */
+    padding-left: 2.5rem;
+    /* Adjust padding as needed */
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.review-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ff8c00;
+    background: none;
+    color: #ff8c00;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.review-button:hover {
+    box-shadow: 0 4px 8px #ff8c00;;
 
 }
 
-/* Main Content */
-main {
-    padding: 20px;
+.explore-dropdown {
+    position: relative;
+    display: inline-block;
 }
-/* List Item Styles */
-li {
+
+.explore-button {
+    padding: 0.35rem 0.75rem;
+    border: 1px solid black;
+    background: none;
+    color: black;
+    border-radius: 5px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 1.5rem; /* Adjust for your padding needs */
-    padding-right: 1rem;
-    
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.explore-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 
 }
 
-/* Text Styles */
-.f-16 {
-    font-size: 16px;
+.explore-button svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 0.5rem;
+    fill: black;
+    transition: fill 0.3s;
 }
 
-.font-weight-medium {
-    font-weight: 500; /* Medium font weight */
+.explore-button:hover svg {
+    fill: white;
 }
 
-.line-height-23 {
-    line-height: 23px;
+.explore-dropdown-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-width: 550px;
+    /* Increased minimum width slightly */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 1rem;
+    box-sizing: border-box;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
 }
 
-.text-capitalize {
-    text-transform: capitalize; /* Capitalize the first letter of each word */
+.explore-dropdown-content a {
+    color: #333;
+    padding: 0.5rem 1rem;
+    /* Added horizontal padding */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
-/* Icon Styles */
-.expand-icon{
-    padding-left:10px ;
-    padding-right: 11px;
-    font-size: 20px;
-}
-.plus{
-    font-size: 20px;
-    margin-right: 12px;
+.explore-dropdown-content a:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
 
+.explore-dropdown-content a:hover {
+    background-color: #f5f5f5;
 }
-.AllCategories{
+
+.explore-dropdown-content a svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.5rem;
+    fill: #777;
+    transition: fill 0.2s;
+}
+
+.explore-dropdown-content a:hover svg {
+    fill: #333;
+}
+
+.explore-dropdown-content .highlight {
+    color: #007bff;
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.explore-dropdown div {
+    /* width: 100%; */
+    padding: 0.5rem 0.5rem;
+}
+
+.explore-dropdown-content hr {
+
+    font-weight: 100;
+}
+
+.explore-dropdown-content .row {
+    display: flex;
+    flex-direction: row;
+    /* Stack links vertically in each column */
+    flex: 1;
+    min-width: 200px;
+    margin-right: 1rem;
+    /* Space between columns */
+}
+
+.explore-dropdown-content .column {
+    flex: 1;
     text-align: left;
+    min-width: 200px;
+    margin-right: 1rem;
+    /* Space between columns */
 }
-.nested-dropdown{
-    padding-left: 10px;
+
+.explore-dropdown-content .review-card {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-width: 200px;
 }
-.logo{
-    padding-left: -80px;
-    padding-right: 30px;
+
+.explore-dropdown-content .review-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar.css */
+
+/* ... (other styles) */
+
+.review-card {
+    padding: 1rem;
+    text-align: center;
+    /* Center the content */
+}
+
+.review-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center content horizontally */
+    gap: 0.5rem;
+    /* Space between elements */
+}
+
+.review-card-title {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.2;
+    /* Adjust line height */
+    margin-bottom: 0.25rem;
+}
+
+.review-card-subtitle {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.review-card-stars {
+    display: flex;
+    gap: 0.2rem;
+    color: orange;
+    /* Star color */
+    font-size: 1.2rem;
+}
+
+
+.review-card-image {
+    margin-top: 1rem;
+}
+
+.review-card-image img {
+    max-width: 100%;
+    /* Prevent image from overflowing */
+    height: auto;
+}
+
+/* ... (rest of your styles) */
+
+.profile-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.profile-button svg {
+    stroke: orange;
+    width: 24px;
+    height: 24px;
+}
+
+.profile-button:hover {
+    background-color: rgba(255, 165, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-button {
+    /* ... (your existing profile-button styles) */
+    border: none;
+    /* Remove default border */
+    background-color: transparent;
+    /* Remove default background */
+    padding: 0;
+    /* Remove default padding */
+    width: auto;
+    /* Adjust width as needed */
+    height: auto;
+    /* Adjust height as needed */
+    box-shadow: none;
+    /* Remove default box shadow */
+    border-radius: 50%;
+    overflow: hidden;
+    /* Ensure image stays within circle */
+}
+
+.profile-button img {
+    width: 100%;
+    /* Make image fill the button */
+    height: 100%;
+    object-fit: cover;
+    /* Maintain aspect ratio and cover the area */
+    border-radius: 50%;
+    /* Ensure image is circular */
+}
+
+.profile-dropdown-content {
+    position: absolute;
+    top: calc(100% + 10px);
+    /* Position below the button with spacing */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #eee;
+    /* Lighter border */
+    border-radius: 8px;
+    /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Softer shadow */
+    z-index: 1;
+    min-width: 160px;
+    display: flex;
+    /* Make dropdown content a flex container */
+    flex-direction: column;
+    /* Arrange items vertically */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* padding: 1rem;  */
+    /* Add padding to the dropdown */
+    font-size: 0.9rem;
+    /* Slightly smaller font */
+    color: #333;
+    /* Darker text color */
+}
+
+.profile-dropdown-content a {
+    color: inherit;
+    /* Inherit color from parent */
+    /* padding: 0.5rem 0; */
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.profile-dropdown-content a:hover {
+    background-color: #f5f5f5;
+    /* Lighter hover background */
+}
+
+.socials-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.mobile-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* padding: 0.5rem 1rem; */
+    /* border-top: 1px solid #ccc; */
+    /* Light gray border */
+    overflow-x: auto;
+    background-color: white;
+    /* Changed to white */
+    color: black;
+    /* Changed to black */
+    font-weight: 500;
+}
+
+.mobile-nav-link {
+    white-space: nowrap;
+    padding: 0.5rem;
+    color: black;
+    /* Changed to black */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.mobile-nav-link:hover {
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+.course-finder-button {
+    margin-left: auto;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    background-color: white;
+    font-weight: 500;
+}
+
+.course-finder-button:hover{
+    background-color: #f0f0f0;
+    border-radius: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .menu-button {
+        display: block;
+    }
+
+    .goal-dropdown,
+    .review-button,
+    .explore-button {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .navbarSearch-container {
+        max-width: none;
+    }
+}
+
+
+.menu-button {
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.menu-button svg {
+    stroke: white;
+    width: 24px;
+    height: 24px;
+}
+
+.profile-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.profile-button svg {
+    stroke: orange;
+    width: 24px;
+    height: 24px;
+}
+
+.profile-button:hover {
+    background-color: rgba(255, 165, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-logo-container {
+    background-color: #edf9ff;
+    /* Light blue background */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    align-items: center;
+    /* Vertically center content */
+    gap: 1rem;
+    /* Space between image and text */
+    font-family: sans-serif;
+    /* Match font style (adjust as needed) */
+    color: #333;
+    /* Dark gray text color */
+    right: 0;
+    overflow-x: inherit;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.profile-logo {
+    background-color: #edf9ff;
+    /* Light blue background */
+    display: flex;
+    /* Use flexbox for layout */
+    padding: 0.75rem 1.5rem;
+    align-items: center;
+    /* Vertically center content */
+    gap: 1rem;
+    /* Space between image and text */
+    font-family: sans-serif;
+    /* Match font style (adjust as needed) */
+    color: #333;
+    /* Dark gray text color */
+    right: 0;
+    overflow-x: inherit;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.profile-logo img {
+    width: 3rem;
+    /* Set image width */
+    height: 3rem;
+    /* Ensure image is square */
+    border-radius: 50%;
+    /* Make image circular */
+    object-fit: cover;
+    /* Prevent image distortion */
+}
+
+.button-container {
+    display: flex;
+    /* Arrange buttons horizontally */
+    flex-direction: column;
+    /* Stack buttons vertically on smaller screens if needed */
+    align-items: stretch;
+    /* Make buttons stretch to container width */
+    gap: 1rem;
+    /* Space between buttons */
+    width: 85%;
+    /* Adjust as needed */
+    margin-bottom: 0.75rem;
+}
+
+.location-button {
+    background-color: #fff;
+    /* White background */
+    border: 1px solid #e0e0e0;
+    /* Light gray border */
+    color: #333;
+    /* Dark gray text */
+    padding: 0.75rem 1rem;
+    /* Adjust padding as needed */
+    /* Rounded corners */
+    font-size: 1rem;
+    /* Adjust font size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Space text and icon */
+    width: 100%;
+    /* Make button fill container width */
+    cursor: pointer;
+    transition: border-color 0.2s;
+    /* Smooth transition for hover effect */
+}
+
+.location-button:hover {
+    border-color: #999;
+    /* Darker border on hover */
+}
+
+.edit-icon {
+    display: flex;
+    align-items: center;
+}
+
+.edit-icon svg {
+    width: 1.2rem;
+    /* Adjust icon size as needed */
+    height: 1.2rem;
+    fill: #777;
+    /* Gray icon color */
+}
+
+.login-button {
+    background-color: #ff6600;
+    /* Orange background */
+    color: #fff;
+    /* White text */
+    padding: 0.75rem 1rem;
+    /* Adjust padding as needed */
+    border: none;
+    /* Remove default border */
+    font-size: 1rem;
+    /* Adjust font size as needed */
+    cursor: pointer;
+    width: 100%;
+    /* Make button fill container width */
+    transition: background-color 0.2s;
+    /* Smooth transition for hover effect */
+}
+
+.login-button:hover {
+    background-color: #e65c00;
+    /* Darker orange on hover */
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        /* Stack buttons vertically on smaller screens */
+    }
+}
+
+
+
+/* Study Pref CSS */
+
+.studypref-container {
+    text-align: left;
+    align-items: left;
+    width: fit-content;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    /* Prevents overflow due to padding */
+    /* overflow-y: scroll; */
+    max-height: 38rem;
+}
+
+
+.navbartitle {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: green;
+    font-weight:500;
+}
+
+.modify-link {
+    color: blue;
+    text-decoration: underline;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.navbarSearch-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f1f1f1;
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: 100%;
+}
+
+
+.navbarsearch-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.popular-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Ensures 4 cities in a row */
+    gap: 10px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.city-card {
+    background: #f9f9f9;
+    padding: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: center;
+}
+
+.city-card:hover {
+    background: #f1f1f1;
+}
+
+.city-icon {
+    font-size: 2rem;
+    /* Increase icon size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    /* Add spacing */
 }

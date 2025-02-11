@@ -1,0 +1,183 @@
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 50;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: white;
+    color: #1a1a1a;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.searchHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.sidebar-header h2 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.sidebar-header button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* .search-container {
+    position: relative;
+    flex: 1;
+    max-width: 100%;
+    margin: 0;
+} */
+
+.search-input-sidebar {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    /* Added border */
+    border-radius: 0.375rem;
+    background-color: #f8f8f8;
+    /* Light gray background */
+    color: black;
+    /* Changed to black */
+    /* background-image: url("search_icon.png");  */
+    /* Replace with your icon path */
+    background-repeat: no-repeat;
+    background-position: 0.75rem center;
+    background-size: 1.2rem 1.2rem;
+    outline: none;
+    order: 2;
+    /* Place the input second */
+    padding-left: 2.5rem;
+    /* Adjust padding as needed */
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    width: 1.2rem;
+    height: 1.2rem;
+    pointer-events: none;
+}
+
+.search-input::placeholder {
+    position: absolute;
+    left: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    padding-left: 1.5rem;
+    /* This is the crucial line */
+}
+
+.search-input::placeholder {
+    /* Keep this if you have any other placeholder styles */
+    color: #777;
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    /* Added left and right padding */
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    /* Prevent text from wrapping */
+}
+
+.sidebar-link:hover {
+    background-color: #f5f5f5;
+}
+
+.sidebar-link span {
+    margin-left: auto;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+
+.category-title {
+    font-weight: 600;
+}
+
+.subcategory-title {
+    padding-left: 2rem;
+    /* Increased padding */
+}
+
+.item-link {
+    padding-left: 3rem;
+    /* Increased padding */
+    border-bottom: none;
+    /* Removed border for items */
+}
+
+/* Scrollbar Styling (Optional - Customize as needed) */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+    /* Adjust scrollbar width */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* or transparent */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    /* Scrollbar thumb color */
+    border-radius: 4px;
+    /* Rounded corners for thumb */
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* Darker color on hover */
+}
