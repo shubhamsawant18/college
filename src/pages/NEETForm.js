@@ -467,8 +467,8 @@ const NEETForm = () => {
           <h1 className="neet-form-unique-title" style={{ fontWeight: '600' }}>
             NEET College Predictor 2025: Predict Top MBBS/BDS Colleges based on your Rank and Scores
           </h1>
-          <div className="neet-form-unique-container">
-            <form onSubmit={handleSubmit} className="form-unique">
+          <div className="neet-form-unique-container" >
+            <form onSubmit={handleSubmit} className="form-unique" style={{gap: '1.5rem'}}>
               <div className="neet-form-unique-row">
                 <div className="neet-form-unique-group">
                   <label htmlFor="rank" className="form-unique-label">

@@ -1,21 +1,27 @@
-
-
 .neet-form-unique-container {
   font-family: Arial, sans-serif;
-  background-color: #ffffff; /* Set background to white */
   padding: 30px 40px;
-  border-radius: 10px;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  width: 100%;
   margin: 20px auto;
-  font-weight: 200;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .neet-form-unique-title {
+  margin-left: 1rem;
   text-align: left;
   font-size: 22px;
-  margin-bottom:25px;
+  margin-bottom: 25px;
   color: #333;
   font-weight: bold;
   font-weight: 400;
@@ -61,7 +67,8 @@
   border: 1px solid #ced4da;
   border-radius: 6px;
   font-size: 14px;
-  background-color: #ffffff; /* Set input and select background to white */
+  background-color: #ffffff;
+  /* Set input and select background to white */
   transition: border 0.3s ease-in-out;
 }
 
@@ -91,14 +98,15 @@
 /* Information Section */
 .neet-info-section {
   padding: 0px 0px;
-  background-color: #ffffff; /* Set background to white */
+  background-color: #ffffff;
+  /* Set background to white */
   margin: auto;
 }
 
 .neet-info-section p {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
-  color: #555;
+  color: black;
 }
 
 .neet-info-section h3 {
@@ -135,39 +143,40 @@
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
-  padding: 20px;
+  /* padding: 20px; */
   box-sizing: border-box;
+  font-family: "din", sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .neet-left-container {
   width: 70%;
-  background-color: #ffffff; /* Set background to white */
-  padding-right: 1rem;
-
+  background-color: #ffffff;
+  /* Set background to white */
+  padding-left: 1rem;
+  margin-top: 1rem;
   border-radius: 10px;
+  flex: 1;
+  max-width: 75%;
 }
 
 .neet-right-container {
   width: 28%;
-  background-color: #ffffff; /* Set background to white */
-  padding: 20px;
+  /* background-color: #ffffff; Set background to white */
+  padding: 10px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   margin-top: 40px;
+  width: 25%;
+  top: 2rem;
 }
 
-.neet-form-unique-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 90%; 
-  background-color: #fff;
-  border-radius: 10px;
-  border: 0.5px solid rgba(93, 156, 204, 0.57);
-  text-align: center;
-}
+
 
 .neet-button-container {
   display: flex;
@@ -178,14 +187,17 @@
 
 .neet-btn {
   width: 100%;
-  padding: 12px 16px;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   border: none;
   cursor: pointer;
   border-radius: 6px;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.75rem 0.8rem;
 }
 
 .btn-orange {
@@ -198,7 +210,8 @@
 }
 
 .btn-white {
-  background-color: #ffffff; /* Set background to white */
+  background-color: #ffffff;
+  /* Set background to white */
   color: #333;
   border: 1px solid #ccc;
 }
@@ -217,28 +230,32 @@
     flex-direction: column;
     align-items: center;
   }
+
   .neet-left-container,
   .neet-right-container {
     width: 100%;
     margin-bottom: 20px;
   }
+
   .neet-form-container .neet-form-unique-row {
     flex-direction: column;
     gap: 20px;
   }
 }
 
-.form-unique{
+.form-unique {
   justify-self: center;
   align-self: center;
 }
-.view-all-btn-container{
+
+.view-all-btn-container {
   margin: 1rem 1rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .view-all-btn {
   display: inline-block;
   padding: 10px 20px;
@@ -257,7 +274,7 @@
   color: grey;
 }
 
-.check-result-container{
+.check-result-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -269,71 +286,78 @@
   flex-direction: column;
   text-align: left;
 }
-.CollegeRanKList img{
+
+.CollegeRanKList img {
   align-self: center;
 }
 
-.neet-btn {
-  display: flex;
-  justify-content:space-evenly;
-  align-items: center;
-  padding: 0.75rem 0.8rem;
-}
+
 
 .icon-right {
-  margin-left: auto; /* Push icon to the right */
+  margin-left: auto;
+  /* Push icon to the right */
 }
 
 /* Container for the table */
 .neet-neettable-container {
   overflow-x: auto;
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  min-height: 20vh;
+  padding: 0;
+  margin: 0;
 }
 
 /* Table styles */
-.neet-table {
+.neet-neettable {
   border-collapse: collapse;
   width: 100%;
   text-align: center;
-  border: 1px solid #d1d5db; /* Border for the entire table */
+  border: 1px solid #d1d5db;
+  /* Border for the entire table */
   /* margin: auto; Optional: Center the table horizontally */
 }
 
 /* Row styles */
 .neet-table-row {
-  border: 1px solid #d1d5db; /* Border for rows */
+  border: 1px solid #d1d5db;
+  /* Border for rows */
 }
 
 /* Even row styles */
 .neet-table-row:nth-child(even) {
-  background-color: #f9fafb; /* Light background for even rows */
+  background-color: #f9fafb;
+  /* Light background for even rows */
 }
 
 /* Odd row styles */
 .neet-table-row:nth-child(odd) {
-  background-color: #ffffff; /* White background for odd rows */
+  background-color: #ffffff;
+  /* White background for odd rows */
 }
 
 /* Cell styles */
 .neet-table-cell {
   padding: 0.5rem 1rem;
   text-decoration: none;
-  color: #3b82f6; /* Blue text color */
+  color: #3b82f6;
+  /* Blue text color */
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border: 1px solid #d1d5db; /* Border for cells */
+  border: 1px solid #d1d5db;
+  /* Border for cells */
 }
 
 /* Hover effect for table cells */
 .neet-neettable-cell:hover {
   text-decoration: underline;
-  background-color: #f1f5f9; /* Light gray background on hover */
+  background-color: #f1f5f9;
+  /* Light gray background on hover */
 }
 
 /* Table container */
-.neet-neettable-container {
-  overflow-x: auto;
-  margin: 20px 0;
-}
+
 
 /* Table styles */
 .neet-mbbs-neettable {
@@ -369,31 +393,29 @@
   background-color: #ffffff;
 }
 
-.neet-neettable-container {
-  /* margin: 20px 0; */
-  display: flex;
-  overflow-x: auto; /* Enables horizontal scrolling on small screens */
-  padding: 0;
-  margin: 0;
-  min-height: 20vh
-}
+
 
 .neet-marks-rank-neettable {
-  width: 100%; /* Table width remains full */
+  width: 100%;
+  /* Table width remains full */
   border-collapse: collapse;
   font-family: Arial, sans-serif;
-  text-align: center; /* Aligns text in the center of table cells */
+  text-align: center;
+  /* Aligns text in the center of table cells */
 }
 
-.neet-marks-rank-neettable th, 
+.neet-marks-rank-neettable th,
 .neet-marks-rank-neettable td {
   border: 1px solid #ddd;
-  padding: 12px; /* Padding for readability */
-  text-align: center; /* Ensures text is centered */
+  padding: 12px;
+  /* Padding for readability */
+  text-align: center;
+  /* Ensures text is centered */
 }
 
 .neet-marks-rank-neettable th {
-  background-color: #b2dfdb; /* Light teal color */
+  background-color: #b2dfdb;
+  /* Light teal color */
   color: #000;
   font-weight: bold;
 }
@@ -410,32 +432,30 @@
   color: #333;
 }
 
-.neet-neettable-container {
-  /* margin: 20px 0; */
-  display: flex;
-  overflow-x: auto; /* Enables horizontal scrolling on small screens */
-  padding: 0;
-  margin: 0;
-  min-height: 20vh
-}
+
 
 .neet-marks-rank-neettable {
-  width: 100%; /* Table width remains full */
+  width: 100%;
+  /* Table width remains full */
   border-collapse: collapse;
   font-family: Arial, sans-serif;
-  text-align: center; /* Aligns text in the center of table cells */
+  text-align: center;
+  /* Aligns text in the center of table cells */
 }
 
-.neet-marks-rank-neettable th, 
+.neet-marks-rank-neettable th,
 .neet-marks-rank-neettable td {
   border: 1px solid #ddd;
-  padding: 12px; /* Padding for readability */
-  text-align: center; /* Ensures text is centered */
+  padding: 12px;
+  /* Padding for readability */
+  text-align: center;
+  /* Ensures text is centered */
 }
 
 .neet-marks-rank-neettable th {
-  background-color: #b2dfdb; /* Light teal color */
-  color: #000;
+  background-color: #b2dfdb;
+  /* Light teal color */
+  color: white;
   font-weight: bold;
 }
 
@@ -491,8 +511,9 @@
 
 .neet-exam-neetcard a {
   text-decoration: none;
-  color: #ff7f00;
-  font-weight: 500;
+  color: #323c4f;
+  font-weight: 600;
+  font-size: 0.85rem;
 }
 
 .neet-exam-neetcard a:hover {
@@ -500,11 +521,7 @@
 }
 
 /* Table Container */
-.neet-neettable-container {
-  width: 100%;
-  /* margin: 30px auto; */
-  overflow-x: auto;
-}
+
 
 /* neettable Styling */
 .neet-college-neettable {
@@ -516,8 +533,9 @@
 
 /* neettable Header */
 .neet-college-neettable thead {
-  background-color: #a5c6d5 !important; /* Ensure background color is applied */
-  color: white !important; 
+  background-color: #a5c6d5 !important;
+  /* Ensure background color is applied */
+  color: white !important;
 }
 
 /* .college-table thead tr {
@@ -529,8 +547,10 @@
   border: 1px solid #ccc;
   text-align: left;
   font-weight: bold;
-  background-color: #a5c6d5 !important; /* Apply color to individual header cells */
-  color: #000 !important; /* Make sure text is readable */
+  background-color: #a5c6d5 !important;
+  /* Apply color to individual header cells */
+  color: #000 !important;
+  /* Make sure text is readable */
 }
 
 /* Table Body */
@@ -548,14 +568,15 @@
   padding: 12px;
   border: 1px solid #ddd;
   color: #333;
+  font-size: medium;
 }
 
 /* College Name Links */
 .neet-college-name {
   color: #00aaff;
   text-decoration: none;
-  font-weight:200;
-  font-size:100%;
+  font-weight: 200;
+  font-size: 0.95rem;
 }
 
 .neet-college-name:hover {
@@ -616,8 +637,11 @@
   color: #fff;
   padding: 4px 8px;
   font-size: 12px;
-  border-radius: 12px;
   white-space: nowrap;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  font-weight: 600;
+
 }
 
 /* Content Section */
@@ -628,7 +652,8 @@
 .college-name {
   font-size: 18px;
   font-weight: bold;
-  margin-top: 8px; /* Added space to ensure no overlap */
+  margin-top: 8px;
+  /* Added space to ensure no overlap */
   margin-bottom: 8px;
   color: #333;
 }
@@ -669,68 +694,86 @@
 
 .program-name {
   font-size: 14px;
-  font-weight: bold;
   color: #333;
+  font-weight: 600;
 }
+
 
 .program-details {
   font-size: 12px;
   color: #555;
+  margin-bottom: 1rem;
 }
 
+
 .program-fees {
-  font-weight: bold;
-  color: #e85d04;
+  font-weight: 600;
+  color: #4CAF50;
+  font-size: 1.1rem;
 }
+
 
 /* Button */
 .apply-button {
   width: 100%;
   background-color: #f97316;
-  color: #fff;
   padding: 10px 0;
   font-size: 14px;
   font-weight: bold;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  background: #FF6F00;
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
 
 .apply-button:hover {
   background-color: #ea580c;
+  background: #E65100;
 }
 
 .category-score-neettable {
-  width: 100%; /* Full width */
+  width: 100%;
+  /* Full width */
   border-collapse: collapse;
   font-family: Arial, sans-serif;
   margin-top: 20px;
 }
 
-.category-score-neettable th, 
+.category-score-neettable th,
 .category-score-neettable td {
-  border: 1px solid #ddd; /* Border for table cells */
-  padding: 12px; /* Padding inside table cells */
-  text-align: center; /* Center align text */
+  border: 1px solid #ddd;
+  /* Border for table cells */
+  padding: 12px;
+  /* Padding inside table cells */
+  text-align: center;
+  /* Center align text */
 }
 
 .category-score-neettable th {
-  background-color: #b2dfdb; /* Light teal for header background */
-  color: #ffffff; /* White text for header */
+  background-color: #b2dfdb;
+  /* Light teal for header background */
+  color: #ffffff;
+  /* White text for header */
   font-weight: bold;
 }
 
 .category-score-neettable tbody tr:nth-child(even) {
-  background-color: #f9f9f9; /* Light grey for alternate rows */
+  background-color: #f9f9f9;
+  /* Light grey for alternate rows */
 }
 
 .category-score-neettable tbody tr:hover {
-  background-color: #f1f1f1; /* Slight highlight on hover */
+  background-color: #f1f1f1;
+  /* Slight highlight on hover */
 }
 
 .neettable-container {
-  overflow-x: auto; /* Horizontal scroll for small screens */
+  overflow-x: auto;
+  /* Horizontal scroll for small screens */
 }
 
 /* CardComponent.css */
@@ -748,10 +791,6 @@
   transform: translateY(-5px);
 }
 
-.neetcard-image-container {
-  position: relative;
-  height: 180px;
-}
 
 .neetcard-image {
   width: 100%;
@@ -767,12 +806,10 @@
   right: 0;
   padding: 1rem;
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  z-index: 1;
 }
 
-.text-overlay {
-  position: relative;
-  z-index: 2;
-}
+
 
 .neetcard-badges {
   position: absolute;
@@ -782,30 +819,15 @@
   gap: 5px;
 }
 
-.badge {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
 .neetcard-title {
+  font-size: 0.875rem;
+  font-weight: bold;
   color: white;
-  font-size: 1.1rem;
-  font-weight: 600;
-  /* margin-bottom: 0.5rem; */
+  margin-top: 2rem;
+  margin-bottom: 0.1rem;
   line-height: 1.3;
   z-index: 2;
-}
 
-.neetcard-location {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  /* margin-bottom: 0.5rem; */
 }
 
 .accreditation-badge {
@@ -837,15 +859,9 @@
   gap: 4px;
 }
 
-.program-details {
-  margin-bottom: 1rem;
-}
 
-.program-name {
-  font-weight: 600;
-  color: #333;
-  /* margin-bottom: 0.25rem; */
-}
+
+
 
 .program-info {
   font-size: 0.8rem;
@@ -853,64 +869,28 @@
   /* margin-bottom: 0.25rem; */
 }
 
-.program-fees {
-  font-weight: 600;
-  color: #4CAF50;
-  font-size: 1.1rem;
-}
+
 
 .fees-label {
   font-size: 0.75rem;
   color: #999;
 }
 
-.apply-button {
-  width: 100%;
-  padding: 10px;
-  background: #FF6F00;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
 
-.apply-button:hover {
-  background: #E65100;
-}
 
-/* neetcard Image Section */
-.neetcard-image-container {
-  position: relative;
-  height: 180px;
-}
+
+
 
 /* Ensure the title and other content within the overlay are on top */
-.neetcard-image-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-  z-index: 1; /* Ensures it's above the image */
-}
+
 
 /* Text container for the college name */
 .text-overlay {
   position: relative;
-  z-index: 2; /* Make sure the text appears above the overlay */
-  color: white; /* Ensure text is white */
-}
-
-/* Title Style */
-.neetcard-title {
-  font-size: 1.2rem;  /* Adjust the font size as needed */
-  font-weight: 600;
-  /* margin-bottom: 0.5rem; */
-  line-height: 1.3;
-  z-index: 2; /* Ensures the title stays above */
+  z-index: 2;
+  /* Make sure the text appears above the overlay */
+  color: white;
+  /* Ensure text is white */
 }
 
 /* Location Styling */
@@ -921,12 +901,14 @@
   align-items: center;
   gap: 4px;
   /* margin-bottom: 0.5rem; */
-  z-index: 2; /* Ensures the location stays above */
+  z-index: 2;
+  /* Ensures the location stays above */
 }
 
 /* Card container */
 .neetcard {
-  flex: 1 1 calc(33.33% - 20px); /* 3 cards per row with spacing */
+  flex: 1 1 calc(33.33% - 20px);
+  /* 3 cards per row with spacing */
   max-width: calc(33.33% - 20px);
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -938,7 +920,8 @@
 .neetcard-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between cards */
+  gap: 20px;
+  /* Space between cards */
   /* justify-content: center; */
   padding: 1rem 0rem;
   box-sizing: border-box;
@@ -946,6 +929,7 @@
 
 /* Image container with overlay */
 .neetcard-image-container {
+  height: 180px;
   position: relative;
   width: 100%;
 }
@@ -956,17 +940,12 @@
 }
 
 /* Reduce gap between title and location */
-.neetcard-title {
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  margin-top: 2rem;
-}
+
 
 /* Ensure subtitle stays close */
 .neetcard-subtitle {
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  margin-bottom: 1.4rem;
   /* Small bottom margin */
   color: white;
   line-height: 1.2;
@@ -999,7 +978,7 @@
   /* Stick to left */
   background: #4caf50;
   color: white;
-  padding: 4px 8px;
+  padding: 2px 4px;
   font-size: 0.75rem;
   font-weight: bold;
   width: auto;
@@ -1055,9 +1034,10 @@
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
+  justify-content: space-between;
   border-top: 1px solid #ddd;
   padding-top: 16px;
+  min-height: 5.35rem;
 }
 
 .neetcard-course {
@@ -1093,9 +1073,9 @@
   background-color: #f97316;
   color: white;
   font-weight: bold;
-  padding: 0.5rem 0.5rem;
   text-decoration: none;
   margin-top: auto;
+  font-size: 0.8125rem;
 }
 
 .neetcard-button:hover {
@@ -1124,37 +1104,47 @@
   gap: 1vh;
 }
 
-.desc-left{
+.desc-left {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
-.desc-right{
+
+.desc-right {
   display: flex;
   flex-direction: column;
   text-align: right;
 }
 
-.title-txt,.fee-txt{
-  font-weight:bold;
+.title-txt,
+.fee-txt {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 15rem;
 }
 
-.feeDesc-txt,.desc-txt{
-  font-size:x-small;
+.feeDesc-txt,
+.desc-txt {
+  font-size: x-small;
   font-weight: 200;
 }
 
 @media screen and (max-width: 768px) {
   .neetcard {
-      flex: 1 1 calc(50% - 20px); /* 2 cards per row on smaller screens */
-      max-width: calc(50% - 20px);
+    flex: 1 1 calc(50% - 20px);
+    /* 2 cards per row on smaller screens */
+    max-width: calc(50% - 20px);
   }
 }
 
 @media screen and (max-width: 480px) {
   .neetcard {
-      flex: 1 1 100%; /* 1 card per row on mobile screens */
-      max-width: 100%;
+    flex: 1 1 100%;
+    /* 1 card per row on mobile screens */
+    max-width: 100%;
   }
 }
 
@@ -1164,7 +1154,8 @@
   margin: 20px 0;
   font-family: Arial, sans-serif;
   display: flex;
-  justify-content: center; /* Align table container to the center */
+  justify-content: center;
+  /* Align table container to the center */
   width: 100%;
 }
 
@@ -1172,13 +1163,14 @@
 .BDS-styled-neettable {
   width: 100%;
   border-collapse: collapse;
-  text-align: center; /* This aligns all the content of the table to center */
+  text-align: center;
+  /* This aligns all the content of the table to center */
   font-size: 16px;
 }
 
 /* Header styles */
 .BDS-styled-neettable thead tr {
-  background-color: #6ab1c2; 
+  background-color: #6ab1c2;
   color: #ffffff;
   text-align: center;
 }
@@ -1186,7 +1178,8 @@
 .BDS-styled-neettable th {
   padding: 10px;
   border: 1px solid #ddd;
-  text-align: center; /* Ensures the header text is centered */
+  text-align: center;
+  /* Ensures the header text is centered */
 }
 
 /* Row styles */
@@ -1195,15 +1188,19 @@
 }
 
 .BDS-styled-neettable tbody tr:nth-child(even) {
-  background-color: #f9fafb; /* Light gray background for even rows */
+  background-color: #f9fafb;
+  /* Light gray background for even rows */
 }
 
 .BDS-styled-neettable tbody tr:nth-child(odd) {
-  background-color: #ffffff; /* White background for odd rows */
+  background-color: #ffffff;
+  /* White background for odd rows */
 }
 
 .BDS-styled-neettable td {
   padding: 10px;
-  border: 1px solid #ddd; /* Border for data cells */
-  text-align: center; /* Ensures the text in data cells is centered */
+  border: 1px solid #ddd;
+  /* Border for data cells */
+  text-align: center;
+  /* Ensures the text in data cells is centered */
 }

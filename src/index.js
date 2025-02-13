@@ -36,6 +36,10 @@ import MBBS from "./coursesjs/MBBS";
 import BCom from "./coursesjs/BCom.js";
 import BCA from "./coursesjs/BCA.js";
 import CollegePredictor from "./components/CollegePredictor";
+import CATResult from "./pages/CATResult";
+import JEEResult from "./pages/JEEResult";
+import JEEADVResult from "./pages/JEEADVResult";
+import GATEResult from "./pages/GATEResult";
 
 const IndexPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -132,6 +136,10 @@ const App = () => {
         <Route path="/mbbs" element={<MBBS />} />
         <Route path="/bca" element ={<BCA/>}/>
         <Route path="/bcom" element ={<BCom/>}/>
+        <Route path="/catresult" element={<CATResult />} /> {/* CATResult page route */}
+        <Route path="/jeeresult" element={<JEEResult />} /> {/* JEEResult page route */}
+        <Route path="/jeeadvresult" element={<JEEADVResult />} />
+        <Route path="/gateresult" element={<GATEResult />} />
 
         <Route path="/collegepredictor" element ={<CollegePredictor/>}/>
       </Routes>

@@ -1,74 +1,291 @@
-/* Remove body styles to avoid global changes */
-
 .form-unique-container {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    background-color: #ffffff;
-    padding: 30px 50px;
-    border-radius: 8px;
-    text-align: center;
-    width: 95%;
-    max-width: 700px;
-    margin: 20px auto;
-  }
-  
-  .form-unique-title {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .form-unique {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Adjusted overall gap between rows */
-    width: 550px;
-    margin: 0 auto;
-  }
-  
-  .form-unique-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px; /* Horizontal gap between boxes */
-  }
-  
-  .form-unique-group {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .form-unique-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #333;
-    font-size: 14px;
-  }
-  
-  .form-unique-input,
-  .form-unique-select {
-    width: 72%; /* Consistent width for all inputs and dropdowns */
-    padding: 12px;
-    border: 1px solid #ced4da;
-    border-radius: 6px;
-    font-size: 14px;
-    background-color: #f9f9f9;
-  }
-  
-  .form-unique-button {
-    background-color: #ff7f00;
-    color: #ffffff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 35%;
-    margin: 1px auto 0; /* Moved the button slightly up */
-  }
-  
-  .form-unique-button:hover {
-    background-color: #e66b00;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  background-color: #ffffff;
+  padding: 30px 50px;
+  border-radius: 8px;
+  text-align: center;
+  width: 95%;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.form-unique-title {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-unique {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* gap: 20px; */
+  /* width: 70%; */
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.form-unique-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px; /* Horizontal gap between boxes */
+}
+
+.form-unique-group {
+  flex: 1;
+  text-align: left;
+}
+
+.form-unique-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-unique-input,
+.form-unique-select {
+  width: 70%; /* Consistent width for all inputs and dropdowns */
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.catform-unique-select{
+  width: 37%; /* Consistent width for all inputs and dropdowns */
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+}
+
+.form-unique-button {
+  background-color: #ff7f00;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 35%;
+  margin: 1px auto 0; /* Moved the button slightly up */
+}
+
+.form-unique-button:hover {
+  background-color: #e66b00;
+}
+
+.cat-main-container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  /* padding: 20px; */
+  box-sizing: border-box;
+  font-family: "din", sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.cat-left-container{
+  width: 70%;
+  background-color: #ffffff;
+  /* Set background to white */
+  padding-left: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  flex: 1;
+  max-width: 75%;
+}
+.cat-right-container{
+  width: 28%;
+  /* background-color: #ffffff; Set background to white */
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+  width: 25%;
+  top: 2rem;
+}
+.cat-section-info p{
+  word-break: break-word;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: "din", sans-serif;
+  font-weight: 400;
+}
+.cat-info-section h3{
+  font-size: 1.125rem;
+  color: #677eb0;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+} 
+
+/* Card Container */
+
+.catexamCardContainer {
+  display: flex;
+  justify-content: flex-start;
+
+}
+.cards-container {
+  display: flex;
+  gap: 20px;
+}
+
+
+.cat-card {
+/* flex: 1 1 calc(33.333% - 20px); 
+max-width: calc(33.333% + 20px);  */
+min-width: 22rem;
+box-sizing: border-box;
+width: 100%;
+max-width: 350px;
+padding: 0.75rem;
+border-radius: 0.25rem;
+background-color: white;
+border: 1px solid #dedede;
+}
+
+/* Logo */
+.cat-logo {
+justify-content: left;
+width: 42px;
+height: 42px;
+max-width: 42px;
+max-height: 42px;
+overflow: hidden;
+border-radius: 50%;
+}
+
+/* Main Heading */
+.cat-main-heading {
+text-align: left;
+color: #ff6b00;
+font-size: 1rem;
+margin: 10px 0;
+font-weight: 500;
+}
+
+/* Timeline Container */
+.cat-timeline {
+display: flex;
+flex-direction: column;
+gap: 15px;
+margin: 20px 0;
+}
+
+/* Timeline Items */
+.cat-timeline-item {
+display: flex;
+flex-direction: column;
+gap: 5px;
+min-height: 3.5rem;
+}
+
+/* Application & Exam Heading */
+.cat-application-heading {
+color: #48639e;
+font-size: 1.125rem;
+font-weight: 700;
+margin: 0;
+}
+
+.cat-exam-heading {
+color: #3eba9f;
+font-size: 1.125;
+font-weight: 700;
+margin: 0;
+}
+
+/* Divider */
+.cat-divider {
+width: 20px;
+height: 2px;
+background-color: #666;
+margin: 5px 0;
+}
+
+/* Date */
+.cat-date {
+color: #666;
+font-size: 0.875rem;
+margin: 0;
+}
+
+/* Button */
+
+.catbutton {
+margin-top: 15px;
+width: 100%;
+padding: 0.75rem;
+font-size: 1rem;
+display: block;
+width: 100%;
+border: 1px solid #ff7900;
+color: #ff7900;
+border-radius: 4px;
+background-color: white;
+cursor: pointer;
+margin-top: 10px;
+transition: background 0.3s ease;
+}
+
+/* Button Hover Effect */
+.catbutton:hover {
+background-color: #e65c00;
+}
+
+.cat-card ul {
+list-style: none;
+padding: 0;
+margin: 0;
+position: relative;
+}
+
+.cat-card li {
+position: relative;
+padding-left: 30px;
+margin-bottom: 15px;
+}
+
+.cat-card li::before {
+content: "";
+position: absolute;
+left: 0;
+top: 5px;
+width: 12px;
+height: 12px;
+background-color: #E6EEFF;
+border-radius: 50%;
+}
+
+/* Create the vertical connecting line */
+.cat-card ul::before {
+content: "";
+position: absolute;
+left: 5px;
+top: 5px;
+bottom: 3px;
+width: 2px;
+background-color: #E6EEFF;
+}
+.cat-card li:last-child::before {
+/* Ensure the bullet remains visible */
+background-color: #E6EEFF;
+}
+.cat-card img {
+margin: 0 auto 10px;
+}
