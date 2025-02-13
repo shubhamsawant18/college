@@ -33,6 +33,7 @@ import BBA from "./coursesjs/BBA";
 import Mtech from "./coursesjs/mtech";
 import BA from "./coursesjs/BA";
 import MBBS from "./coursesjs/MBBS";
+import BCom from "./coursesjs/BCom.js";
 import BCA from "./coursesjs/BCA.js";
 import CollegePredictor from "./components/CollegePredictor";
 
@@ -130,6 +131,8 @@ const App = () => {
         <Route path="/ba" element={<BA />} />
         <Route path="/mbbs" element={<MBBS />} />
         <Route path="/bca" element ={<BCA/>}/>
+        <Route path="/bcom" element ={<BCom/>}/>
+
         <Route path="/collegepredictor" element ={<CollegePredictor/>}/>
       </Routes>
     </Router>

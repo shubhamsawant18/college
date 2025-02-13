@@ -505,6 +505,7 @@ function Navbar() {
 </a>
 
 
+
   <button
     className="course-finder-button"
     style={{

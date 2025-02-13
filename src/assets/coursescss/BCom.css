@@ -1,0 +1,1145 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0
+  }
+  
+  /* Breadcrumb */
+  .bcom_d_breadcrumb {
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin: 1rem;
+  }
+  
+  /* Title */
+  .bcom_d_title {
+    color: #f97316;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem;
+    text-align: left;
+  }
+  
+    /* Flex container for banners */
+    .bcom_d_flex-container {
+      padding-left: 150px;
+      padding-right: 150px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      justify-content: center; /* Center align banners */
+      background-color: #F4F4F4;
+      height: 20vh;
+      align-items: center;
+    }
+    
+    /* Banner/card styles */
+    .bcom_d_banner {
+      flex: 1 1 calc(33.333% - 1rem);
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 350px;
+    }
+    
+    /* Shared styles for banner content */
+    .bcom_d_banner-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .bcom_d_banner-content img {
+      width:110%;
+      /* height: 120%; */
+      object-fit:contain;
+    }
+  
+    /* Banner information */
+    .bcom_d_banner-info {
+      margin-bottom: 1rem;
+    }
+    
+    .bcom_d_bca-info {
+      color: #1e40af;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    
+    .bcom_d_admission-status,
+    .bcom_d_last-date {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    
+    .bcom_d_apply-button,
+    .bcom_d_search-button,
+    .bcom_d_predict-button {
+      background-color: #ef4444;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      border: none;
+    }
+    
+    .bcom_d_apply-button:hover {
+      background-color: #dc2626;
+    }
+    
+    .bcom_d_search-button,
+    .bcom_d_predict-button {
+      background-color: white;
+      color: #3b82f6;
+      border: 2px solid #3b82f6;
+    }
+    
+    .bcom_d_search-button:hover,
+    .bcom_d_predict-button:hover {
+      background-color: #e0f2fe;
+    }
+    
+    .bcom_d_banner-image {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-top: 1rem;
+      border-radius: 8px;
+    }
+  
+    --------------------READ MORE------------------------------
+ 
+
+
+  
+  
+    -------------------------------------------------------------------
+  
+  .bcom_d_table-of-content {
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .bcom_d_table-of-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bcom_d_table-of-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .bcom_d_table-of-content li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+
+
+
+
+
+
+
+
+  /* ----------------------------------------------------- */
+  
+ .btn_d {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+ .btn_d:hover {
+    background-color: #0056b3;
+  }
+  /* ------------------------------------------------------------ */
+  
+  
+  
+  /* Content Placeholder */
+  .bcom_d_content-placeholder {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #e5e7eb;
+    border-radius: 8px;
+    text-align: center;
+  }
+  /* General Styles */
+  .bcom_d_table-container {
+    /* padding: 10 px; */
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+  
+  
+  -----------soring--------------
+  
+  
+  
+  -----------------------------
+
+  .bcom_d_sort-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    padding: 0 15px;
+    margin-bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Ensures the heading remains on the left */
+.bcom_d_heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+    flex-grow: 1; /* Allows it to take available space */
+}
+
+.bcom_d_soring_bg {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+  
+  .bcom_d_sort-options {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 12px;
+    margin-left: auto; 
+  }
+  
+  
+  .bcom_d_sort-container h6 {
+    font-size: 16px; /* Adjust heading size */
+    /* margin: 0; */
+    line-height: 30px; 
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  .bcom_d_heading{
+    font-size: medium;
+  }
+  
+  .bcom_d_sort-options label {
+    font-size: 12px;
+  }
+  
+  .bcom_d_sort-options input[type="radio"] {
+    transform: scale(0.8);
+    margin-right: 4px; /* Space between radio and text */
+  }
+  
+  /* View options container */
+  .bcom_d_view-options {
+    display: flex;
+    align-items: right;
+    gap: 0.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .bcom_d_view-options {
+    display: flex;
+    gap: 15px; /* Add spacing between buttons */
+  }
+
+  
+  .bcom_d_view-button {
+    width: 35px; /* Set a fixed width */
+    height: 35px; /* Set a fixed height */
+    padding: 0;
+    background: none;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+  }
+  
+  .bcom_d_view-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .bcom_d_view-button.active {
+    background-color: #f97316;
+    border-color: #f97316;
+    color: white;
+  }
+  
+  /* Ensure the icons are visible */
+  .bcom_d_view-icon {
+    width: 24px; /* Increase width */
+    height: 24px; /* Increase height */
+    fill: black; /* Ensure visibility */
+  }
+  
+  .bcom_d_view-button.active .bcom_d_view-icon {
+    fill: white; /* Ensure visibility in active state */
+  }
+
+
+
+
+
+
+
+
+
+
+  /* ---------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+  
+  /* Table Styles */
+  .bcom_d_college-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .bcom_d_college-table th,
+  .bcom_d_college-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  .bcom_d_college-table thead th {
+    background-color: #88BDC4;
+  }
+  
+  .bcom_d_college-table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+  }
+  
+  .bcom_d_college-table tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  .bcom_d_college-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Column Alignments */
+  .bcom_d_center {
+    text-align: center;
+  }
+  
+  .bcom_d_clg-fees{
+    color: #4caf50;
+  }
+  /* College Info Styles */
+  .bcom_d_college-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bcom_d_college-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  .bcom_d_college-name {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .bcom_d_college-name:hover {
+    text-decoration: underline;
+  }
+  
+  .bcom_d_college-location {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* Actions */
+  .bcom_d_college-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .bcom_d_action-link {
+    font-size: 14px;
+    text-decoration: none;
+  }
+  
+  .bcom_d_action-link.apply {
+    color: #ff5722;
+  }
+  
+  .bcom_d_action-link.brochure {
+    color: #4caf50;
+  }
+  
+  .bcom_d_action-link:hover {
+    text-decoration: underline;
+  }
+  
+  .bcom_d_compare-checkbox {
+    margin-left: 5px;
+  }
+  
+  /* Reviews and Ranking */
+  .bcom_d_highlight {
+    color: #ff9800;
+  }
+  
+
+
+
+
+
+
+
+  /* ----------------------------FILTER ----------------------------------- */
+/* Additional adjustments */
+.bcom_d_filter-bar {
+  padding: 0; /* Ensure no extra padding in the filter bar */
+}
+
+   /* Filter Bar Styles */
+   .bcom_d_filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    gap: 10px;
+  }
+  
+  /* Sticky Filter Bar */
+  .bcom_d_sticky-filter-bar {
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: #ffffff; /* Background to prevent transparency */
+  }
+  
+    /* Filter Buttons */
+    .bcom_d_filter-button,
+    .bcom_d_dropdown-button {
+      background-color: white;
+      border: 1px solid #d1d5db;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      color: #374151;
+      cursor: pointer;
+      
+    }
+    
+    .bcom_d_dropdown-button.active {
+      background-color: #f97316;
+      color: white;
+      border: none;
+    }
+  
+      /* Selected Filters Styles */
+      .bcom_d_selected-filters {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 1rem 0;
+        flex-wrap: wrap;
+      }
+      
+      .bcom_d_filter-tag {
+        background-color: #fef3c7;
+        color: #f97316;
+        border: 1px solid #fcd34d;
+        padding: 0.25rem 0.75rem;
+        border-radius: 16px;
+        font-size: 0.875rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    
+  
+      .bcom_d_remove-tag {
+        cursor: pointer;
+        font-size: 0.875rem;
+        color: #f97316;
+      }
+      
+      .bcom_d_clear-all-button {
+        background-color: transparent;
+        color: #1f2937;
+        border: none;
+        cursor: pointer;
+        font-size: 0.875rem;
+        text-decoration: underline;
+      }
+    
+  
+      .bcom_d_filter-dropdown-container {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .bcom_d_filter-dropdown-menu {
+        position: absolute;
+        top: 100%;  /* Ensure it is positioned below the button */
+        left: 0;
+        z-index: 1000;
+        min-width: 200px;
+        background-color: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.375rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        
+        /* Ensure it doesn't force a scrollbar unless necessary */
+        max-height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        
+        /* Prevents unwanted scrolling issues */
+        white-space: nowrap;
+      }
+      
+      .bcom_d_filter-option {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        color: #374151;
+        transition: all 0.2s ease;
+      }
+      
+      .bcom_d_filter-option:hover {
+        background-color: #f3f4f6;
+      }
+      
+      .bcom_d_filter-option.selected {
+        background-color: #f97316;
+        color: white;
+      }
+      
+      .bcom_d_active-filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1rem 0;
+        padding: 0.75rem;
+        background-color: #f9fafb;
+        border-radius: 0.5rem;
+        border: 1px solid #e5e7eb;
+      }
+      .bcom_d_filter-tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.75rem;
+        background-color: #f97316;
+        color: white;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        transition: all 0.2s ease;
+      }
+      
+      .bcom_d_remove-filter {
+        margin-left: 0.5rem;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 1.125
+      }
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* ---------------------TABLE----------------------------------------------------- */
+
+  
+  /* Table Wrapper */
+.bcom_d_table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  /* Table Header Styling */
+  .bcom_d_college-table thead {
+    background-color: #008000; /* Green Background */
+    color: #ffffff; /* White Text */
+    text-align: left;
+  }
+  
+  .bcom_d_college-table th {
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  
+  /* Table Styling */
+  .bcom_d_college-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+  
+  /* Header Styling */
+  .bcom_d_college-table thead {
+    background-color: #7fb3c9;
+    color: #fff;
+    text-align: left;
+  }
+  
+  .bcom_d_college-table th {
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  /* Row Styling */
+  .bcom_d_college-table tr {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .bcom_d_college-table td {
+    padding: 12px;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  
+  /* CD Rank Column */
+  .bcom_d_cd-rank {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* College Info Column */
+  .bcom_d_college-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bcom_d_college-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .bcom_d_college-name {
+    font-weight: bold;
+    color: #0073b1;
+    font-size: 16px;
+  }
+  
+  .bcom_d_college-location {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  /* Course Fees Column */
+  .bcom_d_fees-info {
+    text-align: left;
+  }
+  
+  .bcom_d_fees-amount {
+    color: #008000;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .bcom_d_fees-note {
+    font-size: 12px;
+    color: #666;
+  }
+  .bcom_d_package-label {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .bcom_d_compare-fees {
+    color: #ff6600;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  
+  .bcom_d_compare-fees:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .bcom_d__bg{
+    background-color: #009933;
+  }
+  
+    
+  /* User Reviews Column */
+  .bcom_d_reviews-info {
+    text-align: left;
+  }
+  
+  .bcom_d_rating-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bcom_d_rating {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffa500;
+  }
+  
+  .bcom_d_star {
+    color: #ffa500;
+    margin-left: 3px;
+  }
+  
+  .bcom_d_rating-scale {
+    font-size: 12px;
+    color: #666;
+    margin-left: 5px;
+  }
+  
+  .bcom_d_review-count {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .bcom_d_review-badge {
+    font-size: 12px;
+    color: #ff6600;
+    background-color: #ffe4b5;
+    padding: 2px 6px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  .bcom_d_compare-placement {
+    font-size: 12px;
+    color: #ff6600;
+  }
+  
+  /* Ranking Column */
+  .bcom_d_ranking-info {
+    text-align: left;
+  }
+  
+  .bcom_d_ranking-position {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .bcom_d_ranking-details {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .bcom_d_ranking-details span {
+    color: #ff6600;
+  }
+  
+  .bcom_d_college-ranking-logo {
+    width: 100px;
+    margin-top: 5px;
+  }
+
+
+
+   /* ------------------------------------------------------------------------------ */
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  /* ------------banner_bsc_nursing------------------ */
+  
+  
+  .bcom_d_carousel-container {
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 20px 0;
+      background-color: #FFF3EB;
+      /* margin-left: 20px;
+      margin-right: 20px; */
+      margin-top: 2rem;
+  }
+  
+  .bcom_d_carousel-container h3 {
+      margin-left: 15px;
+  }
+  
+  /* Wrapper to align items horizontally */
+  .bcom_d_carousel-wrapper {
+      display: flex;
+      gap: 16px;
+  }
+  
+  /* Individual university card styling */
+  .bcom_d_university-card {
+      width: 200px;
+      flex-shrink: 0;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .bcom_d_green {
+      width: 6rem;
+      color: rgb(20, 156, 111);
+      font-size: x-small;
+      margin-left: 1rem;
+      background-color: rgb(200, 254, 236);
+  }
+  
+  /* Hover effect */
+  .bcom_d_university-card:hover {
+      transform: scale(1.05);
+  }
+  
+  /* Image styling - Ensures it fits properly */
+  .bcom_d_university-image {
+      width: 100%;
+      object-fit: cover;
+  }
+  
+  /* Content styling inside the card */
+  .bcom_d_university-details {
+      margin-left: 1rem;
+  }
+  
+  /* Title - Now properly aligned with other text */
+  .bcom_d_university-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      white-space: normal;  /* Allow text to wrap */
+      word-wrap: break-word;
+      margin-bottom: 1px;
+      margin-left: 0; 
+  }
+  
+  /* Location appears below the title */
+  .bcom_d_university-location {
+      font-size: smaller;
+      color: #777;
+      margin-bottom: 5px;
+  }
+  
+  /* Description */
+  .bcom_d_university-description {
+      font-size: smaller;
+      color: gray;
+      margin: 10px 0;
+  }
+  
+  .bcom_d_green-text{
+      color: rgb(20, 156, 111);
+      white-space: normal;  /* Allow text to wrap */
+      word-wrap: break-word;
+  }
+  
+  /* Apply Now as a text link with an arrow */
+  .bcom_d_apply-link {
+      display: block;
+      font-size: 14px;
+      color: #ff6600;
+      text-decoration: none;
+      cursor: pointer;
+      margin-top: 8px;
+  }
+  
+  /* Add an arrow before Apply Now */
+  .bcom_d_apply-link::before {
+      content: "→ ";
+      font-size: 14px;
+      color: #ff6600;
+  }
+  
+  /* .apply-link:hover {
+      text-decoration: underline;
+  }
+      */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ /* -------------top colleges in bsc nursing ------------- */
+
+
+  .bcom_d_scroll-container {
+    padding: 16px;
+    background-color: #FFF3EB;
+    margin-top: 20px;
+  }
+  
+  /* .scroll-container h2 {
+    margin-left: 0%;
+  } */
+  
+  /* Horizontal scrolling container */
+  .bcom_d_scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 16px;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  }
+  
+  /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+  .bcom_d_scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Individual card styles */
+  .bcom_d_scroll-card {
+    min-width: 200px;
+    width: 256px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+    position: relative;
+  }
+  
+  /* Image container with overlay */
+  .bcom_d_scroll-card-image {
+    position: relative;
+    width: 100%;
+    height: 160px;
+  }
+  
+  .bcom_d_scroll-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Overlay effect */
+  .bcom_d_overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.115)); /* Dark semi-transparent overlay */
+    color: white;
+    padding: 12px;
+    text-align: left;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  /* Title on the overlay */
+  .bcom_d_overlay-title {
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    white-space: normal;  /* Allow text to wrap */
+    word-wrap: break-word;
+    margin-bottom: 1px;
+    margin-left: 0; 
+  }
+  
+  /* Subtitle (count) on the overlay */
+  /* .overlay-subtitle {
+    font-size: 12px;
+    margin-top: 4px;
+  } */
+  
+  
+  /* Container for icons + count */
+  .bcom_d_icon-container {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    /* margin-left: 20px; */
+  }
+  
+  /* Circular icons */
+  .bcom_d_icon-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: -8px; /* Slight overlap effect */
+  }
+  
+  .bcom_d_icon-container img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  /* Subtitle (count) */
+  .bcom_d_overlay-subtitle {
+    font-size: 12px;
+    margin-left: 12px;
+    opacity: 0.9;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* -----------------rating---------------------- */
+  
+  .bcom_d_rating-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1400px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bcom_d_rating-heading {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .bcom_d_rating-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    padding: 0 20px;
+    transform: translateY(-10px); /* Moves the entire rating bar up */
+  }
+  
+  .bcom_d_rating-label {
+    font-size: 14px;
+    color: #666;
+    position: absolute;
+  }
+  
+  .bcom_d_rating-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+  }
+  
+  .bcom_d_rating-button:hover,
+  .bcom_d_rating-button.hovered {
+    background-color: #f1f1f1;
+  }
+  
+  .bcom_d_rating-button.selected {
+    background-color: #ec7f27;
+    color: white;
+    border: 1px solid #ec7f27;
+  }
+  
+  .bcom_d_rating-button.hovered {
+    background-color: #ec7f27;
+  }
+  
+  /* Position the "Not so likely" label below button 1 */
+  .bcom_d_rating-label.bcom_d_first {
+    left: 0;
+    bottom: -20px;
+  }
+  
+  /* Position the "Highly likely" label below button 10 */
+  .bcom_d_rating-label.bcom_d_last {
+    right: 0;
+    bottom: -20px;
+  }
