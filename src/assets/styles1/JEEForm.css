@@ -1,0 +1,32 @@
+
+.jeeATag {
+    color: #4fb8dd; /* Default color (you can change this) */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transitions */
+  }
+  
+  .jeeATag:hover {
+    color: #2a6496; /* Color on hover (you can change this) */
+    text-decoration: underline; /* Underline on hover */
+  }
+  .jeeContentSection p{
+    word-break: break-word;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: "din", sans-serif;
+    font-weight: 400;
+  }
+  .jeeContentSection h3{
+    font-size:'1.25rem' ;
+    color: '#363636';
+    font-weight: '700';
+  }
+  .jeeContentSection h4{
+    font-size: 1.125rem;
+    color: #677eb0;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }

@@ -78,7 +78,7 @@
     /* border: 1px solid #e0e0e0; */
     border-radius: 12px;
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
-    z-index: 1000;
+    z-index: 1500;
     overflow: hidden;
     width: 100vh;
 }
@@ -494,6 +494,7 @@
 .explore-dropdown div {
     /* width: 100%; */
     padding: 0.5rem 0.5rem;
+    z-index: 1500;
 }
 
 .explore-dropdown-content hr {
@@ -659,7 +660,7 @@
     /* More rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Softer shadow */
-    z-index: 1;
+    z-index: 1500;
     min-width: 160px;
     display: flex;
     /* Make dropdown content a flex container */

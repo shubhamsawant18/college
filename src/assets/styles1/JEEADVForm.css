@@ -1,0 +1,474 @@
+.jee-main-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    font-family: "din", sans-serif;
+    line-height: 1.6;
+}
+.jee-right-container{
+    width: 28%;
+    /* background-color: #ffffff; Set background to white */
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+
+}
+.jee-left-container{
+    width: 70%;
+  background-color: #ffffff; /* Set background to white */
+  padding-left: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .jee-main-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .jee-left-container,
+    .jee-right-container {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .jee-form-container .jee-form-unique-row {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+/* styles.css */
+/* CATForm.css or JEEADVForm.css (or create a new CSS file) */
+
+/* ... (Your existing form styles) ... */
+
+.info-section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Space between sections */
+  }
+  
+  .info-section h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .cutoff-trends {
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  .cutoff-trends h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  
+/* styles.css */
+.table-container {
+    overflow-x: auto; /* Add horizontal scroll if needed */
+  }
+  
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse cell borders */
+    table-layout: fixed; /* For consistent column widths */
+    font-family: sans-serif; /* Match the font */
+    font-size: 14px; /* Adjust font size to match */
+    
+  }
+  
+  .table-header {
+    background-color: #8bbdc4; /* Light gray background for header */
+    color: white;
+    padding: 8px; /* Adjust padding as needed */
+    text-align: center; /* Align text to the left */
+    border: 1px solid #ddd; /* Light gray border for cells */
+    font-weight:600;
+    padding: 1rem;
+    font-size: large;
+  }
+  
+  .table-row:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray background for even rows */
+  }
+  
+  .table-cell {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+    padding: 1rem;
+  }
+  
+  .neet-neettable-container {
+    overflow-x: auto;
+  }
+  
+  .neet-neettable {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left; /* Align text to the left */
+    border: 1px solid #d1d5db;
+    
+  }
+  
+  .neet-neettable-row {
+    border: 1px solid #d1d5db;
+  }
+  
+  .neet-neettable-row:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  
+  .neet-neettable-row:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  .neet-neettable-cell {
+    padding: 1rem;
+    color: #74c6e3; /* Blue link color */
+    border: 1px solid #d1d5db;
+    text-align: center; /* Align text to the left */
+  }
+  
+  .neet-neettable-cell a { /* Style the link inside the cell */
+      text-decoration: none; /* Remove underline from link */
+      color: inherit; /* Inherit color from the cell */
+      display: block; /* Make the entire cell clickable */
+      width: 100%;
+      height: 100%;
+  }
+  .collegeCourseName{
+    font-size: small;
+    margin: 0;
+  }
+  .neet-closing-rank{
+    font-size:smaller;
+  }
+
+  /* Main Container */
+.form-unique-container {
+    max-width: 90%;
+    /* margin: 30px auto; */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+/* Form Row: Rank & Reservation Category */
+.form-unique-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Input Group */
+.form-unique-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Remove margin for last item to prevent spacing issues */
+.form-unique-group:last-child {
+    margin-right: 0;
+}
+
+/* Labels */
+.form-unique-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input Fields & Dropdown */
+/* .form-unique-input,
+.form-unique-select {
+    width: 50%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+} */
+
+/* Gender Selection */
+.form-unique-radio-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Radio Labels */
+.form-unique-radio-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Radio Inputs */
+.form-unique-radio-input {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    accent-color: #007bff;
+    cursor: pointer;
+}
+
+/* Submit Button */
+.form-unique-button {
+    display: block;
+    width: 180px;
+    padding: 10px;
+    margin: 20px auto;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff7f0e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Button Hover Effect */
+.form-unique-button:hover {
+    background-color: #e76a00;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-unique-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Main Layout */
+.jee-main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    /* padding-top: 2rem; */
+    /* background-color: #f5f5f5; */
+  }
+  
+  .jee-left-container {
+    flex: 1;
+    max-width: 75%;
+  }
+  
+  .jee-right-container {
+    width: 25%;
+    top: 2rem;
+  }
+  
+  /* Form Styling */
+  .form-unique-container {
+    background: rgba(71,184,221,0.02);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* margin-bottom: 2rem; */
+  }
+  
+  .form-unique-title {
+    margin-left: 1rem;
+    font-size: 1.625rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0;
+    text-align: left;
+    
+  }
+  
+  .form-unique {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1.5rem; */
+    box-shadow: none;
+  }
+  
+  .form-unique-row {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .form-unique-group {
+    flex: 1;
+  }
+  
+  .form-unique-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* .form-unique-input,
+  .form-unique-select {
+    width: 70%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    transition: border-color 0.15s ease;
+  } */
+  
+  .form-unique-input:focus,
+  .form-unique-select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+  }
+  
+  .form-unique-radio-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .form-unique-radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .form-unique-button {
+    background-color: #ff7f0e;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .form-unique-button:hover {
+    background-color: #f97316;
+  }
+  
+  /* Table Styling */
+  .neet-neettable-container {
+    margin: 2rem 0;
+    overflow-x: auto;
+  }
+  
+  .neet-neettable,
+  .neet-marks-rank-neettable,
+  .neet-college-neettable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .neet-neettable-header {
+    background-color: #8bbdc4;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  .neet-neettable-cell {
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+  }
+  
+  .neet-neettable-row:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  
+  /* Right Sidebar Buttons */
+  .neet-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .neet-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 6px;
+    /* font-weight: 500; */
+    cursor: pointer;
+    border: none;
+    transition: transform 0.15s ease;
+  }
+  
+  .neet-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .btn-orange {
+    background-color: #ff7f0e;
+    color: white;
+  }
+  
+  .btn-white {
+    background-color: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+  }
+  
+  .btn-teal {
+    background-color: #14b8a6;
+    color: white;
+  }
+  
+  .icon-right {
+    margin-left: 0.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .jee-main-container {
+      flex-direction: column;
+    }
+  
+    .jee-left-container,
+    .jee-right-container {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .form-unique-row {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .neetcard-list {
+      grid-template-columns: 1fr;
+    }
+  
+    .form-unique-container {
+      padding: 1rem;
+    }
+  }
+  
