@@ -53,20 +53,22 @@
 .TopStudyHeading {
   font-size: 28px;
   color: #333;
-  text-align: center;
+  text-align: left;
   margin-bottom: 20px;
   font-weight: bold;
-  margin-left: -795px;
+  margin-left: 14.5rem;
 }
 
 .slider-container {
-  max-width: 1070px; /* Adjusted container width */
+  max-width: 1070px;
+  /* Adjusted container width */
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .slick-slider {
-  max-width: 1070px; /* Adjusted container width */
+  max-width: 1070px;
+  /* Adjusted container width */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -80,7 +82,8 @@
 }
 
 .cityCardWrapper {
-  padding: 0 25px; /* Increased padding to create a larger gap between cards */
+  padding: 0 25px;
+  /* Increased padding to create a larger gap between cards */
 }
 
 .cityCard {
@@ -90,20 +93,25 @@
   background-color: #fff;
   border: 0.02px solid #ddd;
   border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Added background-color transition */
-  width: 130px; /* Increased card width */
-  height: 120px; /* Increased card height */
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  /* Added background-color transition */
+  width: 130px;
+  /* Increased card width */
+  height: 120px;
+  /* Increased card height */
   margin-left: -20px;
   margin-top: 10px;
 }
 
 .cityCard:hover {
-  background-color: #f8f8f8; /* Changed hover background color */
+  background-color: #f8f8f8;
+  /* Changed hover background color */
 }
 
 .cityImage {
   width: 100%;
-  max-height: 80px; /* Adjusted image height */
+  max-height: 80px;
+  /* Adjusted image height */
   object-fit: contain;
   margin-bottom: 10px;
 }
@@ -112,20 +120,25 @@
   font-size: 16px;
   font-weight: 500;
   color: #333;
-  text-decoration: none; /* Removed underline */
+  text-decoration: none;
+  /* Removed underline */
 }
 
 .cityCard a {
-  text-decoration: none; /* Removed underline */
+  text-decoration: none;
+  /* Removed underline */
 }
 
 .custom-arrow {
-  background-color: #ff7900; /* Changed background color to aciblue */
+  background-color: #ff7900;
+  /* Changed background color to aciblue */
   border: none;
   color: #fff;
   font-size: 18px;
-  width: 50px; /* Restored arrow size */
-  height: 50px; /* Restored arrow size */
+  width: 50px;
+  /* Restored arrow size */
+  height: 50px;
+  /* Restored arrow size */
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -138,13 +151,16 @@
 }
 
 .custom-prev {
-  left: -15px; /* Positioned closer to the cards */
+  left: -15px;
+  /* Positioned closer to the cards */
 }
 
 .custom-next {
-  right: -15px; /* Positioned closer to the cards */
+  right: -15px;
+  /* Positioned closer to the cards */
 }
 
 .custom-arrow:hover {
-  background-color: #ff7900; /* Darker shade for hover state */
+  background-color: #ff7900;
+  /* Darker shade for hover state */
 }

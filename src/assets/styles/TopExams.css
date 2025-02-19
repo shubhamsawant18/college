@@ -19,9 +19,9 @@ background-color: fff;
   font-weight: bold;
   margin-bottom: 10px;
   margin-top: 10px;
-  text-align: center;
+  text-align: left;
   color: #333;
-  margin-left: -860px;
+  margin-left: 4rem;
 }
 
 /* Slider container for the carousel */
@@ -58,7 +58,7 @@ background-color: fff;
   padding: 15px;
 }
 .cbse-title{
-  margin-left: -864px;
+  margin-left: 14rem;
 }
 .exam-logo {
   width: 50px;
@@ -153,10 +153,12 @@ background-color: fff;
   font-size: 14px;
   color: #333; /* Changed color from blue to normal */
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .link:hover {
-  text-decoration: underline;
+  color:#ff7900;
 }
 
 .links .divider {
@@ -165,9 +167,9 @@ background-color: fff;
 }
 
 /* Dots for the slider */
-.slick-dots {
+/* .slick-dots {
   bottom: -20px;
-}
+} */
 
 .slick-dots li button:before {
   font-size: 10px;
@@ -208,7 +210,7 @@ background-color: fff;
 }
 
 .arrow-icon {
-  margin-top: 10px; /* Move the arrow symbol down within the container */
+  /* margin-top: 10px; */
   font-size: 22px;
   font-style: normal;
 }

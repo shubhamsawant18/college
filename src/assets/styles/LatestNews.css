@@ -14,16 +14,17 @@
   color: #333;
   margin-bottom: 20px;
   margin-top: 2px;
-  margin-left: -735px;
+  margin-left: 12.3rem;
+
 }
 
 .categories {
   display: flex;
-  justify-content: center;
-  gap: 8px; 
+  justify-content: left;
+  gap: 8px;
   margin-bottom: 30px;
   margin-top: 11px;
-  margin-left: -600px;
+  margin-left: 14rem;
 }
 
 .category-btn {
@@ -52,7 +53,8 @@
 
 /* Add padding to enforce spacing between slides */
 .news-slide {
-  padding: 0 10px; /* Adjust this value for desired gap */
+  padding: 0 10px;
+  /* Adjust this value for desired gap */
 }
 
 .news-card {
@@ -128,18 +130,20 @@
 }
 
 .custom-prev {
-  left: -20px;
+  left: -2.25rem;
 }
 
 .custom-next {
-  right: -20px;
+  right: -2.5rem;
 }
 
 .arrow-icon {
   font-size: 1.5rem;
   color: #333;
   transition: color 0.3s;
-  margin-top:1px;
+  /* margin-top:1px; */
+  padding-bottom: 0.25rem;
+
 }
 
 .arrow-icon:hover {
@@ -152,9 +156,7 @@
 }
 
 /* Show previous arrow when needed */
-.visible {
-  display: block;
-}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -167,9 +169,11 @@
     width: 100%;
   }
 }
-.slick-list{
+
+.slick-list {
   background-color: #fff;
 }
-.slick-slider{
+
+.slick-slider {
   background-color: #fff;
 }

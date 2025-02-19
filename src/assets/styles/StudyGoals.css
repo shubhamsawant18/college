@@ -1,6 +1,6 @@
 /* Container for the entire study goal section */
 .study-goal-container {
-  padding: 40px 20px;
+  padding: 40px 0px;
   text-align: center;
   background-color: white;
   font-family: "din",sans-serif;
@@ -164,7 +164,7 @@
   font-size: 30px; /* Increased font size for arrows */
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 72px;
+  margin-top: 7rem;
 }
 
 .back-button {
@@ -203,11 +203,13 @@
   border-bottom: 1.5px solid #e9e9e9;
 }
 .h22{
+  text-align: left;
   color: #333;
  font-size: 26px;
   font-weight: 700;
   min-width: 122px;
-  margin-top: -3px;
-  margin-left: -810px;
+  margin-left: 0rem;
+  /* margin-top: -3px;
+  margin-left: -810px; */
 }
 

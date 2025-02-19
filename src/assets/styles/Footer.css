@@ -209,17 +209,17 @@
   margin-top: -50px;
 }
 .Subscribe{
-  padding-left: 550px;
-  padding-right: -300px;
+  /* padding-left: 550px; */
+  /* padding-right: -300px; */
   padding-top: 25px;
   font-size: 28px;
 }
 .get{
-  padding-left: 400px;
-  padding-right: 470px;
+  /* padding-left: 400px; */
+  /* padding-right: 470px; */
   margin-top: -16px;
   padding-bottom: 20px;
-  margin-left: 47px;
+  /* margin-left: 47px; */
   font-size: 13px;
 }
 .footer-d {
@@ -287,6 +287,7 @@
   
 }
 .Subscribe{
-  margin-right: 105px;
-  margin-left: -470px;
+  text-align: center;
+  /* margin-right: 105px;
+  margin-left: -470px; */
 }

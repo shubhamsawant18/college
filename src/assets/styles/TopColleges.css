@@ -14,6 +14,15 @@
   text-align: left;
 }
 
+.top-colleges-container h1{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: left;
+  margin-left: 0.1rem;
+}
+
 /* Table Styles */
 .college-table {
   width: 100%;
