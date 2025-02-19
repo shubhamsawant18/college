@@ -71,7 +71,8 @@ const ExploreCourses = () => {
               </div>
             </div>
             <div className="course-overview0">
-              <p className="course-overview1">Course Overview →</p>
+              <span className="course-overview1">Course Overview </span>
+              <span>→</span>
             </div>
           </div>
         ))}

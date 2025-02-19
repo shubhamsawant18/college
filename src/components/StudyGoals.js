@@ -54,32 +54,34 @@ const StudyGoals = () => {
 
   return (
     <div className="study-goal-container">
-      <h2 class="h22">Select Your Study Goal</h2>
+      <h2 className="h22">Select Your Study Goal</h2>
       <div className="study-goal-list">
-        {!showMore && initialGoals.map((goal, index) => (
-          <div key={index} className="study-goal-item">
-            <div className="icon-title-container">
-              <div className="icon-container">
-                <div className="icon">{goal.icon}</div>
+        {!showMore &&
+          initialGoals.map((goal, index) => (
+            <div key={index} className="study-goal-item">
+              <div className="icon-title-container">
+                <div className="icon-container">
+                  <div className="icon">{goal.icon}</div>
+                </div>
+                <div className="title-college-container">
+                  <h3>{goal.title}</h3>
+                  <p>{goal.colleges} Colleges</p>
+                </div>
               </div>
-              <div className="title-college-container">
-                <h3>{goal.title}</h3>
-                <p>{goal.colleges} Colleges</p>
+              <div className="ul-container">
+                <ul>
+                  {goal.courses.map((course, idx) => (
+                    <li key={idx}>{course}</li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <div className="ul-container">
-              <ul>
-                {goal.courses.map((course, idx) => (
-                  <li key={idx}>{course}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
+          ))}
         {showMore && (
           <>
+            {/* Back Button with Left Arrow */}
             <div className="back-button" onClick={() => setShowMore(false)}>
-              <div className="arrow-icon back-arrow">←</div>
+              <div className="arrow-icon">←</div>
             </div>
             {moreGoals.map((goal, index) => (
               <div key={index} className="study-goal-item">

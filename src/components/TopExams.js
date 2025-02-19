@@ -39,7 +39,7 @@ const SampleNextArrow = (props) => {
   return (
     <div
       className="custom-arrow custom-next"
-      style={{ ...style }}
+      // style={{ ...style }}
       onClick={onClick}
     >
       <span className="arrow-icon">→</span>
@@ -52,7 +52,7 @@ const SamplePrevArrow = (props) => {
   return (
     <div
       className="custom-arrow custom-prev"
-      style={{ ...style }}
+      // style={{ ...style }}
       onClick={onClick}
     >
       <span className="arrow-icon">←</span>
