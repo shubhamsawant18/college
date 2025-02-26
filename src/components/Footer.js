@@ -158,10 +158,10 @@ const Footer = () => {
       <footer className="footer-d">
         <div className="footer-content" style={{ display: "flex", alignItems: "center" }}>
           <div className="logo2">
-            <img src="/assets/logoavispixel.png" alt="Logo" />
+            <img src="/assets/logo-chanel.png" alt="Logo" />
           </div>
           <p className="copyright-text">
-            © {new Date().getFullYear()} Avis Pixel. All rights reserved.
+            © {new Date().getFullYear()} Shubham Sawant.
           </p>
         </div>
       </footer>

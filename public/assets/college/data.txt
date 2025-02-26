@@ -1,0 +1,27 @@
+college table:
+1) collegeid primary key
+2) collegename
+3) city foreign ky
+4) courses [
+    course 1.. foreign key
+]
+5) city foreign key
+6) category foreign key
+7) rank
+
+
+course_Table
+1) course id primary key
+2) course name
+3) duration 
+
+
+city 
+1) id primary key
+2) city name
+
+category 
+1) id primary key
+2) category name
+
+Course.find({category:id, rank: ,})
