@@ -3,7 +3,7 @@ import "../assets/styles/Navbar.css"
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react"
 import { ChevronRight, ChevronDown, Search } from "lucide-react"
-import Logo from "../assets/navimages/logoavispixel.png"
+import Logo from "../assets/navimages/logo-chanel.png"
 import reviewimg from "../assets/navimages/review-banner-header.svg"
 import Sidebar from "./Sidebar"
 import profileimg1 from "../assets/navimages/india-review-banner.svg"
