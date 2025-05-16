@@ -161,7 +161,7 @@ const Footer = () => {
             <img src="/assets/logo-chanel.png" alt="Logo" />
           </div>
           <p className="copyright-text">
-            © {new Date().getFullYear()} Avis Pixel. All rights reserved.
+            © {new Date().getFullYear()} College-Connect. All rights reserved.
           </p>
         </div>
       </footer>
